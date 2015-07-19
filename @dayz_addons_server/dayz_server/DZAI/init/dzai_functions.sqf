@@ -3,7 +3,6 @@
 	
 	Last Updated: 5:08 AM 12/24/2013
 */
-dzai_staticai = true;
 
 diag_log "[DZAI] Compiling DZAI functions.";
 
@@ -14,7 +13,7 @@ BIS_fnc_selectRandom2 = compile preprocessFileLineNumbers format ["%1\compile\fn
 DZAI_checkClassname = compile preprocessFileLineNumbers format ["%1\compile\fn_checkclassname.sqf",DZAI_directory];
 
 //Spawning-related functions
-DZAI_setup_AI = compile preprocessFileLineNumbers format ["%1\compile\fn_createGroup.sqf",DZAI_directory];
+DZAI_setup_AI = compile preprocessFileLineNumbers format ["%1\compile\fn_spawnGroup.sqf",DZAI_directory];
 DZAI_findSpawnPos = compile preprocessFileLineNumbers format ["%1\compile\fn_findspawnpos.sqf",DZAI_directory];
 DZAI_setTrigVars = compile preprocessFileLineNumbers format ["%1\compile\fn_init_trigger.sqf",DZAI_directory];
 fnc_spawnBandits_custom	= compile preprocessFileLineNumbers format ["%1\spawn_functions\spawnBandits_custom.sqf",DZAI_directory];
@@ -24,7 +23,6 @@ fnc_respawnBandits = compile preprocessFileLineNumbers format ["%1\spawn_functio
 fnc_respawnHandler = compile preprocessFileLineNumbers format ["%1\spawn_functions\respawnHandler1.sqf",DZAI_directory];
 fnc_respawnHandler2 = compile preprocessFileLineNumbers format ["%1\spawn_functions\respawnHandler2.sqf",DZAI_directory];
 fnc_despawnBandits = compile preprocessFileLineNumbers format ["%1\spawn_functions\despawnBandits.sqf",DZAI_directory];
-//DZAI_retrySpawn = compile preprocessFileLineNumbers format ["%1\compile\fn_retryspawn.sqf",DZAI_directory];
 
 //AI unit-related functions
 DZAI_AI_handledamage = compile preprocessFileLineNumbers format ["%1\compile\fn_damageHandlerAI2.sqf",DZAI_directory];
@@ -50,20 +48,30 @@ DZAI_heliDestroyed = compile preprocessFileLineNumbers format ["%1\compile\heli_
 DZAI_vehDestroyed = compile preprocessFileLineNumbers format ["%1\compile\veh_destroyed.sqf",DZAI_directory];
 DZAI_AI_killed_air = compile preprocessFileLineNumbers format ["%1\compile\ai_killed_air.sqf",DZAI_directory];
 DZAI_AI_killed_land = compile preprocessFileLineNumbers format ["%1\compile\ai_killed_land.sqf",DZAI_directory];
+DZAI_vehRegroup = compile preprocessFileLineNumbers format ["%1\compile\veh_regroup.sqf",DZAI_directory];
 
 //Static AI functions
 if (DZAI_staticAI) then {
 	fnc_spawnBandits = compile preprocessFileLineNumbers format ["%1\spawn_functions\spawnBandits.sqf",DZAI_directory];
+	DZAI_spawnBandits_init = compile preprocessFileLineNumbers format ["%1\spawn_functions\spawnBandits_initialize.sqf",DZAI_directory];
 	DZAI_static_spawn = compile preprocessFileLineNumbers format ["%1\compile\fn_createStaticSpawn.sqf",DZAI_directory];
 };
 
 //Dynamic AI functions
 if (DZAI_dynAISpawns) then {
 	DZAI_abortDynSpawn = compile preprocessFileLineNumbers format ["%1\compile\fn_abortdynspawn.sqf",DZAI_directory];
-	fnc_spawnBandits_dynamic = compile preprocessFileLineNumbers format ["%1\spawn_functions\spawnBandits_dynamicV2.sqf",DZAI_directory];
+	fnc_spawnBandits_dynamic = compile preprocessFileLineNumbers format ["%1\spawn_functions\spawnBandits_dynamic.sqf",DZAI_directory];
 	fnc_despawnBandits_dynamic = compile preprocessFileLineNumbers format ["%1\spawn_functions\despawnBandits_dynamic.sqf",DZAI_directory];
 	DZAI_dyn_huntPlayer = compile preprocessFileLineNumbers format ["%1\compile\fn_seekPlayer.sqf",DZAI_directory];
 	DZAI_AI_killed_dynamic = compile preprocessFileLineNumbers format ["%1\compile\ai_killed_dynamic.sqf",DZAI_directory];
+};
+
+if (DZAI_maxRandomSpawns > 0) then {
+	DZAI_createRandomSpawns =  compile preprocessFileLineNumbers format ["%1\compile\createRandomSpawns.sqf",DZAI_directory];
+	DZAI_abortRandSpawn = compile preprocessFileLineNumbers format ["%1\compile\fn_abortrandspawn.sqf",DZAI_directory];
+	fnc_spawnBandits_random = compile preprocessFileLineNumbers format ["%1\spawn_functions\spawnBandits_random.sqf",DZAI_directory];
+	fnc_despawnBandits_random = compile preprocessFileLineNumbers format ["%1\spawn_functions\despawnBandits_random.sqf",DZAI_directory];
+	DZAI_AI_killed_random = compile preprocessFileLineNumbers format ["%1\compile\ai_killed_random.sqf",DZAI_directory];
 };
 
 if (DZAI_findKiller) then {
@@ -71,7 +79,7 @@ if (DZAI_findKiller) then {
 };
 
 if ((!isNil "DZAI_debugMarkersEnabled") && {DZAI_debugMarkersEnabled}) then {
-	DZAI_updateSpawnMarker = compile preprocessFileLineNumbers format ["%1\compile\fn_refreshmarker.sqf",DZAI_directory];
+	//DZAI_updateSpawnMarker = compile preprocessFileLineNumbers format ["%1\compile\fn_refreshmarker.sqf",DZAI_directory];
 };
 
 //Compile zombie aggro functions
@@ -87,7 +95,7 @@ if ((DZAI_maxHeliPatrols > 0) or {DZAI_maxLandPatrols > 0}) then {
 	if (DZAI_maxHeliPatrols > 0) then {
 		DZAI_heliDetectPlayers = compile preprocessFileLineNumbers format ["%1\compile\heli_detectplayers.sqf",DZAI_directory];
 		DZAI_heliRandomPatrol = compile preprocessFileLineNumbers format ["%1\compile\heli_randompatrol.sqf",DZAI_directory];
-		DZAI_heliOnCall = compile preprocessFileLineNumbers format ["%1\compile\heli_onCall.sqf",DZAI_directory];
+		if (DZAI_heliReinforceChance > 0) then {DZAI_heliReinforce = compile preprocessFileLineNumbers format ["%1\compile\heli_reinforce.sqf",DZAI_directory]};
 	};
 	//Land vehicle patrol scripts
 	if (DZAI_maxLandPatrols > 0) then {
@@ -119,9 +127,36 @@ if (DZAI_radioMsgs) then {
 	};
 };
 
+if (DZAI_deathMessages) then {
+	DZAI_sendKillMessage = {
+		private ["_killer","_victimName"];
+		_killer = _this select 0;
+		_victimName = _this select 1;
+		{
+			DZAI_killMSG = _victimName;
+			(owner _x) publicVariableClient "DZAI_killMSG";
+		} count (crew _killer);
+	};
+};
+
+DZAI_updGroupCount = {
+	private ["_unitGroup","_isNewGroup"];
+	_unitGroup = _this select 0;
+	_isNewGroup = _this select 1;
+	
+	if (isNull _unitGroup) exitWith {false};
+	
+	if (_isNewGroup) then {
+		DZAI_activeGroups = DZAI_activeGroups + [_unitGroup];
+	} else {
+		DZAI_activeGroups = DZAI_activeGroups - [_unitGroup];
+	};
+	true
+};
+
 //DZAI group side assignment function. Detects when East side has too many groups, then switches to Resistance side.
-DZAI_getGroupSide = {
-	private["_groupSide"];
+DZAI_createGroup = {
+	private["_groupSide","_unitGroup"];
 	_groupSide = (if (({(side _x) == east} count allGroups) < 141) then {
 		east
 	} else {
@@ -132,13 +167,16 @@ DZAI_getGroupSide = {
 			west setFriend [resistance,0];
 			east setFriend [resistance, 1];
 			resistance setFriend [east, 1];
-			diag_log "DZAI Warning: Group maximum reached for East side! Modifying Resistance side for DZAI use.";
+			diag_log "DZAI Warning: Group maximum reached for East side! Modifying Resistance side for DZAI use. Recommend reducing amount of AI spawns.";
 		};
 		resistance
 	});
 	//diag_log format ["Assigned side %1 to AI group",_groupSide];
 	
-	_groupSide
+	_unitGroup = createGroup _groupSide;
+	[_unitGroup,true] call DZAI_updGroupCount;
+	
+	_unitGroup
 };
 
 //Sets skills for unit based on their weapongrade value.
@@ -163,20 +201,6 @@ DZAI_deathFlies = {
 	_this enableSimulation false;
 };
 
-//Convert server uptime in seconds to formatted time (days/hours/minutes/seconds)
-DZAI_getUptime = {
-	private ["_iS","_oS","_oM","_oH","_oD"];
-
-	_iS = diag_tickTime;
-	
-	_oS = floor (_iS % 60);
-	_oM = floor ((_iS % 3600)/60);
-	_oH = floor ((_iS % 86400)/3600);
-	_oD = floor ((_iS % 2592000)/86400);
-	
-	[_oD,_oH,_oM,_oS]
-};
-
 //Combines two arrays and returns the combined array. Does not add duplicate values. Second array is appended to first array.
 DZAI_append = {
 	if (((typeName (_this select 0)) != "ARRAY")&&((typeName (_this select 1)) != "ARRAY")) exitWith {diag_log "DZAI Error: DZAI_append function was not provided with two arrays!";};
@@ -194,7 +218,7 @@ DZAI_findLootPile = {
 	_unitGroup = _this select 0;
 	_searchRange = _this select 1;
 	
-	_lootPiles = (ASLtoATL getPosASL (leader _unitGroup)) nearObjects ["ReammoBox",_searchRange];
+	_lootPiles = (getPosASL (leader _unitGroup)) nearObjects ["ReammoBox",_searchRange];
 	if ((count _lootPiles) > 0) then {
 		_lootPos = ASLtoATL getPosASL (_lootPiles call BIS_fnc_selectRandom2);
 		if ((behaviour (leader _unitGroup)) != "AWARE") then {_unitGroup setBehaviour "AWARE"};
@@ -218,10 +242,6 @@ DZAI_protectObject = {
 	true
 };
 
-DZAI_purgeEH = {
-	{_this removeAllEventHandlers _x} count ["Killed","HandleDamage","GetIn","GetOut","Fired"];
-};
-
 DZAI_getWeapongrade = {
 	private ["_indexWeighted"];
 
@@ -237,16 +257,6 @@ DZAI_getWeapongrade = {
 	DZAI_weaponGrades select (_indexWeighted call BIS_fnc_selectRandom2)
 };
 
-DZAI_updateUnitCount = {
-	if (((typeName _this) == "SCALAR") && {(_this >= 0)}) then {
-		DZAI_numAIUnits = _this;
-		true
-	} else {
-		diag_log format ["DZAI Error: Tried to update AI count using invalid value type! Value: %1",_this];
-		false
-	};
-};
-
 DZAI_spawn_vehicle = {
 	if ((getMarkerColor (_this select 0)) == "") exitWith {diag_log format ["DZAI Error: Unable to find provided marker %1 to spawn AI vehicle.",(_this select 0)]};
 	if (!([(_this select 1),"vehicle"] call DZAI_checkClassname)) exitWith {diag_log format ["DZAI Error: Provided vehicle classname %1 is a banned or nonexistent classname.",(_this select 1)]};
@@ -257,6 +267,7 @@ DZAI_spawn_vehicle = {
 
 DZAI_protectGroup = {
 	private ["_dummy"]; //_this = group
+	
 	_dummy = _this createUnit ["Logic",[0,0,0],[],0,"FORM"];
 	[_dummy] joinSilent _this;
 	_dummy disableAI "MOVE";
@@ -264,21 +275,9 @@ DZAI_protectGroup = {
 	if ((behaviour _dummy) != "AWARE") then {_this setBehaviour "AWARE"};
 	_this setVariable ["dummyUnit",_dummy];
 	
-	_dummy
-};
-
-DZAI_deleteGroupTimed = {
-	private ["_dummy","_wait","_unitGroup"];
-	_unitGroup = _this select 0;
+	if (DZAI_debugLevel > 1) then {diag_log format["DZAI Extended Debug: Spawned 1 dummy AI unit to preserve group %1.",_this];};
 	
-	if (!isNull _unitGroup) then {
-		_wait = _this select 1;
-		_dummy = _unitGroup call DZAI_protectGroup;
-		
-		uiSleep _wait;
-		{deleteVehicle _x} forEach (units _unitGroup);
-		deleteGroup _unitGroup;
-	};
+	_dummy
 };
 
 DZAI_addTempNVG = {
@@ -291,53 +290,92 @@ DZAI_addTempNVG = {
 
 DZAI_respawnAIVehicle = {
 	//Usage: [_unitGroup,_vehicle] call DZAI_respawnAIVehicle;
-	private ["_vehicle"];
+	private ["_vehicle","_unitType"];
+	_unitType = (_this select 0) getVariable ["unitType",""];
 	_vehicle = _this select 1;
-	if (_vehicle isKindOf "Air") then {DZAI_curHeliPatrols = DZAI_curHeliPatrols - 1} else {DZAI_curLandPatrols = DZAI_curLandPatrols - 1};
-	if (((_this select 0) getVariable ["unitType",""]) in ["aircustom","landcustom"]) then {
-		private ["_spawnParams"];
-		_spawnParams = (_this select 0) getVariable ["spawnParams",false];
-		if (_spawnParams select 4) then {
-			[1,_spawnParams] call fnc_respawnHandler;
+	call {
+		if (_unitType in ["aircustom","landcustom"]) exitWith {
+			private ["_spawnParams"];
+			_spawnParams = (_this select 0) getVariable ["spawnParams",false];
+			if (_spawnParams select 4) then {
+				[1,_spawnParams] call fnc_respawnHandler;
+			};
+			if (_vehicle isKindOf "Air") then {DZAI_curHeliPatrols = DZAI_curHeliPatrols - 1} else {DZAI_curLandPatrols = DZAI_curLandPatrols - 1};
 		};
-	} else {
-		[2,typeOf _vehicle] call fnc_respawnHandler;
+		if (_unitType in ["air","land"]) exitWith {
+			[2,typeOf _vehicle] call fnc_respawnHandler;
+			if (_vehicle isKindOf "Air") then {DZAI_curHeliPatrols = DZAI_curHeliPatrols - 1} else {DZAI_curLandPatrols = DZAI_curLandPatrols - 1};
+		};
 	};
-	_vehicle setVariable ["DZAI_deathTime",diag_tickTime+900]; //mark vehicle for cleanup
+	_vehicle setVariable ["DZAI_deathTime",diag_tickTime]; //mark vehicle for cleanup
 	
 	true
 };
 
-DZAI_updStaticSpawnCount = {
-	if (!isNull _this) then {
-		if (_this in DZAI_staticTriggerArray) then {
-			DZAI_staticTriggerArray = DZAI_staticTriggerArray - [_this];
-			false
+DZAI_updateSpawnCount = {
+	private ["_trigger","_arrayString","_triggerArray"];
+	_trigger = _this select 0;
+	_arrayString = _this select 1;
+	
+	_triggerArray = missionNamespace getVariable [_arrayString,[]];
+	if (!isNull _trigger) then {
+		if (_trigger in _triggerArray) then {
+			_triggerArray = _triggerArray - [_trigger];
 		} else {
-			if ((triggerStatements _this select 1) == "") then {
-				DZAI_staticTriggerArray set [count DZAI_staticTriggerArray,_this];
+			if ((triggerStatements _trigger select 1) == "") then {
+				_triggerArray set [count _triggerArray,_trigger];
 			};
-			true
 		};
-	} else {
-		DZAI_staticTriggerArray = DZAI_staticTriggerArray - [objNull];
+	};
+	
+	_triggerArray = _triggerArray - [objNull];
+	missionNamespace setVariable [_arrayString,_triggerArray];
+};
+
+DZAI_deleteGroup = {
+	private ["_groupManager"];
+
+	[_this,false] call DZAI_updGroupCount;
+	
+	{
+		if (alive _x) then {
+			deleteVehicle _x;
+		} else {
+			[_x] joinSilent grpNull;
+		};
+	} count (units _this);
+	deleteGroup _this;
+	
+	true
+};
+
+DZAI_chance = {
+	private ["_result"];
+	_result = ((random 1) < _this);
+	
+	_result
+};
+
+
+DZAI_addMapMarker = {
+	private ["_mapMarkerArray","_objectString"];
+	_mapMarkerArray = missionNamespace getVariable ["DZAI_mapMarkerArray",[]];
+	_objectString = str (_this);
+	if !(_objectString in _mapMarkerArray) then {	//Determine if marker is new
+		if ((getMarkerColor _objectString) == "") then {
+			private ["_marker"];
+			_marker = createMarker [_objectString, (getPosASL _this)];
+			_marker setMarkerType "Defend";
+			_marker setMarkerBrush "Solid";
+		};
+		_mapMarkerArray set [(count _mapMarkerArray),_objectString];
+		missionNamespace setVariable ["DZAI_mapMarkerArray",_mapMarkerArray];
+	};
+	if (_this isKindOf "EmptyDetector") then {	//Set marker as active
+		_objectString setMarkerText "STATIC TRIGGER (ACTIVE)";
+		_objectString setMarkerColor "ColorRed";
 	};
 };
 
-DZAI_updDynSpawnCount = {
-	if (!isNull _this) then {
-		if (_this in DZAI_dynTriggerArray) then {
-			DZAI_dynTriggerArray = DZAI_dynTriggerArray - [_this];
-			false
-		} else {
-			if ((triggerStatements _this select 1) == "") then {
-				DZAI_dynTriggerArray set [count DZAI_dynTriggerArray,_this];
-				true
-			};
-		};
-	} else {
-		DZAI_dynTriggerArray = DZAI_dynTriggerArray - [objNull];
-	};
-};
 
 diag_log "[DZAI] DZAI functions compiled.";

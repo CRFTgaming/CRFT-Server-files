@@ -415,10 +415,10 @@ if (isServer && isNil "sm_done") then {
 	};
 
 	if(WAIScript)then{
-	[] ExecVM "\z\addons\dayz_server\WAI\init.sqf";
+		[] ExecVM "\z\addons\dayz_server\WAI\init.sqf";
 	};
 	if(DZAIScript)then{
-	call compile preprocessFileLineNumbers "\z\addons\dayz_server\DZAI\init\dzai_initserver.sqf";
+		[] call compile preprocessFileLineNumbers "\z\addons\dayz_server\DZAI\init\dzai_initserver.sqf";
 	};
 	if(DZMSScript)then{
 		[] ExecVM "\z\addons\dayz_server\DZMS\DZMSInit.sqf";

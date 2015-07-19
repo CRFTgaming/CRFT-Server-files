@@ -39,7 +39,7 @@ if (_debugMarkers) then {
 
 if (({isNull _x} count _grpArray) < _grpCount) then {uiSleep DZAI_despawnWait};
 
-if (isNull _trigger) exitWith {_trigger call DZAI_updStaticSpawnCount};
+if (isNull _trigger) exitWith {[_trigger,"DZAI_staticTriggerArray"] call DZAI_updateSpawnCount};
 
 if ((triggerActivated _trigger) && {({isNull _x} count _grpArray) < _grpCount}) exitWith {			//Exit script if trigger has been reactivated since DZAI_despawnWait seconds has passed.
 	_trigger setVariable ["isCleaning",false];	//Allow next despawn request.
@@ -61,16 +61,16 @@ _permDelete = _trigger getVariable ["permadelete",false];
 	if (!isNull _x) then {
 		_groupSize = (_x getVariable ["groupSize",0]);
 		if ((_groupSize > 0) or {_permDelete}) then { //If trigger is not set to permanently despawn, then ignore empty groups.
-			(DZAI_numAIUnits - _groupSize) call DZAI_updateUnitCount;
-			{deleteVehicle _x} count (units _x); //Delete all units in group
-			if (DZAI_debugLevel > 1) then {diag_log format ["DZAI Extended Debug: Despawned group %1 with %2 active units.",_x,(_x getVariable ["groupSize",0])];};
-			uiSleep 0.25;
-			deleteGroup _x;									//Delete the group after its units are deleted.
+			//(DZAI_numAIUnits - _groupSize) call DZAI_updateUnitCount;
+			if (DZAI_debugLevel > 1) then {diag_log format ["DZAI Extended Debug: Despawning group %1 with %2 active units.",_x,(_x getVariable ["groupSize",0])];};
+			//_x call DZAI_deleteGroup;
+			_x setVariable ["GroupSize",-1];
+			_grpArray set [_forEachIndex,grpNull];
 		};
 	};
 } forEach _grpArray;
 
-_trigger call DZAI_updStaticSpawnCount;
+[_trigger,"DZAI_staticTriggerArray"] call DZAI_updateSpawnCount;
 if !(_permDelete) then {
 	//Cleanup variables attached to trigger
 	_trigger setVariable ["GroupArray",_grpArray - [grpNull]];
@@ -85,6 +85,7 @@ if !(_permDelete) then {
 		};
 	};
 	if (DZAI_debugLevel > 0) then {diag_log format ["DZAI Debug: Despawned AI units at %1. Reset trigger's group array to: %2.",(triggerText _trigger),_trigger getVariable "GroupArray"];};
+	//diag_log format ["DEBUG :: Despawned trigger %1 has statements %2.",triggerText _trigger,triggerStatements _trigger];
 } else {
 	if (_debugMarkers) then {
 		deleteMarker (str (_trigger));

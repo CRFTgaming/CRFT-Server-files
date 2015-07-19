@@ -30,10 +30,11 @@ _playerUIDs = [];		//Array of all collected playerUIDs
 _timestamps = [];		//Array of timestamps for each corresponding playerUID
 //_playerData = [];
 _maxSpawnTime = DZAI_maxSpawnTime; //Time required for maximum % spawn probability. (seconds)
-_retainMaxSpawnTime = DZAI_maxSpawnTime + DZAI_keepMaxSpawnTime;
 //_maxSpawnTime = 1; //FOR DEBUGGING
+_retainMaxSpawnTime = DZAI_maxSpawnTime + DZAI_keepMaxSpawnTime;
+_debugMarkers = ((!isNil "DZAI_debugMarkersEnabled") && {DZAI_debugMarkersEnabled});
 
-while {0 == 0} do {
+while {true} do {
 	if (({isPlayer _x} count playableUnits) > 0) then {
 		_allPlayers = [];		//Do not edit
 		{
@@ -43,7 +44,7 @@ while {0 == 0} do {
 				if (!(_playerUID in _playerUIDs)) then {
 					_index = (count _playerUIDs);
 					_playerUIDs set [_index,_playerUID];
-					_timestamps set [_index,time];
+					_timestamps set [_index,diag_tickTime];
 				};
 				//diag_log format ["DZAI Debug: Found a player at %1 (%2).",mapGridPosition _x,name _x];
 			};
@@ -67,21 +68,21 @@ while {0 == 0} do {
 				if (_index < 0) then {	//Failsafe: Add player UID at last minute if not found
 					_index = (count _playerUIDs);
 					_playerUIDs set [_index,(getPlayerUID _player)];
-					_timestamps set [_index,time];
+					_timestamps set [_index,diag_tickTime];
 				};
 				_lastSpawned = _timestamps select _index;
-				_spawnChance = (((time - _lastSpawned) % _retainMaxSpawnTime) / _maxSpawnTime);
+				_spawnChance = (((diag_tickTime - _lastSpawned) % _retainMaxSpawnTime) / _maxSpawnTime);
 				if (DZAI_debugLevel > 1) then {diag_log format ["DZAI Extended Debug: Player %1 has %2 probability of generating dynamic spawn.",_playername,_spawnChance];};
-				if ((random 1) < _spawnChance) then {
+				if (_spawnChance call DZAI_chance) then {
 					_playerPos = ASLtoATL getPosASL _player;
 					if (
 						(((vehicle _player) isKindOf "Man") or {(vehicle _player) isKindOf "Land"}) &&	//Player must be on foot or in land vehicle
 						{(!(_playerPos in (nearestLocation [_playerPos,"Strategic"])))} &&				//Player must not be in blacklisted area
 						{(!(surfaceIsWater _playerPos))} && 											//Player must not be on water position
 						{((_playerPos distance getMarkerpos "respawn_west") > 2000)} &&					//Player must not be in debug area
-						{((count (_playerPos nearObjects ["Plastic_Pole_EP1_DZ",100])) == 0)}			//Player must not be near a plot pole
+						{((count (_playerPos nearObjects ["DZE_Base_Object",100])) == 0)}					//Player must not be near Epoch buildables
 					) then {
-						_timestamps set [_index,time];
+						_timestamps set [_index,diag_tickTime + (0.10 * DZAI_maxSpawnTime)];
 						_trigger = createTrigger ["EmptyDetector",_playerPos];
 						_trigger setTriggerArea [600, 600, 0, false];
 						_trigger setTriggerActivation ["ANY", "PRESENT", true];
@@ -90,7 +91,7 @@ while {0 == 0} do {
 						_trigger setVariable ["targetplayer",_player];
 						_trigActStatements = format ["0 = [175,thisTrigger,%1] call fnc_spawnBandits_dynamic;",_spawnChance];
 						_trigger setTriggerStatements ["{isPlayer _x} count thisList > 0;",_trigActStatements, "[thisTrigger] spawn fnc_despawnBandits_dynamic;"];
-						if ((!isNil "DZAI_debugMarkersEnabled") && {DZAI_debugMarkersEnabled}) then {
+						if (_debugMarkers) then {
 							_nul = _trigger spawn {
 								_marker = str(_this);
 								if ((getMarkerColor _marker) != "") then {deleteMarker _marker};
@@ -102,7 +103,7 @@ while {0 == 0} do {
 								_marker setMarkerAlpha 0;
 							};
 						};
-						if (((count DZAI_reinforcePlaces) < DZAI_curHeliPatrols) && {(random 1) < DZAI_heliReinforceChance}) then {
+						if (((count DZAI_reinforcePlaces) < DZAI_curHeliPatrols) && {DZAI_heliReinforceChance call DZAI_chance}) then {
 							DZAI_reinforcePlaces set [(count DZAI_reinforcePlaces),_trigger];
 							if (DZAI_debugLevel > 1) then {diag_log format ["DZAI Extended Debug: Sending AI helicopter patrol to search for %1.",_playername];};
 						};
@@ -117,6 +118,7 @@ while {0 == 0} do {
 				if (DZAI_debugLevel > 1) then {diag_log format ["DZAI Extended Debug: Cancel dynamic spawn check for player %1 (Reason: Probability reduction or Player death).",_player]};
 			};
 			_allPlayers = _allPlayers - [_player];
+			_activeDynamicSpawns = _activeDynamicSpawns + 1;
 			if (DZAI_debugLevel > 1) then {diag_log format ["DZAI Extended Debug: Processed a spawning probability check in %1 seconds.",diag_tickTime - _time]};
 			uiSleep 5;
 		};

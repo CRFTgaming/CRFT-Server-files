@@ -3,7 +3,7 @@
 	
 	Description: Contains all configurable settings of DZAI. Contains settings for debugging, customization of AI units, spawning, and loot.
 	
-	Last updated: 6:25 AM 6/17/2014
+
 */
 
 diag_log "[DZAI] Reading DZAI configuration file.";
@@ -18,35 +18,24 @@ DZAI_debugLevel = 0;
 //Frequency of server monitor update to RPT log in seconds. The monitor periodically reports number of max/current AI units and dynamically spawned triggers into RPT log. (Default: 300, 0 = Disable reporting)										
 DZAI_monitorRate = 300;
 
-//Enable or disable verification of classname tables used by DZAI. If invalid entries are found, they are removed and logged into the RPT log.
-//If disabled, any invalid classnames will not be removed and clients may crash if AI bodies with invalid items are looted. Disable ONLY if a previous scan shows no invalid classnames (Default: true).										
+//Enable or disable verification and error-correction of classname tables used by DZAI. If invalid entries are found, they are removed and logged into the RPT log.
+//If disabled, any invalid classnames will not be removed and clients may crash if AI bodies with invalid items are looted. Only disable if a previous scan shows no invalid classnames (Default: true).										
 DZAI_verifyTables = true;
+
+//(Feature in development) Enables additional checking and error-correction of certain classname tables. (Default: false)
+DZAI_extendedVerify = false;
 
 //Enable to have server spawn in objects/buildings normally spawned clientside by DayZ's CfgTownGenerator. Prevents AI from walking/shooting through clutter and other objects. (Default: true)	
 //If running DayZ Mod ("vanilla DayZ") or DayZ Overwatch, it is highly recommended to enable this option, as many added buildings are handled by the CfgTownGenerator. Not used with Epoch.							
 DZAI_objPatch = true;
 
-//Minimum seconds to pass until each dead AI body or destroyed vehicle can be cleaned up by DZAI's task scheduler. DZAI will not clean up a body/vehicle if there is a player close by (Default: 600).	
+//Minimum seconds to pass until each dead AI body or destroyed vehicle can be cleaned up by DZAI's task scheduler. DZAI will not clean up a body/vehicle if there is a player close by (Default: 900).	
 //Note: Other cleanup scripts might interfere by cleaning up dead AI bodies/vehicles!									
-DZAI_cleanupDelay = 600;									
+DZAI_cleanupDelay = 900;									
 
-
-/*
-
-	DZAI_modName value	|	Enables additional settings for...	|	Automatically detected by DZAI? (If Yes, editing DZAI_modName is not needed)
-	--------------------------------------------------------------------------------------------------------------------
-	""						Automatically detect mod 						N/A
-	"default"				Force default settings							N/A
-	"2017"					DayZ 2017/Namalsk 2017						No - Must set DZAI_modName = "2017" to enable additional settings.
-	"epoch"					DayZ Epoch 									Yes - Adds bar currency to AI loot tables, AI skins, Epoch foods, replaces toolbelt items with Epoch versions.
-	"overwatch"				DayZ Overwatch 								Yes - Adds Overwatch skins for AI.
-	"huntinggrounds"		DayZ Hunting Grounds 						Yes - Enables additional static AI spawns for expanded Lingor map, AI skins, and backpacks.
-	"unleashed"				DayZ Unleashed								Yes - Enables Unleashed static AI spawns and AI skins.
-	
-*/
-
-//(Optional) In most cases this setting should be left unchanged. This setting should only be changed if DZAI is detecting the wrong DayZ mod automatically. (Default: "")
-DZAI_modName = "epoch";
+//Enable auto detection of DayZ mod type ran by server. If additional support exists for the mod type, DZAI will load additional classnames (example: weapons, skins, or other items)
+//Additional support exists for the following DayZ mods: Epoch, Overwatch, Unleashed, Hunting Grounds, 2017. (Default: true)
+DZAI_modAutoDetect = true;
 
 
 /*	AI Unit Settings
@@ -95,11 +84,14 @@ DZAI_lastManStanding = true;
 //Enable to use client-side radio addon for radio messages instead of remote execution method. (Default: false)
 DZAI_clientRadio = false;
 
-//Enable or disable AI hostility to zombies. If enabled, AI will attack zombies. (Default: false)
+//Enable or disable AI hostility to zombies. If enabled, AI units spawned by DZAI will attack nearby zombies. (Default: false)
 DZAI_zombieEnemy = true;	
 
-//Maximum distance for AI group leader to detect zombies. Increasing range beyond default may impact server performance. (Default: 150)							
-DZAI_zDetectRange = 150;									
+//Maximum distance (in meters) for AI group leader to detect zombies. Increasing range beyond default may negatively impact server performance. (Default: 150)							
+DZAI_zDetectRange = 150;
+
+//Enable or disable AI death messages. Messages will be sent only to player responsible for killing the unit. Messages will be sent in System chat in the format "(Unit name) was killed." (Default: false)
+DZAI_deathMessages = true;									
 
 
 /*	Static AI Spawning Settings
@@ -116,10 +108,16 @@ DZAI_respawnTimeMax = 1000;
 DZAI_despawnWait = 120;										
 
 //Respawn limits. Set to -1 for unlimited respawns. (Default: -1 for each).
-DZAI_respawnLimit0 = -1; //Respawn limit for low level AI found in low-value areas (Default: -1)
-DZAI_respawnLimit1 = -1; //Respawn limit for mid level AI found in cities and other mid-value areas (Default: -1)
-DZAI_respawnLimit2 = -1; //Respawn limit for high level AI found in places with military loot (Default: -1)
-DZAI_respawnLimit3 = -1; //Respawn limit for very high level AI in places with high-grade military loot (Default: -1)
+DZAI_respawnLimit0 = -1; 	//Respawn limit for low level AI found in low-value areas (Default: -1)
+DZAI_respawnLimit1 = -1; 	//Respawn limit for mid level AI found in cities and other mid-value areas (Default: -1)
+DZAI_respawnLimit2 = -1; 	//Respawn limit for high level AI found in places with military loot (Default: -1)
+DZAI_respawnLimit3 = -1; 	//Respawn limit for very high level AI in places with high-grade military loot (Default: -1)
+
+//Spawn probabilities
+DZAI_spawnChance0 = 0.40;	//Spawn chance for low-skill AI typically found in small towns (Default: 0.40)
+DZAI_spawnChance1 = 0.60;	//Spawn chance for mid-level AI typically found in cities and large towns (Default: 0.60)
+DZAI_spawnChance2 = 0.80;	//Spawn chance for high-level AI typically found in places with military-grade loot (Default: 0.80)
+DZAI_spawnChance3 = 0.90;	//Spawn chance for expert-level AI found in areas with high-grade military loot (Default: 0.90)
 
 
 /*	Dynamic AI Spawning Settings
@@ -128,10 +126,10 @@ DZAI_respawnLimit3 = -1; //Respawn limit for very high level AI in places with h
 //Enable or disable dynamic AI spawns. If enabled, AI spawn locations will be generated for randomly selected players at randomized intervals (Default: true)									
 DZAI_dynAISpawns = true;
 
-//Time (seconds) required to reach maximum spawn probability per player, after which the probability is reset to 0%. Lower number = More frequent spawns, Higher Number = Less frequent. (Recommended range: 1200-2700, Default: 1800)
+//Time (seconds) required to reach maximum spawn probability per player, after which the probability is reset to 0%. Lower number = More frequent spawns, Higher Number = Less frequent. (Recommended range: 1200-2700, Default: 1200)
 DZAI_maxSpawnTime = 1800;
 
-//Time (seconds) to allow each player to retain maximum spawn probability. (Default: 1800).
+//Time (seconds) to allow each player to retain maximum spawn probability. (Default: 1200).
 DZAI_keepMaxSpawnTime = 1800;
 
 //Probability for dynamic AI to actively hunt a targeted player. If probability check fails, dynamic AI will patrol the area instead of hunting (Default: 0.50)
@@ -144,11 +142,26 @@ DZAI_heliReinforceChance = 0.70;
 //Epoch: DZAI will automatically set up 200m-radius blacklist areas around each trader area.
 DZAI_dynAreaBlacklist = [];
 
-//Time to wait before despawning all AI units in dynamic trigger area when no players are present. (Default: 120)
+//Time to wait before despawning all AI units in dynamic spawn area when no players are present. (Default: 120)
 DZAI_dynDespawnWait = 120;
 
 //Enable or disable dynamic spawn-free zones of 600m radius around player spawn areas. (Default: false)
 DZAI_freshSpawnSafeArea = false;
+
+
+/*	Random AI Spawning Settings (Feature in development)
+--------------------------------------------------------------------------------------------------------------------*/		
+
+//Maximum number of placed random spawns on map
+DZAI_maxRandomSpawns = 0;
+
+//Time to wait before despawning all AI units in random spawn area when no players are present. (Default: 120)
+DZAI_randDespawnWait = 120;
+
+//Array of area blacklist markers. Players within marker areas will not be targeted for random AI spawns (Example: ["BlacklistArea1","BlacklistArea2","BlacklistArea3"])
+//Epoch: DZAI will automatically set up 200m-radius blacklist areas around each trader area.
+//Tip: To use dynamic-spawn blacklist areas for random-spawn blacklist areas, simply set DZAI_randAreaBlacklist = DZAI_dynAreaBlacklist;
+DZAI_randAreaBlacklist = [];
 
 
 /*	AI Air vehicle patrol settings. These AI vehicles will randomly travel between different cities and towns.
@@ -161,7 +174,7 @@ DZAI_maxHeliPatrols = 10;
 DZAI_respawnTMinA = 600;
 DZAI_respawnTMaxA = 900;
 
-//Classnames of air vehicle types to use, with the maximum amount of each type to spawn. Default: [["UH1H_DZ",1]]
+//Classnames of air vehicle types to use, with the maximum amount of each type to spawn.
 DZAI_heliList = [["UH1H_DZ",3],["Mi17_DZ",1],["UH60M_EP1",2],["CH_47F_EP1",1],["Ka137_MG_PMC",3]];
 
 //Difficulty level of air vehicle patrol units. Difficulty level also affects unit loadout and loot. Possible values: 0 to 3 (Default: 3)
@@ -192,7 +205,7 @@ DZAI_maxLandPatrols = 20;
 DZAI_respawnTMinL = 600;
 DZAI_respawnTMaxL = 900;
 
-//Classnames of land vehicle types to use, with the maximum amount of each type to spawn. Default: [["UAZ_Unarmed_TK_EP1",1]]
+//Classnames of land vehicle types to use, with the maximum amount of each type to spawn.
 DZAI_vehList = [["UAZ_Unarmed_TK_EP1",4],["KamazOpen",2],["V3S_TK_EP1",3],["LandRover_CZ_EP1",3],["Pickup_PK_GUE",3],["TT650_TK_EP1",5]];
 
 //Difficulty level of land vehicle patrol units. Difficulty level also affects unit loadout and loot. Possible values: 0 to 3 (Default: 3)
@@ -205,10 +218,18 @@ DZAI_vehGunnerUnits = 2;
 DZAI_vehCargoUnits = 8;
 
 
+/*	AI Vehicle (Air & Land) Settings
+--------------------------------------------------------------------------------------------------------------------*/
+
+//Array of area blacklist markers. Areas covered by marker will not be used as waypoints for vehicle patrols. (Example: ["BlacklistArea1","BlacklistArea2","BlacklistArea3"])
+//Note: Vehicles may still pass through these areas but will not make stops unless enemies are encountered.
+DZAI_waypointBlacklist = [];
+
+
 /*	AI weapon selection settings
 --------------------------------------------------------------------------------------------------------------------*/
 
-//True: Dynamically generate AI weapon list from CfgBuildingLoot (DayZ loot tables). False: Use preset weapon list located in world_classname_configs/global_classnames.sqf. (Default: true).
+//True: Dynamically generate AI weapon list from CfgBuildingLoot (DayZ loot tables). False: Use preset weapon tables located near the end of this file. (Default: true).
 //Highly recommended to enable DZAI_verifyTables if this option is set to false. 
 DZAI_dynamicWeaponList = true;
 
@@ -383,14 +404,12 @@ DZAI_skill9 = nil;
 
 
 /*
-	Global AI weapon, loot, and equipment settings
+	AI weapon, loot, and equipment settings
 	
-	DZAI will first load global classname tables defined below, then load the map/mod-specific file to modify global settings.
+	DZAI will first load the classname tables defined below, the modify the settings according to the DayZ map/mod being run.
 	
-	Example: DZAI will always first load the classname tables defined below, then if DayZ Epoch is detected, DZAI will append or overwrite settings specified by \world_classname_configs\epoch\dayz_epoch.sqf. 
-
-	In this case, you may also need to edit \world_classname_configs\epoch\dayz_epoch.sqf to make your wanted classname changes.
-		
+	Example: DZAI will always first load the classname tables defined below, then if DayZ Epoch is detected, DZAI will add or overwrite settings specified by \world_classname_configs\epoch\dayz_epoch.sqf. 
+	
 */
 
 //Default weapon classname tables - DZAI will ONLY use these tables if the dynamic weapon list (DZAI_dynamicWeaponList) is disabled, otherwise they are ignored and overwritten if it is enabled.
@@ -464,10 +483,5 @@ DZAI_gadgets0 = [["binocular",0.40],["NVGoggles",0.00]];
 DZAI_gadgets1 = [["binocular",0.60],["NVGoggles",0.05]];
 
 
-
 //NOTHING TO EDIT BEYOND THIS POINT
-
-//Load custom DZAI settings file.
-if ((!isNil "DZAI_overrideEnabled") && {DZAI_overrideEnabled}) then {call compile preprocessFileLineNumbers format ["%1\DZAI_settings_override.sqf",DZAI_directory]};
-
 diag_log "[DZAI] DZAI configuration file loaded.";

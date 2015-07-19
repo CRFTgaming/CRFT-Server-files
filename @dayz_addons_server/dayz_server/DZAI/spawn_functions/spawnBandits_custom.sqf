@@ -26,7 +26,7 @@ if (count _grpArray > 0) exitWith {if (DZAI_debugLevel > 0) then {diag_log forma
 _trigger setTriggerArea [750,750,0,false];
 _triggerPos = ASLtoATL getPosASL _trigger;
 
-if (DZAI_debugLevel > 0) then {diag_log format["DZAI Debug: Processed static trigger spawn data in %1 seconds (spawnBandits).",(diag_tickTime - _startTime)];};
+if (DZAI_debugLevel > 0) then {diag_log format["DZAI Debug: Processed static trigger spawn data in %1 seconds (Custom Spawn).",(diag_tickTime - _startTime)];};
 
 _startTime = diag_tickTime;
 
@@ -35,7 +35,7 @@ if !(_trigger getVariable ["respawn",true]) then {
 	_totalAINew = (_maxUnits select 0);
 	if (_totalAINew > 0) then {_totalAI = _totalAINew};	//Retrieve AI amount if it was updated from initial value (for non-respawning custom spawns only)
 };
-_spawnPos = [(ASLtoATL getPosASL _trigger),random (_patrolDist),random(360),false] call SHK_pos;
+_spawnPos = [(ASLtoATL getPosASL _trigger),random (_patrolDist),random(360),0] call SHK_pos;
 _unitGroup = [_totalAI,grpNull,_spawnPos,_trigger,_weapongrade] call DZAI_setup_AI;
 
 //Set group variables
@@ -48,28 +48,28 @@ if (_patrolDist > 1) then {
 	0 = [_unitGroup,_triggerPos,_patrolDist] spawn DZAI_BIN_taskPatrol;
 } else {
 	[_unitGroup, 0] setWaypointType "HOLD";
-	_unitGroup setFormDir (random 360);
 };
 
-if (DZAI_debugLevel > 0) then {diag_log format["DZAI Debug: Spawned a group of %1 units in %2 seconds at %3 (spawnBandits).",_totalAI,(diag_tickTime - _startTime),(triggerText _trigger)];};
+if (DZAI_debugLevel > 0) then {diag_log format["DZAI Debug: Spawned a group of %1 units in %2 seconds at %3 (Custom Spawn).",_totalAI,(diag_tickTime - _startTime),(triggerText _trigger)];};
 
 _equipType = if (_weapongrade in DZAI_weaponGrades) then {(_weapongrade max 0)} else {3};
+_grpArray set [count _grpArray,_unitGroup];
 
 _triggerStatements = (triggerStatements _trigger);
 if (!(_trigger getVariable ["initialized",false])) then {
-	0 = [_trigger,[_unitGroup],_patrolDist,_equipType,[],[_totalAI,0]] call DZAI_setTrigVars;
+	0 = [0,_trigger,_grpArray,_patrolDist,_equipType,[],[_totalAI,0]] call DZAI_setTrigVars;
 	_trigger setVariable ["triggerStatements",+_triggerStatements];
 } else {
 	_trigger setVariable ["isCleaning",false];
 	_trigger setVariable ["maxUnits",[_totalAI,0]];
-	_trigger call DZAI_updStaticSpawnCount;
 	if (DZAI_debugLevel > 1) then {diag_log format ["DZAI Extended Debug: Trigger group array updated to: %1.",_grpArray]};
 };
 _triggerStatements set [1,""];
 _trigger setTriggerStatements _triggerStatements;
+[_trigger,"DZAI_staticTriggerArray"] call DZAI_updateSpawnCount;
 
 if ((!isNil "DZAI_debugMarkersEnabled") && {DZAI_debugMarkersEnabled}) then {
-	_nul = [_trigger] spawn DZAI_updateSpawnMarker;
+	_nul = _trigger call DZAI_addMapMarker;
 };
 
 _unitGroup

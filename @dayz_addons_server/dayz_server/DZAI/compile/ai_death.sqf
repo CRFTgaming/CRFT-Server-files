@@ -4,99 +4,94 @@
 		Description: Called when AI unit blood level drops below zero to process unit death.
 		
         Usage: [_unit,_killer] call DZAI_unitDeath;
-		
-		Last updated: 7:09 PM 12/15/2013
 */
 
-private["_victim","_killer","_unitGroup","_unitType","_launchWeapon","_deathType","_skin","_bp","_okSkin","_result","_pos"];
+private["_victim","_killer","_unitGroup","_unitType","_launchWeapon","_launchAmmo","_deathType","_groupIsEmpty","_unitsAlive","_vehicle","_groupSize"];
+
 _victim = _this select 0;
 _killer = _this select 1;
 _deathType = if ((count _this) > 2) then {_this select 2} else {"bled"};
 
-if ((isPlayer _killer) && {(_deathType == "shothead")}) then {
-	_nul = _killer spawn {
-		_headshots = _this getVariable["headShots",0];
-		_headshots = _headshots + 1;
-		_this setVariable["headShots",_headshots,true];
-	};
-};
-
 if (_victim getVariable ["deathhandled",false]) exitWith {};
 _victim setVariable ["deathhandled",true];
-_victim setDamage 1;
-_victim removeAllEventHandlers "HandleDamage";
 
+_vehicle = (vehicle _victim);
 _unitGroup = (group _victim);
-_unitType = _unitGroup getVariable ["unitType","unknown"];
-switch (_unitType) do {
-	case "static":
-	{
-		[_victim,_killer,_unitGroup] spawn DZAI_AI_killed_static;
+
+_victim setDamage 1;
+_victim removeAllEventHandlers DZAI_healthType;
+
+//Check number of units alive, preserve group immediately if empty.
+_unitsAlive = ({alive _x} count (units _unitGroup));
+_groupIsEmpty = if (_unitsAlive == 0) then {_unitGroup call DZAI_protectGroup; true} else {false};
+
+//Update group size counter
+_groupSize = (_unitGroup getVariable ["GroupSize",0]);
+if (_groupSize > 0) then {_unitGroup setVariable ["GroupSize",(_groupSize - 1)]};
+
+//Retrieve group type
+_unitType = _unitGroup getVariable ["unitType",""];
+
+call {
+	if (_unitType == "static") exitWith {
+		[_victim,_killer,_unitGroup,_groupIsEmpty] call DZAI_AI_killed_static;
+		0 = [_victim,_killer,_unitGroup,_unitType,_unitsAlive] call DZAI_AI_killed_all;
 	};
-	case "dynamic":
-	{
-		[_victim,_killer,_unitGroup] spawn DZAI_AI_killed_dynamic;
+	if (_unitType == "dynamic") exitWith {
+		[_victim,_killer,_unitGroup,_groupIsEmpty] call DZAI_AI_killed_dynamic;
+		0 = [_victim,_killer,_unitGroup,_unitType,_unitsAlive] call DZAI_AI_killed_all;
 	};
-	case "air": 
-	{
+	if (_unitType == "randomspawn") exitWith {
+		[_victim,_killer,_unitGroup,_groupIsEmpty] call DZAI_AI_killed_random;
+		0 = [_victim,_killer,_unitGroup,_unitType,_unitsAlive] call DZAI_AI_killed_all;
 	};
-	case "land":
-	{
+	if (_unitType in ["air","aircustom"]) exitWith {
+		[_victim,_unitGroup] call DZAI_AI_killed_air;
 	};
-	case default {
-		if ((!isNil "DZAI_debugMarkersEnabled") && {DZAI_debugMarkersEnabled}) then {
-			if (({alive _x} count (units _unitGroup)) == 0) then {
-				{
-					deleteMarker (str _x);
-				} forEach (waypoints _unitGroup);
-			};
+	if (_unitType in ["land","landcustom"]) exitWith {
+		0 = [_victim,_killer,_unitGroup,_unitType] call DZAI_AI_killed_all;
+		[_victim,_unitGroup,_groupIsEmpty] call DZAI_AI_killed_land;
+	};
+	if (_unitType == "aircrashed") exitWith {};
+	if (_groupIsEmpty) then {
+		_unitGroup setVariable ["GroupSize",-1];
+	};
+};
+
+if !(isNull _victim) then {
+	_launchWeapon = (secondaryWeapon _victim);
+	if (_launchWeapon in DZAI_launcherTypes) then {
+		_launchAmmo = getArray (configFile >> "CfgWeapons" >> _launchWeapon >> "magazines") select 0;
+		_victim removeWeapon _launchWeapon;
+		_victim removeMagazines _launchAmmo;
+	};
+
+	if (_deathType == "shothead") then { //no need for isplayer check since "shothead" is only possible if killer is a player
+		_nul = _killer spawn {
+			_headshots = _this getVariable ["headShots",0];
+			_headshots = _headshots + 1;
+			_this setVariable ["headShots",_headshots,true];
 		};
 	};
-};
 
-if (_unitType in ["static","dynamic","unknown"]) then {
-	0 = [_victim,_killer,_unitGroup] call DZAI_AI_killed_all;
-};
+	if (_victim getVariable ["removeNVG",true]) then {
+		_victim removeWeapon "NVGoggles";
+	};
 
-if ((_victim getVariable ["removeNVG",0]) == 1) then {
-	_victim removeWeapon "NVGoggles";
-};
-
-_launchWeapon = (secondaryWeapon _victim);
-if (_launchWeapon in DZAI_launcherTypes) then {
-	_launchAmmo = getArray (configFile >> "CfgWeapons" >> _launchWeapon >> "magazines") select 0;
-	_victim removeMagazines _launchAmmo;
-	_victim removeWeapon _launchWeapon;
-};
-
-
-//Script addition to add skin to units gear
-_skin = (typeOf _victim);
-_skin = "Skin_" + _skin;
-_okSkin = isClass (configFile >> "CfgMagazines" >> _skin);
-
-if (_okSkin) then {
-
- _result = [_victim,_skin] call BIS_fnc_invAdd;
-	if (_result) then {
-		hintSilent "";
-
-	} else {
-		
-		_bp = unitBackpack _victim;
-		_bp addMagazineCargoGlobal [_skin,1];
-		
+	_victim spawn DZAI_deathFlies;
+	_bodyName = _victim getVariable ["bodyName","unknown"];
+	_victim setVariable ["bodyName",_bodyName,true];		//Broadcast the unit's name (was previously a private variable).
+	_victim setVariable ["deathType",_deathType,true];
+	_victim setVariable ["DZAI_deathTime",diag_tickTime];
+	_victim setVariable ["unconscious",true];
+	if (_vehicle == (_unitGroup getVariable ["assignedVehicle",objNull])) then {
+		_victim setPosASL (getPosASL _victim);
+	};
+	if ((combatMode _unitGroup) == "BLUE") then {_unitGroup setCombatMode "RED"};
+	//[_victim] joinSilent grpNull;
+	if (DZAI_deathMessages && {isPlayer _killer}) then {
+		_nul = [_killer,_bodyName] spawn DZAI_sendKillMessage;
 	};
 };
-//Script end
-
-
-//_victim spawn DZAI_deathFlies;
-_victim setVariable ["bodyName",_victim getVariable ["bodyName","unknown"],true];		//Broadcast the unit's name (was previously a private variable).
-_victim setVariable ["deathType",_deathType,true];
-_victim setVariable ["DZAI_deathTime",(time + DZAI_cleanupDelay)];
-_victim setVariable ["unconscious",true];
-
-//diag_log format ["DEBUG :: AI %1 (Group %2) killed by %3",_victim,_unitGroup,_killer];
 
 _victim
