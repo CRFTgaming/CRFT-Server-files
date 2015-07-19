@@ -152,7 +152,7 @@ if (_spawnRoll <= _spawnChance) then
     _itemTypes =    [] + getArray (_config >> "itemType");
     _index =        dayz_CBLBase find toLower(_lootTable);
     _weights =        dayz_CBLChances select _index;
-    _cntWeights = (count _weights)
+    _cntWeights = (count _weights);
 	//Zero divisor fix
 	if((_cntWeights < 0)||(_cntWeights == 0))then{
 	_cntWeights = _cntWeights + 1;
