@@ -1,0 +1,25 @@
+{done} 1) The sheriff skin is available for civilian hummingbirds.
+
+{wasnt actually an issue} 2) That same hummingbird multiplied itself when stored into an air garage.
+
+{done} 3) Gang member hexagons are visible in game but tags/player names on the map are not.
+
+{done} 4) Even with a drivers/Pilots license, you are unable to buy black market vehicles.
+
+5) There are times you will sometimes spawn in the ocean, specifically when you attempt to spawn at ACADEMI base.
+
+{done} 6) You are unable to spawn vehicles from the black market garage, it informs the player the spawn point is already occupied even with no vehicles present.
+
+{done} 7) The player's gun disappears if you disconnect, period.
+
+8) There is a minor animation glitch when repairing vehicles.
+
+THE REST OF THESE EITHER NEED TO BE LABELED CORRECTLY OR THE CORRECT PERMISSIONS NEED TO BE IMPLEMENTED, EITHER WAY I'M PUTTING THEM DOWN.
+
+{disregard} 9) "Text All" is equivalent to sending an admin message which i had access to.
+
+{disregard} 10) "Text" on the top right of the phone is equivalent to sending APD a message.
+
+{disregard} 11) I also had access to the "Admin Msg" option on the phone.
+
+{disregard} 12) Above "Text All" is another button labeled "text," that is admin request

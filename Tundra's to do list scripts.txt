@@ -1,0 +1,37 @@
+{done} zip ties
+{done} slave trading
+{does not work at this point} hide illegal zones from cops  http://www.altisliferpg.com/topic/5142-tutorial-hiding-illegal-zones-for-cop-side/
+{done} custom phone y menu http://www.altisliferpg.com/topic/8112-howto-custom-phone/
+{no point} have sex with hookers http://www.altisliferpg.com/topic/4126-howto-have-sex-with-a-hooker/
+{fixing processing} alchohol and extras http://www.altisliferpg.com/topic/4769-how-toalcohol-with-multiple-item-processingdrunk-effects-passouts-and-police-breathalyzing/
+kidney harvesting
+{added} bounty hunting  http://www.altisliferpg.com/topic/3006-bounty-hunter-shop-barebone/page-2
+{done} rob gas stations
+{done} rob banks {tellers low output and manager/vault high output}
+{to buggy} sit in chairs http://www.armaholic.com/page.php?id=22145
+possibility. shipwrecks  http://www.altisliferpg.com/topic/9722-script-shipwrecks-by-ryan/
+airdrops http://www.altisliferpg.com/topic/9002-tutorial-dynamic-airdrop-script-by-ryan/
+possibility blackjack table  http://www.altisliferpg.com/topic/7532-howto-blackjackreal/
+				http://www.altisliferpg.com/topic/7754-howto-papabears-slot-machine/
+
+{done} gathering and processing proficiency system  http://www.altisliferpg.com/topic/8095-howto-papabears-persistent-proficiency-system/
+{added} bar gate opener to key [o] for cops
+{done / in progress} add the textures to the vehicles and uniforms
+{done} add fancy vehicle shop back in
+{done} billboards for
+		cop shops cop_bil
+		rebel hq's reb_bil
+		bars bar_bil
+		airfields civ air_bil
+		hospitols ems_bil
+		gas stations gas_bil
+			this allowDamage false; this setObjectTexture [0, "textures\billboard\YOURIMAGEHERE.jpg"];
+			512 width and 256 height
+
+{done} better prison break  http://www.altisliferpg.com/topic/7424-tutorial-break-out-of-prision-more-advanced-than-landing-with-helicopter/
+fast roping  http://www.altisliferpg.com/topic/863-tutorial-fast-roping-script-for-most-helis/
+{done} stolen vehicles added to your garage http://www.altisliferpg.com/topic/7458-howto-make-stolen-vehicle-your-own-at-chop-shop/
+{done} vehicle arrow http://www.altisliferpg.com/topic/9119-howto-add-spawned-vehicle-marker-arrow/
+{done} speedbomb http://www.altisliferpg.com/topic/4817-tutorial-speed-bomb-for-car-with-a-activated-sound/
+{doesnt work} pilot activated turret control http://www.armaholic.com/page.php?id=27757
+replace y menu with this? http://www.armaholic.com/page.php?id=25032
