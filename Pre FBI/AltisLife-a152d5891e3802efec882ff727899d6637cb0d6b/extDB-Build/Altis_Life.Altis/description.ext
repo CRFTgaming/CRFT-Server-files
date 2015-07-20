@@ -44,10 +44,10 @@ class CfgFunctions
 class CfgSounds
 {
 	sounds[] = {};
-	class SirenLong
+	class Wail
 	{
-		name = "SirenLong";
-		sound[] = {"\sounds\Siren_Long.ogg", 1.0, 1};
+		name = "Wail";
+		sound[] = {"\sounds\wail.ogg", 1.0, 1};
 		titles[] = {};
 	};
 	
@@ -85,11 +85,24 @@ class CfgSounds
 		sound[] = {"\sounds\cuff.ogg", 0.95, 0.95};
 		titles[] = {};
 	};
+	
+	class Yelp
+	{
+		name = "Yelp";
+		sound[] = {"\sounds\Yelp.ogg", 1.0, 1};
+		titles[] = {};
+	};
 
 	class bombarm
   	{
     	name = "bombarm";
     	sound[] = {"\sounds\bombarm.ogg", 1.0, 1};
+    	titles[] = {};
+  	};
+	class Beedo
+  	{
+    	name = "Beedo";
+    	sound[] = {"\sounds\Beedo.ogg", 1.0, 1};
     	titles[] = {};
   	};
 };
