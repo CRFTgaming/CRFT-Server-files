@@ -258,7 +258,7 @@ switch (_code) do
 	{
 		if(_shift) then {
 			if(vehicle player != player &&
-			   (typeOf vehicle player) in ["C_Offroad_01_F", "B_MRAP_01_F", "C_SUV_01_F", "C_Hatchback_01_F", "C_Hatchback_01_sport_F", "C_Heli_Light_01_civil_F", "I_MRAP_03_F","B_Quadbike_01_F"]) then {
+			   (typeOf vehicle player) in ["C_Offroad_01_F", "B_MRAP_01_F", "C_SUV_01_F", "C_Hatchback_01_F", "C_Hatchback_01_sport_F", "C_Heli_Light_01_civil_F","I_MRAP_03_F","B_Quadbike_01_F"]) then {
 				if(!isNil {vehicle player getVariable "lights"}) then {
 					if(playerSide in [west, civilian]) then {
 						[vehicle player] call life_fnc_sirenLights;
@@ -268,10 +268,19 @@ switch (_code) do
 					_handled = true;
 				};
 			};
+			if(vehicle player != player && (typeOf vehicle player) in ["C_Offroad_01_repair_F"]) then {
+				if(!isNil {vehicle player getVariable "lights"}) then {
+					if(playerSide in [civilian]) then {
+						[vehicle player] call life_fnc_repairSirenLights;
+					};
+					_handled = true;
+				};
+			};
 		};
 		
 		if(!_alt && !_ctrlKey) then { [] call life_fnc_radar; };
 	};
+	
 	//Y Player Menu
 	case 21:
 	{
@@ -280,39 +289,107 @@ switch (_code) do
 			[] call life_fnc_p_openMenu;
 		};
 	};
-	
 	//F Key
 	case 33:
 	{
-		if (!isNil {vehicle player getVariable "lights"} &&
-		    vehicle player != player && !life_siren_active &&
-		    ((driver vehicle player) == player)) then
+		if(_shift) then
+        {
+            if(playerSide == west && vehicle player != player && !life_siren2_active && ((driver vehicle player) == player)) then
+            {
+                [] spawn
+                {
+                    life_siren2_active = true;
+                    sleep 1.2;
+                    life_siren2_active = false;
+                };
+                _veh = vehicle player;
+                if(isNil {_veh getVariable "siren2"}) then {_veh setVariable["siren2",false,true];};
+                if((_veh getVariable "siren2")) then
+                {
+                    titleText ["Yelp Off","PLAIN"];
+                    _veh setVariable["siren2",false,true];
+                }
+                    else
+                {
+                    titleText ["Yelp On","PLAIN"];
+                    _veh setVariable["siren2",true,true];
+                    [[_veh],"life_fnc_copsiren2",nil,true] spawn life_fnc_MP;
+                };
+            };
+        };
+		
+		if (!_shift) then
 		{
-			[] spawn
-			{
-				life_siren_active = true;
-				sleep 4.7;
-				life_siren_active = false;
-			};
-			_veh = vehicle player;
-			if(isNil {_veh getVariable "siren"}) then {_veh setVariable["siren",false,true];};
-			if((_veh getVariable "siren")) then
-			{
-				titleText [localize "STR_MISC_SirensOFF","PLAIN"];
-				_veh setVariable["siren",false,true];
-			}
-				else
-			{
-				titleText [localize "STR_MISC_SirensON","PLAIN"];
-				_veh setVariable["siren",true,true];
-				if(playerSide in [west, civilian]) then {
-					[[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
-				} else {
-					[[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
-				};
-			};
-		};
-	};
+	        if(playerSide == west && vehicle player != player && !life_siren_active && ((driver vehicle player) == player)) then
+	        {
+	            [] spawn
+	            {
+	                life_siren_active = true;
+	                sleep 5.0;
+	                life_siren_active = false;
+	            };
+	            _veh = vehicle player;
+	            if(isNil {_veh getVariable "siren"}) then {_veh setVariable["siren",false,true];};
+	            if((_veh getVariable "siren")) then
+	            {
+	                titleText ["Sirens Off","PLAIN"];
+	                _veh setVariable["siren",false,true];
+	            }
+	                else
+	            {
+	                titleText ["Sirens On","PLAIN"];
+	                _veh setVariable["siren",true,true];
+	                [[_veh],"life_fnc_copSiren",nil,true] spawn life_fnc_MP;
+	            };
+	        };
+
+	        if(playerSide == independent && vehicle player != player && !life_sirenI_active && ((driver vehicle player) == player)) then
+	        {
+	            [] spawn
+	            {
+	                life_siren_active = true;
+	                sleep 5.0;
+	                life_siren_active = false;
+	            };
+	            _veh = vehicle player;
+	            if(isNil {_veh getVariable "sirenI"}) then {_veh setVariable["sirenI",false,true];};
+	            if((_veh getVariable "sirenI")) then
+	            {
+	                titleText ["Sirens Off","PLAIN"];
+	                _veh setVariable["sirenI",false,true];
+	            }
+	                else
+	            {
+	                titleText ["Sirens On","PLAIN"];
+	                _veh setVariable["sirenI",true,true];
+	                [[_veh],"life_fnc_medicSiren",nil,true] spawn life_fnc_MP;
+	            };
+	        }; 
+
+	        if(playerSide == civilian && (__GETC__(life_adminlevel) == 5) && vehicle player != player && !life_sirenA_active && ((driver vehicle player) == player)) then
+	        {
+	            [] spawn
+	            {
+	                life_siren_active = true;
+	                sleep 5.0;
+	                life_siren_active = false;
+	            };
+	            _veh = vehicle player;
+	            if(isNil {_veh getVariable "sirenA"}) then {_veh setVariable["sirenA",false,true];};
+	            if((_veh getVariable "sirenA")) then
+	            {
+	                titleText ["Sirens Off","PLAIN"];
+	                _veh setVariable["sirenA",false,true];
+	            }
+	                else
+	            {
+	                titleText ["Sirens On","PLAIN"];
+	                _veh setVariable["sirenA",true,true];
+	                [[_veh],"life_fnc_repairSiren",nil,true] spawn life_fnc_MP;
+	            };
+	        };
+        };                                          
+    };
 	//U Key
 	case 22:
 	{

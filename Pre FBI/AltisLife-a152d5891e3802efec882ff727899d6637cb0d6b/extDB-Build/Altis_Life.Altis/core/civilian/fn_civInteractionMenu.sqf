@@ -61,11 +61,3 @@ if((_curTarget getVariable["Escorting",false])) then {
 //Set PutInCar Button
 _Btn3 ctrlSetText localize "STR_pInAct_PutInCar";
 _Btn3 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar;";
-
-if((_curTarget getVariable["blindfold",false])) then {
-	_Btn3 ctrlSetText localize "STR_pInAct_BlindfoldRemove";
-	_Btn3 buttonSetAction "[life_pInact_curTarget] call life_fnc_blindfoldRemove; [life_pInact_curTarget] call life_fnc_civInteractionMenu;";
-} else {
-	_Btn3 ctrlSetText localize "STR_pInAct_Blindfold";
-	_Btn3 buttonSetAction "[life_pInact_curTarget] call life_fnc_blindfold; closeDialog 0;";
-};

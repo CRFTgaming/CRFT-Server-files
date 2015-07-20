@@ -52,7 +52,7 @@ _marker = createMarker ["schiffswmarker", _dest];
 "schiffswmarker" setMarkerSize [500,500];
 _markerText = createMarker ["schiffswmarkertext", _dest];
 "schiffswmarkertext" setMarkerColor "ColorBlack";
-"schiffswmarkertext" setMarkerText "Schiffswrack";
+"schiffswmarkertext" setMarkerText "Ship Wreck";
 "schiffswmarkertext" setMarkerType "mil_warning";
 
 "schiffswmarker" setMarkerAlpha 0.3;

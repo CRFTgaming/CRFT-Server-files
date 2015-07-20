@@ -9,7 +9,7 @@ _building = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _building) exitWith {};
 if(!(_building isKindOf "House_F")) exitWith {hint "You are not looking at a house door."};
 if(isNil "life_boltcutter_uses") then {life_boltcutter_uses = 0;};
-if((nearestObject [[20894.1,19226.8,0.4],"Land_Dome_Big_F"]) == _building OR (nearestObject [[20894.1,19226.8,0.4],"Land_Research_house_V1_F"]) == _building) then {
+if((nearestObject [[20894.1,19226.8,0.4],"Land_Dome_Big_F"]) == _building OR (nearestObject [[20894.1,19226.8,0.4],"Land_Research_HQ_F"]) == _building) then {
 	[[[1,2],"STR_ISTR_Bolt_AlertFed",true,[]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
 } else {
 	[[0,"STR_ISTR_Bolt_AlertHouse",true,[profileName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
@@ -41,7 +41,7 @@ _cP = 0.01;
 
 switch (typeOf _building) do {
 	case "Land_Dome_Big_F": {_cpRate = 0.003;};
-	case "Land_Research_house_V1_F": {_cpRate = 0.0015;};
+	case "Land_Research_HQ_F": {_cpRate = 0.0015;};
 	default {_cpRate = 0.08;}
 };
 

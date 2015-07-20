@@ -116,6 +116,9 @@ class Life_Client_Core
 		class robTeller {};
 		class robManager {};
 		class stealVehicle {};
+		class repairSirenLights {};
+		class repairLights {};
+		class repairSiren {};
 	};
 	
 	class Housing
@@ -322,6 +325,7 @@ class Life_Client_Core
 		class breathalyzer {};
 		class copOpener {};
 		class rubberbullet {};
+		class copSiren2 {};
 	};
 	
 	class Gangs

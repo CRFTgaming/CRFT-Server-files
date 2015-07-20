@@ -28,7 +28,7 @@ if(isNull _curTarget) exitWith {
 	};
 };
 
-if(_curTarget isKindOf "House_F" && {player distance _curTarget < 12} OR ((nearestObject [[20894.1,19226.8,0.4],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject [[20894.1,19226.8,0.4],"Land_Research_house_V1_F"]) == _curTarget)) exitWith {
+if(_curTarget isKindOf "House_F" && {player distance _curTarget < 12} OR ((nearestObject [[20894.1,19226.8,0.4],"Land_Dome_Big_F"]) == _curTarget OR (nearestObject [[20894.1,19226.8,0.4],"Land_Research_HQ_F"]) == _curTarget)) exitWith {
 	[_curTarget] call life_fnc_houseMenu;
 };
 
