@@ -80,17 +80,26 @@ switch(_shop) do
 			};
 			case (__GETC__(life_coplevel) == 1):
 			{
+				["APD Gear",
+					[	
+							["ItemRadio","CellPhone",0],
+							["ItemGPS","GPS",0],
+							["ItemMap","MAP",0],
+							["FirstAidKit","FirstAid Kit",20],
+							["Rangefinder","Rangefinder",100],
+							["Toolkit","Tool Kit",200],
+							["NVGoggles_OPFOR","NVG Black",2000],
+							["NVGoggles","NVG Brown",2000],
+							["NVGoggles_INDEP","NVG GREEN",2000]
+					]
+				];
+			};
+			case (__GETC__(life_coplevel) == 1):
+			{
 				["APD Cadets Weapons",
 					[
-							["FirstAidKit",nil,20],
-							["ItemGPS",nil,0],
-							["Toolkit",nil,200],
-							["ItemMap",nil,0],
-							["Rangefinder",nil,100],
-							["NVGoggles_OPFOR","NVG Black",2000],
 							["hgun_p07_snds_F","Tazer Pistol",500],
-							["16Rnd_9x21_Mag","Tazer Rounds",20],
-							["ItemRadio","CellPhone",0]
+							["16Rnd_9x21_Mag","Tazer Rounds",20]
 					]
 				];
 			};
@@ -98,13 +107,6 @@ switch(_shop) do
 			{
 				["APD Patrol Officer Weapons",
 					[
-							
-							["FirstAidKit",nil,20],
-							["ItemGPS",nil,0],
-							["Toolkit",nil,200],
-							["ItemMap",nil,0],
-							["Rangefinder",nil,100],
-							["NVGoggles_OPFOR","NVG Black",2000],
 							["hgun_p07_snds_F","Tazer Pistol",500],
 							["16Rnd_9x21_Mag","Tazer Rounds",20],
 							["30Rnd_65x39_caseless_mag_Tracer","Rubber Bullets",100],
@@ -126,8 +128,7 @@ switch(_shop) do
 							["optic_Aco_smg",nil,150],
 							["optic_ACO_grn_smg",nil,150],
 							["optic_Aco",nil,150],
-							["optic_ACO_grn",nil,150],
-							["ItemRadio","CellPhone",0]
+							["optic_ACO_grn",nil,150]
 					]
 				];
 			};
@@ -135,12 +136,6 @@ switch(_shop) do
 			{
 				["APD Sergeant Weapons",
 					[
-							["FirstAidKit",nil,20],
-							["ItemGPS",nil,0],
-							["Toolkit",nil,200],
-							["ItemMap",nil,0],
-							["Rangefinder",nil,100],
-							["NVGoggles_OPFOR","NVG Black",2000],
 							["hgun_p07_snds_F","Tazer Pistol",500],
 							["16Rnd_9x21_Mag","Tazer Rounds",20],
 							["30Rnd_65x39_caseless_mag_Tracer","Rubber Bullets",100],
@@ -182,8 +177,7 @@ switch(_shop) do
 							["optic_NVS",nil,1000],
 							["optic_DMS",nil,1000],
 							//Launchers and grenades
-							["HandGrenade_Stone","Flashbang",1000],
-							["ItemRadio","CellPhone",0]
+							["HandGrenade_Stone","Flashbang",1000]
 					]
 				];
 			};
@@ -191,12 +185,6 @@ switch(_shop) do
 			{
 				["APD Lieutenant Weapons",
 					[
-							["FirstAidKit",nil,20],
-							["ItemGPS",nil,0],
-							["Toolkit",nil,200],
-							["ItemMap",nil,0],
-							["Rangefinder",nil,100],
-							["NVGoggles_OPFOR","NVG Black",2000],
 							["hgun_p07_snds_F","Tazer Pistol",500],
 							["16Rnd_9x21_Mag","Tazer Rounds",20],
 							["30Rnd_65x39_caseless_mag_Tracer","Rubber Bullets",100],
@@ -251,8 +239,7 @@ switch(_shop) do
 							["optic_NVS",nil,1000],
 							["optic_DMS",nil,1000],
 							//Launchers and grenades
-							["HandGrenade_Stone","Flashbang",1000],
-							["ItemRadio","CellPhone",0]
+							["HandGrenade_Stone","Flashbang",1000]
 					]
 				];
 			};
@@ -260,12 +247,6 @@ switch(_shop) do
 			{
 				["APD Captains Weapons",
 					[
-							["FirstAidKit",nil,20],
-							["ItemGPS",nil,0],
-							["Toolkit",nil,200],
-							["ItemMap",nil,0],
-							["Rangefinder",nil,100],
-							["NVGoggles_OPFOR","NVG Black",2000],
 							["hgun_p07_snds_F","Tazer Pistol",500],
 							["16Rnd_9x21_Mag","Tazer Rounds",20],
 							["30Rnd_65x39_caseless_mag_Tracer","Rubber Bullets",100],
@@ -333,8 +314,7 @@ switch(_shop) do
 							["optic_DMS",nil,1000],
 							//Launchers and grenades
 							["HandGrenade_Stone","Flashbang",1000],
-							["SmokeShellBlue","Teargas",700],
-							["ItemRadio","CellPhone",0]
+							["SmokeShellBlue","Teargas",700]
 					]
 				];
 			};
@@ -342,14 +322,6 @@ switch(_shop) do
 			{
 				["APD SWAT Arsenal",
 					[
-							//Basics
-							["FirstAidKit",nil,20],
-							["ItemGPS",nil,0],
-							["Toolkit",nil,200],
-							["ItemMap",nil,0],
-							["Rangefinder",nil,100],
-							["NVGoggles_OPFOR","NVG Black",2000],
-							
 							//Non Lethals
 								//Taser Pistol
 							["hgun_p07_snds_F","Tazer Pistol",500],
@@ -403,7 +375,6 @@ switch(_shop) do
 								//ASP-1 Kir 12.7mm
 							["srifle_DMR_04_F",nil,4000],
 							["10Rnd_127x54_Mag",nil,20],
-
 							//LMGs
 								//MX SW 6.5
 							["arifle_MX_SW_Black_F",nil,3000],
@@ -422,8 +393,6 @@ switch(_shop) do
 								//Navid 9.3
 							["MMG_01_tan_F",nil,9000],
 							["150Rnd_93x64_Mag",nil,350],
-							
-
 							//Marksman and Sniper Rifles
 								//MXM 6.5mm
 							["arifle_MXM_Black_F",nil,2000],
@@ -449,7 +418,6 @@ switch(_shop) do
 								//Lynz 12.7mm
 							["srifle_GM6_camo_F",nil,9000],
 							["5Rnd_127x108_Mag",700],
-
 							//attachments
 							["bipod_01_F_blk",nil,300],
 							["bipod_02_F_blk",nil,300],
@@ -480,8 +448,7 @@ switch(_shop) do
 							["optic_LRPS",nil,1200],
 							//Launchers and grenades
 							["HandGrenade_Stone","Flashbang",1000],
-							["SmokeShellBlue","Teargas",700],
-							["ItemRadio","CellPhone",0]
+							["SmokeShellBlue","Teargas",700]
 					]
 				];
 			};
@@ -489,15 +456,6 @@ switch(_shop) do
 			{
 				["APD Commanding Officers",
 					[
-					 		//Basics
-							["FirstAidKit",nil,20],
-							["ItemGPS",nil,0],
-							["ItemRadio","CellPhone",0],
-							["Toolkit",nil,200],
-							["ItemMap",nil,0],
-							["Rangefinder",nil,100],
-							["NVGoggles_OPFOR","NVG Black",2000],
-
 							//Non Lethals
 								//Taser Pistol
 							["hgun_p07_snds_F","Tazer Pistol",500],
@@ -508,7 +466,6 @@ switch(_shop) do
 							["HandGrenade_Stone","Flashbang",1000],
 								//Teargas
 							["SmokeShellBlue","Teargas",700],
-
 							//Pistols
 								//1911 .45 ACP
 							["hgun_ACPC2_F",nil,900],
@@ -530,7 +487,6 @@ switch(_shop) do
 								//Vermin .45ACP
 							["SMG_01_F",nil,3500],
 							["30Rnd_45ACP_Mag_SMG_01",nil,350],
-
 							//Assault Rifles
 								//SDAR 5.56
 							["arifle_SDAR_F",nil,1600],
@@ -551,7 +507,6 @@ switch(_shop) do
 								//ASP-1 Kir 12.7mm
 							["srifle_DMR_04_F",nil,4000],
 							["10Rnd_127x54_Mag",nil,20],
-
 							//LMGs
 								//MX SW 6.5
 							["arifle_MX_SW_Black_F",nil,3000],
@@ -570,7 +525,6 @@ switch(_shop) do
 								//Zafir 7.62mm
 							["LMG_Zafir_F",nil,10000],
 							["150Rnd_762x51_Box",nil,400],
-
 							//Marksman and Sniper Rifles
 								//MXM 6.5
 							["arifle_MXM_Black_F",nil,2000],
@@ -593,7 +547,6 @@ switch(_shop) do
 								//Lynx 12.7
 							["srifle_GM6_camo_F",nil,9000],
 							["5Rnd_127x108_Mag",700],
-
 							//Attachments
 								//Sound Suppressors
 							["muzzle_snds_338_black",nil,100],
