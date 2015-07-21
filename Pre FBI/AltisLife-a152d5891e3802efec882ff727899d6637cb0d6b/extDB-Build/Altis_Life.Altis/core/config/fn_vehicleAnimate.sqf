@@ -44,7 +44,9 @@ if(!_preset) then
 		case "service_truck":
 		{
 			//waitUntil{!isNil {_vehicle getVariable "color"}};
-			_vehicle animate ["HideDoor3", 1];
+			_vehicle animate ["HideDoor3", 0];
+			_vehicle animate ["HideBackpacks", 0];
+			_vehicle setVariable["lights",false,true];
 		};
 		
 		case "med_offroad":

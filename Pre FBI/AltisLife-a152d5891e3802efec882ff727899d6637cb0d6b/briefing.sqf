@@ -212,7 +212,7 @@ player createDiarySubject ["controls","Controls"];
 				"
 				This is the Rules and Ruglations of the A.P.D. All officers are required to follow this regardless of rank.<br/><br/>
 
-				1.All members of the A.P.D. no matter the rank are required to be on TeamSpeak3 at all times in the respective channel for the server they are playing on! ( ts.epikgaming.net )​<br/><br/>
+				1.All members of the A.P.D. no matter the rank are required to be on TeamSpeak3 at all times in the respective channel for the server they are playing on! ( 192.111.144.6 )​<br/><br/>
 
 				2.All officers will spawn at the Athira HQ spawn point. Once spawned the officer will make it known via TS3 that they need a partner and a patrol district.​<br/>
 
@@ -276,8 +276,6 @@ player createDiarySubject ["controls","Controls"];
 
 				32.All officers ranked Sergeant or above will have their rank in their profile name as to identify them as a commanding officer.​<br/>
 
-				33.All officers no matter the rank will keep updated via the epikgaming.net website of any changes to the A.P.D. Policy and Procedure Manual.​<br/><br/>
-
 				"
 		]
 	];
@@ -289,9 +287,9 @@ player createDiarySubject ["controls","Controls"];
 				This is how you need to act when you are on duty as a A.P.D officer.<br/><br/>
 				1. All members of the Altis Police Department are to treat one another with respect and dignity that is becoming of a member of the Police Department.​<br/>
 
-				2. All members of the Altis Police Department are expected to treat all citizens with respect and dignity during any situation or conflict. (At no time will anyone be harassed or bullied in accordance with Epikgaming server rules.)​<br/>
+				2. All members of the Altis Police Department are expected to treat all citizens with respect and dignity during any situation or conflict. (At no time will anyone be harassed or bullied in accordance with CRFT Gaming's server rules.)​<br/>
 
-				3. All members of the Altis Police Department will follow all Epikgaming server rules at all times while on duty and off. (Any officer caught breaking server rules will be subject to disciplinary action decided by the Internal Affairs Division pending an investigation.)​<br/>
+				3. All members of the Altis Police Department will follow all of CRFT Gaming's rules at all times while on duty and off. (Any officer caught breaking server rules will be subject to disciplinary action decided by the Internal Affairs Division pending an investigation.)​<br/>
 
 				4.All members of the Altis Police Department will follow all orders from a higher ranking officer. If the officer feels the order was wrong or against the Altis Police Departments Code Of Conduct they will immediately report the incident to a member of the Internal Affairs Division for investigation.​<br/>
 
