@@ -95,6 +95,18 @@ if(playerSide == west) then {
 	} else {
 		_Btn3 ctrlShow false;
 	};
+
+	if(typeOf _curTarget == "D41_Trawler") then {
+		_Btn3 ctrlSetText localize "STR_vInAct_DeviceMine";
+		_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine1";
+		if(!isNil {(_curTarget getVariable "mining")} OR !local _curTarget && {_curTarget in life_vehicles}) then {
+			_Btn3 ctrlEnable false;
+		} else {
+			_Btn3 ctrlEnable true;
+		};
+	} else {
+		_Btn3 ctrlShow false;
+	};
 	
 	_Btn4 ctrlShow false;
 	_Btn5 ctrlShow false;
