@@ -602,26 +602,19 @@ switch(_shop) do
 		switch(true) do
 		{
 			case (playerSide != west): {"You are not a deputy! Please see the Sheriff about applying."};
-			case (__GETC__(life_sherlevel) > 0): 
+			case (__GETC__(life_sherlevel) == 1):
 			{
-				["Sheriff's Dept Shop",
-					[
-						["ItemRadio","CellPhone",0],
-						["ItemGPS","GPS",0],
-						["ItemMap","MAP",0],
-						["FirstAidKit","FirstAid Kit",20],
-						["Rangefinder","Rangefinder",100],
-						["Toolkit","Tool Kit",200],
-						["NVGoggles_OPFOR","NVG Black",2000],
-						["NVGoggles","NVG Brown",2000],
-						["NVGoggles_INDEP","NVG GREEN",2000]
-					]
-				];
-			};
-			case (__GETC__(life_sherlevel) > 0):
-			{
-				["Sheriff's Attachment",
-					[
+				["Deputy Gear",
+					[	
+						//Pistol
+						["hgun_Pistol_heavy_01_F","4-Five Pistol",1100],
+						["11Rnd_45ACP_Mag","11rd 4-Five Mag",35],
+						//Rifle
+						["arifle_MX_Black_F","MX Rifle",1600],
+						["30Rnd_65x39_caseless_mag","30rd MX Mag",100],
+						["arifle_MXC_Black_F","MXC Rifle",1800],
+						["30Rnd_65x39_caseless_mag","30rd MXC Mag",400],
+						//attachment's
 						["bipod_01_F_blk",nil,300],
 						["bipod_02_F_blk",nil,300],
 						["bipod_03_F_blk",nil,300],
@@ -648,22 +641,17 @@ switch(_shop) do
 						["optic_DMS",nil,1000],
 						["optic_KHS_blk",nil,1200],
 						["optic_SOS",nil,1200],
-						["optic_LRPS",nil,1200]
-					]
-				];
-			};
-			case (__GETC__(life_sherlevel) == 1):
-			{
-				["Deputy Gear",
-					[	
-						//Pistol
-						["hgun_Pistol_heavy_01_F","4-Five Pistol",1100],
-						["11Rnd_45ACP_Mag","11rd 4-Five Mag",35],
-						//Rifle
-						["arifle_MX_Black_F","MX Rifle",1600],
-						["30Rnd_65x39_caseless_mag","30rd MX Mag",100],
-						["arifle_MXC_Black_F","MXC Rifle",1800],
-						["30Rnd_65x39_caseless_mag","30rd MXC Mag",400]
+						["optic_LRPS",nil,1200],
+						//items
+						["ItemRadio","CellPhone",0],
+						["ItemGPS","GPS",0],
+						["ItemMap","MAP",0],
+						["FirstAidKit","FirstAid Kit",20],
+						["Rangefinder","Rangefinder",100],
+						["Toolkit","Tool Kit",200],
+						["NVGoggles_OPFOR","NVG Black",2000],
+						["NVGoggles","NVG Brown",2000],
+						["NVGoggles_INDEP","NVG GREEN",2000]
 					]
 				];
 			};
@@ -689,8 +677,45 @@ switch(_shop) do
 						["SMG_01_F","VERMIN",1200],
 						["30Rnd_45ACP_Mag_SMG_01","30rd Vermin Mag",30],
 						["SMG_02_F","STING",1100],
-						["30Rnd_9x21_Mag","30rd Sting Mag",30]
-						
+						["30Rnd_9x21_Mag","30rd Sting Mag",30],
+						//attachment's
+						["bipod_01_F_blk",nil,300],
+						["bipod_02_F_blk",nil,300],
+						["bipod_03_F_blk",nil,300],
+						["muzzle_snds_338_black",nil,100],
+						["muzzle_snds_93mmg",nil,100],
+						["muzzle_snds_L",nil,100],
+						["muzzle_snds_H",nil,300],
+						["muzzle_snds_B",nil,400],
+						["muzzle_snds_acp",nil,100],
+						["muzzle_snds_H_MG",nil,400],
+						["acc_flashlight",nil,200],
+						["acc_pointer_IR",nil,200],
+						["optic_MRD",nil,150],
+						["optic_Aco_smg",nil,150],
+						["optic_ACO_grn_smg",nil,150],
+						["optic_Aco",nil,150],
+						["optic_ACO_grn",nil,150],
+						["optic_Holosight",nil,1700],
+						["optic_AMS",nil,200],
+						["optic_Arco",nil,200],
+						["optic_MRCO",nil,210],
+						["optic_Hamr",nil,250],
+						["optic_NVS",nil,1000],
+						["optic_DMS",nil,1000],
+						["optic_KHS_blk",nil,1200],
+						["optic_SOS",nil,1200],
+						["optic_LRPS",nil,1200],
+						//items
+						["ItemRadio","CellPhone",0],
+						["ItemGPS","GPS",0],
+						["ItemMap","MAP",0],
+						["FirstAidKit","FirstAid Kit",20],
+						["Rangefinder","Rangefinder",100],
+						["Toolkit","Tool Kit",200],
+						["NVGoggles_OPFOR","NVG Black",2000],
+						["NVGoggles","NVG Brown",2000],
+						["NVGoggles_INDEP","NVG GREEN",2000]				
 					]
 				];
 			};
@@ -717,7 +742,45 @@ switch(_shop) do
 						["100Rnd_65x39_caseless_mag","100rd MX SW Drum",150],
 						["LMG_Mk200_F","MK200 Rifle",8000],
 						["200Rnd_65x39_cased_Box","200rd MK200 Drum",300],
-						["200Rnd_65x39_cased_Box_Tracer","200rd MK200 Tracer",300]
+						["200Rnd_65x39_cased_Box_Tracer","200rd MK200 Tracer",300],
+						//attachment's
+						["bipod_01_F_blk",nil,300],
+						["bipod_02_F_blk",nil,300],
+						["bipod_03_F_blk",nil,300],
+						["muzzle_snds_338_black",nil,100],
+						["muzzle_snds_93mmg",nil,100],
+						["muzzle_snds_L",nil,100],
+						["muzzle_snds_H",nil,300],
+						["muzzle_snds_B",nil,400],
+						["muzzle_snds_acp",nil,100],
+						["muzzle_snds_H_MG",nil,400],
+						["acc_flashlight",nil,200],
+						["acc_pointer_IR",nil,200],
+						["optic_MRD",nil,150],
+						["optic_Aco_smg",nil,150],
+						["optic_ACO_grn_smg",nil,150],
+						["optic_Aco",nil,150],
+						["optic_ACO_grn",nil,150],
+						["optic_Holosight",nil,1700],
+						["optic_AMS",nil,200],
+						["optic_Arco",nil,200],
+						["optic_MRCO",nil,210],
+						["optic_Hamr",nil,250],
+						["optic_NVS",nil,1000],
+						["optic_DMS",nil,1000],
+						["optic_KHS_blk",nil,1200],
+						["optic_SOS",nil,1200],
+						["optic_LRPS",nil,1200],
+						//items
+						["ItemRadio","CellPhone",0],
+						["ItemGPS","GPS",0],
+						["ItemMap","MAP",0],
+						["FirstAidKit","FirstAid Kit",20],
+						["Rangefinder","Rangefinder",100],
+						["Toolkit","Tool Kit",200],
+						["NVGoggles_OPFOR","NVG Black",2000],
+						["NVGoggles","NVG Brown",2000],
+						["NVGoggles_INDEP","NVG GREEN",2000]
 					]
 				];
 			};
@@ -757,7 +820,45 @@ switch(_shop) do
 						["200Rnd_65x39_cased_Box","200rd MK200 Drum",300],
 						["200Rnd_65x39_cased_Box_Tracer","200rd MK200 Tracer",300],
 						["LMG_Zafir_F","Zafir Rifle",10000],
-						["150Rnd_762x51_Box","150rd Zafir Drum",400]
+						["150Rnd_762x51_Box","150rd Zafir Drum",400],
+						//attachment's
+						["bipod_01_F_blk",nil,300],
+						["bipod_02_F_blk",nil,300],
+						["bipod_03_F_blk",nil,300],
+						["muzzle_snds_338_black",nil,100],
+						["muzzle_snds_93mmg",nil,100],
+						["muzzle_snds_L",nil,100],
+						["muzzle_snds_H",nil,300],
+						["muzzle_snds_B",nil,400],
+						["muzzle_snds_acp",nil,100],
+						["muzzle_snds_H_MG",nil,400],
+						["acc_flashlight",nil,200],
+						["acc_pointer_IR",nil,200],
+						["optic_MRD",nil,150],
+						["optic_Aco_smg",nil,150],
+						["optic_ACO_grn_smg",nil,150],
+						["optic_Aco",nil,150],
+						["optic_ACO_grn",nil,150],
+						["optic_Holosight",nil,1700],
+						["optic_AMS",nil,200],
+						["optic_Arco",nil,200],
+						["optic_MRCO",nil,210],
+						["optic_Hamr",nil,250],
+						["optic_NVS",nil,1000],
+						["optic_DMS",nil,1000],
+						["optic_KHS_blk",nil,1200],
+						["optic_SOS",nil,1200],
+						["optic_LRPS",nil,1200],
+						//items
+						["ItemRadio","CellPhone",0],
+						["ItemGPS","GPS",0],
+						["ItemMap","MAP",0],
+						["FirstAidKit","FirstAid Kit",20],
+						["Rangefinder","Rangefinder",100],
+						["Toolkit","Tool Kit",200],
+						["NVGoggles_OPFOR","NVG Black",2000],
+						["NVGoggles","NVG Brown",2000],
+						["NVGoggles_INDEP","NVG GREEN",2000]
 					]
 				];
 			};
