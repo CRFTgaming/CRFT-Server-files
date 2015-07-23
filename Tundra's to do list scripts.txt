@@ -35,3 +35,17 @@ fast roping  http://www.altisliferpg.com/topic/863-tutorial-fast-roping-script-f
 {done} speedbomb http://www.altisliferpg.com/topic/4817-tutorial-speed-bomb-for-car-with-a-activated-sound/
 {doesnt work} pilot activated turret control http://www.armaholic.com/page.php?id=27757
 replace y menu with this? http://www.armaholic.com/page.php?id=25032
+
+
+
+------CRFT--------
+
+Remove M107 (or find a sound file)
+
+add Glock Sounds 
+
+Make Taser Work 
+
+Make Radar Gun Work 
+
+Remove Beneli & HK416
