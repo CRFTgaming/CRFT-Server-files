@@ -1,0 +1,8 @@
+
+Deputy Sheriff >> Level 1
+
+Sheriff's Task Force >> Level 2
+
+Chief Deputy >> Level 3
+
+Sheriff >> Level 4
