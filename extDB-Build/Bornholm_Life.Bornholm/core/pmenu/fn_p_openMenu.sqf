@@ -29,7 +29,7 @@ switch(playerSide) do
 		ctrlShow[InvButtonWantedMenu, true];
 
 		// Cadets don't get access to custom wanted list.
-		if (__GETC__(life_coplevel) > 1) then {
+		if (__GETC__(life_coplevel) > 0) then {
 		ctrlShow[InvButtonWantedAdd, true];
 		};
 	};

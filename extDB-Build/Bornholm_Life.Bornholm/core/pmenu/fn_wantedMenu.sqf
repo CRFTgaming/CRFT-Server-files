@@ -22,5 +22,9 @@ if(__GETC__(life_coplevel) < 3 && __GETC__(life_adminlevel) == 0) then
 {
 	ctrlShow[2405,false];
 };
+if(__GETC__(life_sherlevel) < 1 && __GETC__(life_adminlevel) == 0) then
+{
+	ctrlShow[2405,false];
+};
 
 [[player],"life_fnc_wantedFetch",false,false] spawn life_fnc_MP;
