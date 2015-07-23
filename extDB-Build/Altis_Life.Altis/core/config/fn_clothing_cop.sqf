@@ -96,10 +96,7 @@ switch (_filter) do
 		if(__GETC__(life_coplevel) > 5) then
 		{
 			_ret pushBack ["G_Diving",nil,55];
-			_ret pushBack ["G_Bandanna_shades",nil,55];
-			_ret pushBack ["G_Bandanna_beast",nil,55];
-			_ret pushBack ["G_Balaclava_blk",nil,55];
-			_ret pushBack ["G_Balaclava_combat",nil,55];
+			_ret pushBack ["G_Tactical_Black",nil,55];
 		};
 	};
 	

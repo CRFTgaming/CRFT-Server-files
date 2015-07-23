@@ -36,8 +36,6 @@ switch (_vehicle) do
 			case 16: {_color = "EMS"};
 			case 17: {_color = "America"};
 			case 18: {_color = "Darkside"};
-			case 19: {_color = "EMS-A"};
-			case 20: {_color = "WAPD"};
 			
 		};
 	};
@@ -317,7 +315,6 @@ switch (_vehicle) do
 		{
 			case 0: {_color = "TUNDRA"};
 			case 1: {_color = "DOPPLER"};	
-			case 2: {_color = "GUARDIAN"};
 		};
 	};
 	

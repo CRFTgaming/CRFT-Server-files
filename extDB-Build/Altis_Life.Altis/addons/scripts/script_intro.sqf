@@ -11,23 +11,23 @@ _onScreenTime = 9; //<-- How long is the text on the screen for ? Recommended: 1
 sleep 25; //Wait in seconds before the credits start after player is in-game
 
 _role1 = "Greetings from";
-_role1names = ["Epik-Gaming's AltisLife Server"];
+_role1names = ["CRFT Gaming's AltisLife Server"];
 _role2 = "IMPORTANT NOTICE:";
 _role2names = ["This is a role-play server!  Please press M and read the Server Rules"];
 _role3 = "Owners/Co-Owners:";
-_role3names = ["Xaneo001","Tundra"];
-_role4 = "Directors:";
-_role4names = ["Brent","Eliud","MeezyMurder","Boehm","Copper"];
-_role5 = "Game Developers/Designers:";
-_role5names = ["Xaneo001","Tundra","Doppler","AceShadow","Guardian"];
-_role6 = "Website:";
-_role6names = ["http://www.epikgaming.net"];
+_role3names = ["Casey","Rad","Flamez","talos"];
+_role4 = "Lead Developer:";
+_role4names = ["Tundra"];
+_role5 = "Graphics Designer:";
+_role5names = ["Doppler"];
+_role6 = "Map Editor:";
+_role6names = ["Aceshadow"];
 _role7 = "TeamSpeak:";
-_role7names = ["ts.epikgaming.net"];
-_role8 = "Admins:";
-_role8names = ["Jennifer","Mark","Fiola","DigidyDog","Guns","Knis2me2","Blondie"];
-_role9 = "Moderators:";
-_role9names = ["VestraHD","ShadowForce","Speedy","Kevin","Ghost"];
+_role7names = ["192.111.144.6"];
+_role8 = "Website:";
+_role8names = [""];
+_role9 = "Admins:";
+_role9names = [""];
 _role10 = "Controls:";
 _role10names = ["Windows Key - Interact <br/>Y Key - Player Menu <br/> SHIFT+H - Holster <br/> CTRL+H - UnHolster <br/> SHIFT+G -  Surrender <br/> SHIFT+SPACE - Jump <br/> SHIFT+O - Rebel Restrain <br/> SHIFT+P - Ear Plugs <br/> SHIFT+C - Remove Comms (cops and civs)"];
 

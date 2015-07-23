@@ -9,9 +9,6 @@ publicVariable "life_server_isReady";
 
 [] execVM "\life_server\functions.sqf";
 [] execVM "\life_server\eventhandlers.sqf";
-[] execVM "\life_server\Functions\Schiffswrack\fn_generateschiffwrackAuto.sqf";
-[] execVM "\life_server\Functions\airdrop\config.sqf";
-[] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";
 
 //I am aiming to confuse people including myself, ignore the ui checks it's because I test locally.
 
@@ -135,3 +132,6 @@ _rsb allowDamage false;
 _dome allowDamage false;
 life_server_isReady = true;
 publicVariable "life_server_isReady";
+[] execVM "\life_server\Functions\Schiffswrack\fn_generateschiffwrackAuto.sqf";
+[] execVM "\life_server\Functions\airdrop\config.sqf";
+[] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";

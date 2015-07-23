@@ -59,12 +59,14 @@
 		(backpackContainer player) setObjectTextureGlobal [0,"textures\cop\clothing\APD_backpack.jpg"];
 		waitUntil {backpack player == "B_Bergen_sgg"};
 		};
+		
 		if(playerSide == independent) then 
-		{
-		waitUntil {backpack player == "B_FieldPack_ocamo"};
-		(backpackContainer player) setObjectTextureGlobal [0,"textures\med\clothing\backpack_gorod_hex_co_EMS.jpg"];
-		waitUntil {backpack player == "B_FieldPack_ocamo"};
-		};
++		{
++		waitUntil {backpack player == "B_FieldPack_ocamo"};
++		(backpackContainer player) setObjectTextureGlobal [0,"textures\med\clothing\backpack_gorod_hex_co_EMS.jpg"];
++		waitUntil {backpack player == "B_FieldPack_ocamo"};
++		};
+		
         waitUntil {backpack player != _bp};
         if(backpack player == "") then
         {

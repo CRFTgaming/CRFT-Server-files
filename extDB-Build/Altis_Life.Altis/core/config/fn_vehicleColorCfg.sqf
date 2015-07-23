@@ -1,4 +1,3 @@
-#include <macro.h>
 /*
 	File: fn_vehicleColorCfg.sqf
 	Author: Bryan "Tonic" Boardwine
@@ -68,9 +67,7 @@ switch (_vehicle) do
 			["textures\civilian\veh\RAM.jpg","civ"],
 			["textures\med\pickup_medic.jpg","med"],
 			["textures\civilian\veh\america.jpg","civ"],
-			["textures\civilian\veh\darkside.jpg","civ"],
-			["textures\med\pickup_medic2.jpg","med"],
-			["textures\cop\veh\police_offroad2.jpg","cop"]
+			["textures\civilian\veh\darkside.jpg","civ"]
 			
 		];
 	};
@@ -87,7 +84,8 @@ switch (_vehicle) do
 			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base07_co.paa","civ"],
 			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base08_co.paa","civ"],
 			["\a3\soft_f_gamma\Hatchback_01\data\hatchback_01_ext_base09_co.paa","civ"],
-			["textures\med\EMS_hatchback.jpg","med"]
+			["textures\med\EMS_hatchback.jpg","med"],
+			["textures\civilian\veh\ganja.jpg","civ"]
 		];
 	};
 
@@ -299,8 +297,7 @@ switch (_vehicle) do
 		_ret =
 		[
 			["textures\civilian\veh\Tundra.jpg","civ"],
-			["textures\civilian\veh\Hawk.jpg","civ"],
-			["textures\civilian\veh\oriley.jpg","civ"]
+			["textures\civilian\veh\Hawk.jpg","civ"]
 		];
 	};
 

@@ -113,6 +113,5 @@ life_fnc_garageRefund = compileFinal
 [] execVM "core\init_survival.sqf";
 
 __CONST__(life_paycheck,life_paycheck); //Make the paycheck static.
-__CONST__(life_tax,life_tax); //Make the paycheck static.
 player enableFatigue (__GETC__(life_enableFatigue));
 [] call life_fnc_Uniformscolor;

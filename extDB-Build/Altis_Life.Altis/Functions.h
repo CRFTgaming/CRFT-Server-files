@@ -159,7 +159,7 @@ class Life_Client_Core
 		class vehicleWeightCfg {};
 		class houseConfig {};
 		class profType {};
-			
+		
 		//Clothing Store Configs
 		class clothing_cop {};
 		class clothing_bruce {};
@@ -386,7 +386,7 @@ class Life_Client_Core
 		class drinkwhiskey {};
 		class speedBomb {};
 	};
-		
+	
 	class Dialog_Controls
 	{
 		file = "dialog\function";

@@ -37,7 +37,6 @@ switch (_shop) do
 		_return = [
 			["C_Heli_Light_01_civil_F",5000],
 			["O_Heli_Light_02_unarmed_F",7500],
-			["I_Heli_Transport_02_F",9000],
 			["O_Heli_Transport_04_medevac_black_F",10000]
 		];
 	};
@@ -60,7 +59,6 @@ switch (_shop) do
 	{
 		_return =
 		[
-			["B_G_Offroad_01_repair_F",nil,2000],
 			["C_Van_01_fuel_F",2500],
 			["C_Van_01_Box_F",2500],
 			["C_Van_01_transport_F",2500],
@@ -146,7 +144,7 @@ switch (_shop) do
     	{
     	};
   	};
-
+	
 	case "civ_air":
 	{
 		_return =
@@ -216,7 +214,6 @@ switch (_shop) do
 			["B_Heli_Transport_01_F",2000];
 		};
 	};
-
 	
 	case "civ_ship":
 	{

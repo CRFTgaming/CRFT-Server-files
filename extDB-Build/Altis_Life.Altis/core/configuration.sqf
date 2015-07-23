@@ -47,7 +47,7 @@ __CONST__(life_save_yinv,TRUE); //Save Y-Inventory for players?
 
 //Revive constant variables.
 __CONST__(life_revive_cops,TRUE); //Set to false if you don't want cops to be able to revive downed players.
-__CONST__(life_revive_fee,1000); //Fee for players to pay when revived.
+__CONST__(life_revive_fee,250); //Fee for players to pay when revived.
 
 //House Limit
 __CONST__(life_houseLimit,5); //Maximum amount of houses a player can buy (TODO: Make Tiered licenses).
@@ -89,7 +89,6 @@ life_action_in_use = false;
 life_thirst = 100;
 life_hunger = 100;
 __CONST__(life_paycheck_period,5); //Five minutes
-__CONST__(life_tax_period,60); //Five minutes
 life_cash = 0;
 //player event pay-check multiplier
 life_multiply = 1;
@@ -106,19 +105,16 @@ switch (playerSide) do
 	{
 		life_atmcash = 100000; //Starting Bank Money
 		life_paycheck = (life_multiply * 8000); //Paycheck Amount
-		life_tax = (__CONST__(life_atmcash / 0.05)); //tax 5%
 	};
 	case civilian: 
 	{
 		life_atmcash = 100000; //Starting Bank Money
 		life_paycheck = (life_multiply * 3500); //Paycheck Amount
-		life_tax = (__CONST__(life_atmcash / 0.05)); //tax 5%
 	};
 	
 	case independent: {
 		life_atmcash = 100000;
 		life_paycheck = (life_multiply * 8000);
-		life_tax = (__CONST__(life_atmcash / 0.05)); //tax 5%
 	};
 };
 
