@@ -1,8 +1,7 @@
+Sheriff's Deputies are going to be level 7
+Sheriff, Chief Deputy, & The Sheriff's Task Force Are Level 8
 
-Deputy Sheriff >> Level 1
+Sheriff : Casey
+Chief Deputy : AceShadow
 
-Sheriff's Task Force >> Level 2
-
-Chief Deputy >> Level 3
-
-Sheriff >> Level 4
+Deputies:
