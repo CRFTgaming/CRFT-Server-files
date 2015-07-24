@@ -1,0 +1,129 @@
+case "sheriff_basic":
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a cop! Please see an APD recruiter about applying."};
+			case (__GETC__(life_coplevel) == 7): 
+			{
+				["Bornholm Sheriff's Equipment",
+					[
+							["ItemGPS",nil,0],
+							["Toolkit",nil,200],
+							["ItemMap",nil,0],
+							["ItemRadio","CellPhone",0],
+							["FirstAidKit",nil,20],
+							["Rangefinder",nil,100],
+							["NVGoggles_OPFOR","NVG Black",2000],
+							["NVGoggles","NVG Brown",2000],
+							["NVGoggles_INDEP","NVG Green",2000]
+					]
+				];
+			};
+			case (__GETC__(life_coplevel) == 7):
+			{
+				["Bornholm Sheriff's Armory",
+					[
+						//NON LETHAL
+							["hgun_p07_snds_F","Tazer Pistol",500],
+							["16Rnd_9x21_Mag","Tazer Rounds",20],
+						//PISTOL
+							["hgun_ACPC2_F","45 ACP",1500],
+							["9Rnd_45ACP_Mag","9Rnd ACP Mag",50],
+							["hgun_Pistol_heavy_01_F","4-five",2000],
+							["11Rnd_45ACP_Mag","11rd 4-five Mag",50],
+						//SMG
+							["SMG_02_F","Sting 9mm",3500],
+							["30Rnd_9x21_Mag","30rd Sting Mag",100],
+							["SMG_01_F","Vermin",3500],
+							["30Rnd_45ACP_Mag_SMG_01","30rd Vermin Mag",100],
+						//Rifles Black for Sheriff Dept
+							["arifle_MXC_Black_F","MXC Rifle",4500],
+							["arifle_MX_Black_F","MX Rifle",4500],
+							["arifle_MX_GL_Black_F","MX 3Gl",5000],
+							["arifle_MX_SW_Black_F","MX SW Rifle",5500],
+							["arifle_MXM_Black_F","MXM Rifle",6000],
+							["30Rnd_65x39_caseless_mag","30rd MX Mag",100],
+							["30Rnd_65x39_caseless_mag_Tracer","30rd MX Tracer",150],
+							["3Rnd_UGL_FlareWhite_F","White Flare",50],
+							["3Rnd_Smoke_Grenade_shell","Smoke Grenade",50]	
+					]
+				];
+			};
+			case (__GETC__(life_coplevel) == 7):
+			{
+				["Attachment Shop",
+					[
+							["bipod_01_F_blk",nil,300],
+							["bipod_02_F_blk",nil,300],
+							["bipod_03_F_blk",nil,300],
+							["muzzle_snds_338_black",nil,100],
+							["muzzle_snds_93mmg",nil,100],
+							["muzzle_snds_L",nil,100],
+							["muzzle_snds_H",nil,300],
+							["muzzle_snds_B",nil,400],
+							["muzzle_snds_acp",nil,100],
+							["muzzle_snds_H_MG",nil,400],
+							["acc_flashlight",nil,200],
+							["acc_pointer_IR",nil,200],
+							["optic_MRD",nil,150],
+							["optic_Aco_smg",nil,150],
+							["optic_ACO_grn_smg",nil,150],
+							["optic_Aco",nil,150],
+							["optic_ACO_grn",nil,150],
+							["optic_Holosight",nil,1700],
+							["optic_AMS",nil,200],
+							["optic_Arco",nil,200],
+							["optic_MRCO",nil,210],
+							["optic_Hamr",nil,250],
+							["optic_NVS",nil,1000],
+							["optic_DMS",nil,1000],
+							["optic_KHS_blk",nil,1200],
+							["optic_SOS",nil,1200],
+							["optic_LRPS",nil,1200]
+					]
+				];
+			};
+			case (__GETC__(life_coplevel) == 8):
+			{
+				["Sheriff's Task Force",
+					[
+						//NON LETHAL
+							["hgun_p07_snds_F","Tazer Pistol",500],
+							["16Rnd_9x21_Mag","Tazer Rounds",20],
+						//PISTOL
+							["hgun_ACPC2_F","45 ACP",1500],
+							["9Rnd_45ACP_Mag","9Rnd ACP Mag",50],
+							["hgun_Pistol_heavy_01_F","4-five",2000],
+							["11Rnd_45ACP_Mag","11rd 4-five Mag",50],
+						//SMG
+							["SMG_02_F","Sting 9mm",3500],
+							["30Rnd_9x21_Mag","30rd Sting Mag",100],
+							["SMG_01_F","Vermin",3500],
+							["30Rnd_45ACP_Mag_SMG_01","30rd Vermin Mag",100],
+						//RIFLES	
+							["srifle_EBR_F","MK18 EBR",6500],
+							["20Rnd_762x51_Mag","20rd EBR Mag",150],
+							["srifle_DMR_01_F","Rahim",6500],
+							["10Rnd_762x54_Mag","10rd Rahim Mag",150],
+						//SNIPER RIFLES
+							["srifle_LRR_F","408 LRR",8500],
+							["7Rnd_408_Mag","7rd 408 Mag,250],
+							["srifle_DMR_02_F","MAR-10 Rifle"8500],
+							["10Rnd_338_Mag","10rd MAR-10",250],
+						//SPECIALTY WEAPONS	
+							["LMG_Mk200_F","MK200",8500],
+							["200Rnd_65x39_cased_Box","200rd MK Mag",250],
+							["200Rnd_65x39_cased_Box_Tracer","200rd MK Tracer",250],
+							["LMG_Zafir_F","Zafir",8500],
+							["150Rnd_762x54_Box","150rd Zafir Mag",250],	
+							["150Rnd_762x54_Box_Tracer","150rd Zafir Tracer",250],
+							["MMG_02_black_F","SPMG .338",9000],
+							["130Rnd_338_Mag","130rd SPMG Mag",300],
+							["MMG_01_tan_F","Navid",9000],
+							["150Rnd_93x64_Mag","150rd Navid Mag",300],
+						//EXPLOSIVES
+							["SmokeShellBlue","Teargas",700],
+							["HandGrenade_Stone","Flashbang",1000]
+					]
+				];
+			};
