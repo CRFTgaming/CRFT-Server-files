@@ -9,8 +9,8 @@ kidney harvesting
 {done} rob gas stations
 {done} rob banks {tellers low output and manager/vault high output}
 {to buggy} sit in chairs http://www.armaholic.com/page.php?id=22145
-{done} possibility. shipwrecks  http://www.altisliferpg.com/topic/9722-script-shipwrecks-by-ryan/
-{done} airdrops http://www.altisliferpg.com/topic/9002-tutorial-dynamic-airdrop-script-by-ryan/
+possibility. shipwrecks  http://www.altisliferpg.com/topic/9722-script-shipwrecks-by-ryan/
+airdrops http://www.altisliferpg.com/topic/9002-tutorial-dynamic-airdrop-script-by-ryan/
 possibility blackjack table  http://www.altisliferpg.com/topic/7532-howto-blackjackreal/
 				http://www.altisliferpg.com/topic/7754-howto-papabears-slot-machine/
 
@@ -35,40 +35,3 @@ fast roping  http://www.altisliferpg.com/topic/863-tutorial-fast-roping-script-f
 {done} speedbomb http://www.altisliferpg.com/topic/4817-tutorial-speed-bomb-for-car-with-a-activated-sound/
 {doesnt work} pilot activated turret control http://www.armaholic.com/page.php?id=27757
 replace y menu with this? http://www.armaholic.com/page.php?id=25032
-
-
-
-------CRFT--------
-
-Remove M107 (or find a sound file)
-
-add Glock Sounds 
-
-Make Taser Work 
-
-Make Radar Gun Work 
-
-Remove Beneli & HK416
-
-----CRFT TO ADD MODS-----
-	
-	//Weapons
-	
-http://www.armaholic.com/page.php?id=21912 >> SF & Spetsnaz Weapons
-
-	//Clothing
-
-http://www.armaholic.com/page.php?id=21616 >> Clothing and gear from this
-
-http://www.armaholic.com/page.php?id=27501 >> Nato offensive mod (Clothng)
-
-http://www.armaholic.com/page.php?id=26645 >> Custom Rebel Camo
-
-http://www.armaholic.com/page.php?id=28920 >> Sheriff Tactical Uniforms
-
-http://www.armaholic.com/page.php?id=19446&highlight=SWAT >> SWAT Uniforms 
-
-	//Misc
-	
-http://www.armaholic.com/page.php?id=28554 >> BAD ASS Gun Store	
-

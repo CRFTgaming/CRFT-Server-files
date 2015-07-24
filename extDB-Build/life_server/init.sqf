@@ -9,6 +9,9 @@ publicVariable "life_server_isReady";
 
 [] execVM "\life_server\functions.sqf";
 [] execVM "\life_server\eventhandlers.sqf";
+[] execVM "\life_server\Functions\Schiffswrack\fn_generateschiffwrackAuto.sqf";
+[] execVM "\life_server\Functions\airdrop\config.sqf";
+[] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";
 
 //I am aiming to confuse people including myself, ignore the ui checks it's because I test locally.
 
@@ -58,7 +61,6 @@ if (!_extDB) exitWith {
 life_adminlevel = 0;
 life_medicLevel = 0;
 life_coplevel = 0;
-life_sherlevel = 0;
 
 //Null out harmful things for the server.
 __CONST__(JxMxE_PublishVehicle,"No");
@@ -104,7 +106,7 @@ client_session_list = [];
 		sleep (30 * 60);
 		{
 			_x setVariable["sellers",[],true];
-		} foreach [Dealer_1,Dealer_3];
+		} foreach [Dealer_1,Dealer_2,Dealer_3];
 	};
 };
 
@@ -133,6 +135,3 @@ _rsb allowDamage false;
 _dome allowDamage false;
 life_server_isReady = true;
 publicVariable "life_server_isReady";
-[] execVM "\life_server\Functions\Schiffswrack\fn_generateschiffwrackAuto.sqf";
-[] execVM "\life_server\Functions\airdrop\config.sqf";
-[] execVM "\life_server\Functions\airdrop\fn_generateAirdropAuto.sqf";
