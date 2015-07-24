@@ -9,8 +9,8 @@ kidney harvesting
 {done} rob gas stations
 {done} rob banks {tellers low output and manager/vault high output}
 {to buggy} sit in chairs http://www.armaholic.com/page.php?id=22145
-possibility. shipwrecks  http://www.altisliferpg.com/topic/9722-script-shipwrecks-by-ryan/
-airdrops http://www.altisliferpg.com/topic/9002-tutorial-dynamic-airdrop-script-by-ryan/
+{done} possibility. shipwrecks  http://www.altisliferpg.com/topic/9722-script-shipwrecks-by-ryan/
+{done} airdrops http://www.altisliferpg.com/topic/9002-tutorial-dynamic-airdrop-script-by-ryan/
 possibility blackjack table  http://www.altisliferpg.com/topic/7532-howto-blackjackreal/
 				http://www.altisliferpg.com/topic/7754-howto-papabears-slot-machine/
 

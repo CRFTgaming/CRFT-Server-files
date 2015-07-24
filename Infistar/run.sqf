@@ -9,7 +9,7 @@
 	Make sure to have proper settings!
 */
 /* *******************Developer : infiSTAR (infiSTAR23@gmail.com)******************* */
-/* **************infiSTAR CopyrightÂ®Â© 2011 - 2015 All rights reserved.************** */
+/* **************infiSTAR Copyright®© 2011 - 2015 All rights reserved.************** */
 /* *********************************www.infiSTAR.de********************************* */
 /* ********************************************************************************* */
 /* ********************************************************************************* */
@@ -93,12 +93,12 @@ _adminLevel1 =
 _adminLevel2_UIDs =
 // Copper, Blondie, Woona
 // MeezyMurder, AceShadow, doppler, boehm
-// Mark, Jen, Guardian,
+// Mark, Jen, Guardian, Eluid,
 // Knis2me2, Fiola, DigityDog, Guns
 [
 	'76561198047148413','76561197973639637','76561198088012858',
 	'76561198039850686','76561198056017572','76561197966618733','76561198084784165',
-	'76561197983621024','76561198018595340','76561198057928846',
+	'76561197983621024','76561198018595340','76561198057928846','76561198009012819',
 	'76561198090546914','76561198137364997','76561198154243983','76561198080073329'
 ];
 _adminLevel2 =
@@ -109,9 +109,9 @@ _adminLevel2 =
 	'==== AltisLife Money ====','Stealth / Invisible','Remove Gear','Mass Message'
 ];
 _adminLevel3_UIDs =
-//Vestra, ShadowForce, Sandscorpion, eliud
+//Vestra, ShadowForce, Sandscorpion
 [
-	'76561198115833202','76561198097073532','76561198004867965','76561198071619918','76561198009012819'
+	'76561198115833202','76561198097073532','76561198004867965','76561198071619918'
 ];
 _adminLevel3 =
 [
@@ -494,5 +494,5 @@ diag_log format['infiSTAR.de %1 - run.sqf - AdminTools included!',time];
 /* ********************************************************************************* */
 /* *********************************www.infiSTAR.de********************************* */
 /* *******************Developed by infiSTAR (infiSTAR23@gmail.com)****************** */
-/* **************infiSTAR CopyrightÂ®Â© 2011 - 2015 All rights reserved.************** */
+/* **************infiSTAR Copyright®© 2011 - 2015 All rights reserved.************** */
 /* ****DayZAntiHack.com***DayZAntiHack.de***ArmaAntiHack.com***Arma3AntiHack.com**** */

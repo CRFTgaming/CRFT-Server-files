@@ -1,0 +1,168 @@
+
+this addAction[""Sheriffs Department"",life_fnc_weaponShopMenu,""sheriff_basic""];
+
+
+case "sheriff_basic":
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a deputy! Please see the Sheriff about applying."};
+			case (__GETC__(life_sherifflevel) == 1): 
+			{
+				["Sheriff's Dept Shop",
+					[
+						["ItemRadio","CellPhone",0],
+						["ItemGPS","GPS",0],
+						["ItemMap","MAP",0],
+						["FirstAidKit","FirstAid Kit",20],
+						["Rangefinder","Rangefinder",100],
+						["Toolkit","Tool Kit",200],
+						["NVGoggles_OPFOR","NVG Black",2000],
+						["NVGoggles","NVG Brown",2000],
+						["NVGoggles_INDEP","NVG GREEN",2000]
+					]
+				];
+			};
+			case (__GETC__(life_sherifflevel) == 1):
+			{
+				["Sheriff's Attachment",
+					[
+						["bipod_01_F_blk",nil,300],
+						["bipod_02_F_blk",nil,300],
+						["bipod_03_F_blk",nil,300],
+						["muzzle_snds_338_black",nil,100],
+						["muzzle_snds_93mmg",nil,100],
+						["muzzle_snds_L",nil,100],
+						["muzzle_snds_H",nil,300],
+						["muzzle_snds_B",nil,400],
+						["muzzle_snds_acp",nil,100],
+						["muzzle_snds_H_MG",nil,400],
+						["acc_flashlight",nil,200],
+						["acc_pointer_IR",nil,200],
+						["optic_MRD",nil,150],
+						["optic_Aco_smg",nil,150],
+						["optic_ACO_grn_smg",nil,150],
+						["optic_Aco",nil,150],
+						["optic_ACO_grn",nil,150],
+						["optic_Holosight",nil,1700],
+						["optic_AMS",nil,200],
+						["optic_Arco",nil,200],
+						["optic_MRCO",nil,210],
+						["optic_Hamr",nil,250],
+						["optic_NVS",nil,1000],
+						["optic_DMS",nil,1000],
+						["optic_KHS_blk",nil,1200],
+						["optic_SOS",nil,1200],
+						["optic_LRPS",nil,1200]
+					]
+				];
+			};
+			case (__GETC__(life_sherifflevel) == 1):
+			{
+				["Deputy Gear",
+					[	
+						//Pistol
+						["hgun_Pistol_heavy_01_F","4-Five Pistol",1100],
+						["11Rnd_45ACP_Mag","11rd 4-Five Mag",35],
+						//Rifle
+						["arifle_MX_Black_F","MX Rifle",1600],
+						["30Rnd_65x39_caseless_mag","30rd MX Mag",100],
+						["arifle_MXC_Black_F","MXC Rifle",1800],
+						["30Rnd_65x39_caseless_mag","30rd MXC Mag",400]
+					]
+				];
+			};
+			case (__GETC__(life_sherifflevel) == 2):
+			{
+				["Sheriff's Task Force",
+					[	
+						//Non-Lethal
+						["hgun_p07_snds_F","Tazer Pistol",500],
+						["16Rnd_9x21_Mag","Tazer Rounds",20],
+						["arifle_MXC_Holo_pointer_F","MX Rifle",15000],
+						["30Rnd_65x39_caseless_mag_Tracer","Rubber Bullets",100],
+						["HandGrenade_Stone","Flashbang",1000],
+						["SmokeShellBlue","Teargas",700],
+						//Pistol
+						["hgun_ACPC2_F",".45 ACP Pistol",900],
+						["9Rnd_45ACP_Mag","9rd ACP Mag",30],
+						["hgun_Pistol_heavy_01_F","4-Five Pistol",1100],
+						["11Rnd_45ACP_Mag","11rd 4-Five Mag",35],
+						//SMG
+						["hgun_PDW2000_F","PDW",1000],
+						["30Rnd_9x21_Mag","30rd PDW Mag",30],
+						["SMG_01_F","VERMIN",1200],
+						["30Rnd_45ACP_Mag_SMG_01","30rd Vermin Mag",30],
+						["SMG_02_F","STING",1100],
+						["30Rnd_9x21_Mag","30rd Sting Mag",30]
+						
+					]
+				];
+			};
+			case (__GETC__(life_sherifflevel) == 3):
+			{
+				["Chief Deputy Shop",
+					[
+						//Pistol
+						["hgun_ACPC2_F",".45 ACP Pistol",900],
+						["9Rnd_45ACP_Mag","9rd ACP Mag",30],
+						["hgun_Pistol_heavy_01_F","4-Five Pistol",1100],
+						["11Rnd_45ACP_Mag","11rd 4-Five Mag",35],
+						//rifles
+						["arifle_SDAR_F","SDAR Rifle",1600],
+						["30Rnd_556x45_Stanag","30rd SDAR Mag",100],
+						["20Rnd_556x45_UW_mag","20rd UnderWater Mag",100],
+						["arifle_MX_Black_F","MX Rifle",1600],
+						["30Rnd_65x39_caseless_mag","30rd MX Mag",100],
+						["arifle_MXC_Black_F","MXC Rifle",1800],
+						["30Rnd_65x39_caseless_mag","30rd MXC Mag",400],
+					     //LMG
+						["arifle_MX_SW_Black_F","MX SW Rifle",3000],
+						["30Rnd_65x39_caseless_mag","30rd MX SW Mag",100],
+						["100Rnd_65x39_caseless_mag","100rd MX SW Drum",150],
+						["LMG_Mk200_F","MK200 Rifle",8000],
+						["200Rnd_65x39_cased_Box","200rd MK200 Drum",300],
+						["200Rnd_65x39_cased_Box_Tracer","200rd MK200 Tracer",300]
+					]
+				];
+			};
+			case (__GETC__(life_sherifflevel) == 4):
+			{
+				["Sheriff's Shop",
+					[
+						//Pistol
+						["hgun_ACPC2_F",".45 ACP Pistol",900],
+						["9Rnd_45ACP_Mag","9rd ACP Mag",30],
+						["hgun_Pistol_heavy_01_F","4-Five Pistol",1100],
+						["11Rnd_45ACP_Mag","11rd 4-Five Mag",35],
+						//rifles
+						["arifle_SDAR_F","SDAR Rifle",1600],
+						["30Rnd_556x45_Stanag","30rd SDAR Mag",100],
+						["20Rnd_556x45_UW_mag","20rd UnderWater Mag",100],
+						["arifle_MX_Black_F","MX Rifle",1600],
+						["30Rnd_65x39_caseless_mag","30rd MX Mag",100],
+						["arifle_MXC_Black_F","MXC Rifle",1800],
+						["30Rnd_65x39_caseless_mag","30rd MXC Mag",400],
+						["arifle_MX_GL_Black_F","MX GL Rifle",2000],
+						["30Rnd_65x39_caseless_mag","30rd MX Mag",100],
+						["3rnd_UGL_FlareWhite_F","3rd White Flare",100],
+						["3rnd_UGL_FlareRed_F","3rd Red Flare",100],
+						["3rnd_Smoke_Grenade_Shell","3rd Smoke Shells",100],
+						["srifle_DMR_04_F","ASP-1 Kir",4000],
+						["10Rnd_127x54_Mag","10rd ASP-1 Mag",20],
+						//LMG
+						["arifle_MX_SW_Black_F","MX SW Rifle",3000],
+						["30Rnd_65x39_caseless_mag","30rd MX SW Mag",100],
+						["100Rnd_65x39_caseless_mag","100rd MX SW Drum",150],
+						["MMG_01_tan_F","Navid Rifle",9000],
+						["150Rnd_93x64_Mag","150rd Navid Drum",350],
+						["MMG_02_black_F","SPMG Rifle",9000],
+						["130Rnd_338_Mag","130rd SPMG Drum",350],
+						["LMG_Mk200_F","MK200 Rifle",8000],
+						["200Rnd_65x39_cased_Box","200rd MK200 Drum",300],
+						["200Rnd_65x39_cased_Box_Tracer","200rd MK200 Tracer",300],
+						["LMG_Zafir_F","Zafir Rifle",10000],
+						["150Rnd_762x51_Box","150rd Zafir Drum",400]
+					]
+				];
+			};
