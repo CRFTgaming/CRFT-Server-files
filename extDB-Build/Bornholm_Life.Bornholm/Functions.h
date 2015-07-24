@@ -293,6 +293,7 @@ class Life_Client_Core
 		class vInteractionMenu {};
 		class vehicleWeight {};
 		class deviceMine {};
+		class deviceMine1 {};
 		class addVehicle2Chain {};
 	};
 	
