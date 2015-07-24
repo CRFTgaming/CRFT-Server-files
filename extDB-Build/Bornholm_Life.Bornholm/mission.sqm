@@ -8954,9 +8954,9 @@ class Mission
 		};
 		class Item370
 		{
-			position[]={17469.303,0.012822756,17614.986};
-			azimut=-36.139599;
-			offsetY=7;
+			position[]={17466.822,-0.049281463,17616.135};
+			azimut=-61.881935;
+			offsetY=9;
 			id=662;
 			side="EMPTY";
 			vehicle="Land_CargoBox_V1_F";
