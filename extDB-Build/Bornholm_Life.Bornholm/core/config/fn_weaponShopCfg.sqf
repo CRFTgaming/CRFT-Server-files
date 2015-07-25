@@ -530,6 +530,30 @@ switch(_shop) do
 		};
 	};
 	
+	case "sheriff_basic":
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a Deputy! Please see the sheriff about applying."};
+			case (__GETC__(life_coplevel) == 7): 
+			{
+				["Bornholm Sheriff's Equipment",
+					[
+							["ItemGPS",nil,0],
+							["Toolkit",nil,200],
+							["ItemMap",nil,0],
+							["ItemRadio","CellPhone",0],
+							["FirstAidKit",nil,20],
+							["Rangefinder",nil,100],
+							["NVGoggles_OPFOR","NVG Black",2000],
+							["NVGoggles","NVG Brown",2000],
+							["NVGoggles_INDEP","NVG Green",2000]
+					]
+				];
+			};
+		};
+	};	
+	
 	case "rebel":
 	{
 		switch(true) do
