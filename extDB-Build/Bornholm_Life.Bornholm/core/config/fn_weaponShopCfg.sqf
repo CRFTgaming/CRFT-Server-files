@@ -551,6 +551,36 @@ switch(_shop) do
 					]
 				];
 			};
+			case (__GETC__(life_coplevel) == 7):
+			{
+				["Bornholm Sheriff's Armory",
+					[
+						//NON LETHAL
+							["hgun_p07_snds_F","Tazer Pistol",500],
+							["16Rnd_9x21_Mag","Tazer Rounds",20],
+						//PISTOL
+							["hgun_ACPC2_F","45 ACP",1500],
+							["9Rnd_45ACP_Mag","9Rnd ACP Mag",50],
+							["hgun_Pistol_heavy_01_F","4-five",2000],
+							["11Rnd_45ACP_Mag","11rd 4-five Mag",50],
+						//SMG
+							["SMG_02_F","Sting 9mm",3500],
+							["30Rnd_9x21_Mag","30rd Sting Mag",100],
+							["SMG_01_F","Vermin",3500],
+							["30Rnd_45ACP_Mag_SMG_01","30rd Vermin Mag",100],
+						//Rifles
+							["arifle_MXC_Black_F","MXC Rifle",4500],
+							["arifle_MX_Black_F","MX Rifle",4500],
+							["arifle_MX_GL_Black_F","MX 3Gl",5000],
+							["arifle_MX_SW_Black_F","MX SW Rifle",5500],
+							["arifle_MXM_Black_F","MXM Rifle",6000],
+							["30Rnd_65x39_caseless_mag","30rd MX Mag",100],
+							["30Rnd_65x39_caseless_mag_Tracer","30rd MX Tracer",150],
+							["3Rnd_UGL_FlareWhite_F","White Flare",50],
+							["3Rnd_Smoke_Grenade_shell","Smoke Grenade",50]	
+					]
+				];
+			};
 		};
 	};	
 	
