@@ -2,8 +2,8 @@
 #include "infiSTAR_AdminMenu.hpp"
 #include "R3F_LOG\desc_include.h"
 author = "Tonic";
-onLoadName = "Altis Life RPG v3.1.4.8";
-onLoadMission = "A RPG game mode developed by Tonic, Edited by CRFT Gaming";
+onLoadName = "Bornholm Life RPG";
+onLoadMission = "A RPG game mode developed by Tonic, Edited by CRFT Gaming's Dev Team";
 loadScreen = "newloading.jpg";
 joinUnassigned = 1;
 respawn = BASE;
