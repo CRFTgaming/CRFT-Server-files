@@ -221,7 +221,8 @@ switch (_shop) do
 		[
 			["C_Rubberboat",500],
 			["C_Boat_Civil_01_F",2200],
-			["B_SDV_01_F",3200]
+			["B_SDV_01_F",3200],
+			["D41_Trawler",10000]
 		];
 	};
 
