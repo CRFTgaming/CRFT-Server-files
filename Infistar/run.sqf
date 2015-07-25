@@ -72,9 +72,9 @@ _announce_adminstate_changed = false;	/* true or false */
 /* "_passwordAdmin": Taken from the servers config.cfg, needed for servercommands     */
 _passwordAdmin = 'EnterAdminPasswordFromYourConfigHere';
 _adminLevel1_UIDs =
-// Tundra, Casey, Rad, Talos, Icy, Doppler, Aceshadow
+// Tundra, Casey, Rad, Talos, Doppler, Aceshadow, Only owners and devs have access to this.
 [
-	'76561198105556705','76561198134898961','76561198032047520','76561198054879039','76561198081827219','76561197966618733','76561198056017572'
+	'76561198105556705','76561198134898961','76561198032047520','76561198054879039','76561197966618733','76561198056017572'
 ];
 _adminLevel1 =
 [
