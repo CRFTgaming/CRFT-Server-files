@@ -529,6 +529,7 @@ switch(_shop) do
 			};
 		};
 	};
+<<<<<<< HEAD
 
 	case "sheriff_basic":
 	{
@@ -664,6 +665,8 @@ switch(_shop) do
 			};
 		};
 	};		
+=======
+>>>>>>> parent of dde299a... ADDING SHERIFF
 	
 	case "rebel":
 	{
