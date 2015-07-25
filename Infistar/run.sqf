@@ -39,7 +39,7 @@ _MOD = 'AltisLife';
 /* "_OPEN_ADMIN_MENU_KEY": Key to open the menu (google DIK_KeyCodes (0x3B is F1))   */
 _OPEN_ADMIN_MENU_KEY = 0x3B;
 /* What ESCAPE Menu shows */
-_ESCMNUTOP = 'EpikGamings Altis Life Server';
+_ESCMNUTOP = 'CRFT Gamings Bornholm Life Server';
 _ESCMNUBOT = 'Protected By InfiSTAR';
 _BRIEFING_MSG = false;	/* use mission briefing message: if   "_BRIEFING_MSG = false;"   then the message will be replaced by infiSTAR */
 
@@ -72,9 +72,9 @@ _announce_adminstate_changed = false;	/* true or false */
 /* "_passwordAdmin": Taken from the servers config.cfg, needed for servercommands     */
 _passwordAdmin = 'EnterAdminPasswordFromYourConfigHere';
 _adminLevel1_UIDs =
-// xaneo001, Tundra, Brent
+// Tundra, Casey, Rad, Talos, Icy, Doppler, Aceshadow
 [
-	'76561197979697671','76561198105556705','76561198143737782'
+	'76561198105556705','76561198134898961','76561198032047520','76561198054879039','76561198081827219','76561197966618733','76561198056017572'
 ];
 _adminLevel1 =
 [
@@ -91,15 +91,9 @@ _adminLevel1 =
 	'Spawn Ammo','showinfo','Login as Arma Admin'
 ];
 _adminLevel2_UIDs =
-// Copper, Blondie, Woona
-// MeezyMurder, AceShadow, doppler, boehm
-// Mark, Jen, Guardian, Eluid,
-// Knis2me2, Fiola, DigityDog, Guns
+//
 [
-	'76561198047148413','76561197973639637','76561198088012858',
-	'76561198039850686','76561198056017572','76561197966618733','76561198084784165',
-	'76561197983621024','76561198018595340','76561198057928846','76561198009012819',
-	'76561198090546914','76561198137364997','76561198154243983','76561198080073329'
+	'76561197973639637'
 ];
 _adminLevel2 =
 [
@@ -109,9 +103,9 @@ _adminLevel2 =
 	'==== AltisLife Money ====','Stealth / Invisible','Remove Gear','Mass Message'
 ];
 _adminLevel3_UIDs =
-//Vestra, ShadowForce, Sandscorpion
+//
 [
-	'76561198115833202','76561198097073532','76561198004867965','76561198071619918'
+	'76561198115833202'
 ];
 _adminLevel3 =
 [

@@ -44,10 +44,6 @@ switch (life_veh_shop select 0) do
 	case "fancy_shop": {_ret = true;};
 	case "reb_car_shop": {_ret = license_civ_rebel;};
 	case "reb_air_shop": {_ret = license_civ_rebel;};
-
-
-	// Pulled over from the original Epik
-        // TODO(san): Go through these and eliminate the ones we dont need.
 	case "civ_car_1": {_ret = license_civ_driver;};
 	case "civ_car_2": {_ret = license_civ_driver;};
 	case "civ_car_3": {_ret = license_civ_driver;};
