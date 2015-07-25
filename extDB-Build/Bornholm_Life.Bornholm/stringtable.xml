@@ -4759,6 +4759,9 @@
 			<Italian>Drop Fishing Net</Italian>		
 			<Portuguese>Jogar Rede de Pesca</Portuguese>
 		</Key>
+		<Key ID="STR_pAct_DeviceMine">
+			<Original>Mine from ship</Original>
+		</Key>
 		<Key ID="STR_pAct_RobPerson">
 			<Original>Rob Person</Original>
 			<German>Person ausrauben</German>
