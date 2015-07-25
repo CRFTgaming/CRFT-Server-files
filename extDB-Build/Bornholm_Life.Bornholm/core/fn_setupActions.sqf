@@ -12,8 +12,8 @@ switch (playerSide) do
 		life_actions = [player addAction[localize "STR_pAct_DropFishingNet",life_fnc_dropFishingNet,"",0,false,false,"",'
 		(surfaceisWater (getPos vehicle player)) && (vehicle player isKindOf "Ship") && life_carryWeight < life_maxWeight && speed (vehicle player) < 2 && speed (vehicle player) > -1 && !life_net_dropped ']];
 		//Mine from ship
-		life_actions = [player addAction[localize "STR_pAct_DeviceMine",life_fnc_deviceMine,"",0,false,false,"",'
-		!life_action_in_use && ((player distance (getMarkerPos "oil_1","oil_2") < 250)) && ((vehicle player == player) OR (typeOf (vehicle player) == "D41_Trawler" && driver (vehicle player) == player)) && (life_carryWeight + (["oilu"] call life_fnc_itemWeight)) <= life_maxWeight ']];
+		life_actions = [player addAction["Mine from Ship",life_fnc_deviceMine,"",0,false,false,"",'
+		(surfaceisWater (getPos vehicle player)) && (vehicle player isKindOf "Ship") && life_carryWeight < life_maxWeight && speed (vehicle player) < 2 && speed (vehicle player) > -1 && !life_net_dropped ']];
 		//Rob person
 		life_actions = life_actions + [player addAction[localize "STR_pAct_RobPerson",life_fnc_robAction,"",0,false,false,"",'
 		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && animationState cursorTarget == "Incapacitated" && !(cursorTarget getVariable["robbed",FALSE]) ']];
