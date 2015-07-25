@@ -15,7 +15,7 @@
 			class logo : life_RscPicture 
 			{
 			idc = -1;
-			text = "textures\crftlogo.png";
+			text = "textures\crftlogo.paa";
 			x = safeZoneX+safeZoneW-0.22; y = safeZoneY+safeZoneH-0.28;
 			w = 0.2; h = 0.29;
 			};
