@@ -529,13 +529,12 @@ switch(_shop) do
 			};
 		};
 	};
-
 	case "sheriff_basic":
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"You are not a Deputy! Please see the Sheriff about applying."};
-			case (__GETC__(life_coplevel) == 8): 
+			case (playerSide != west): {"You are not a cop! Please see an APD recruiter about applying."};
+	case (__GETC__(life_coplevel) == 8): 
 			{
 				["Bornholm Sheriff's Equipment",
 					[
@@ -551,8 +550,7 @@ switch(_shop) do
 					]
 				];
 			};
-
-			case (__GETC__(life_coplevel) == 8):
+	case (__GETC__(life_coplevel) == 8):
 			{
 				["Bornholm Sheriff's Armory",
 					[
@@ -582,8 +580,7 @@ switch(_shop) do
 					]
 				];
 			};
-
-			case (__GETC__(life_coplevel) == 8):
+	case (__GETC__(life_coplevel) == 8):
 			{
 				["Attachment Shop",
 					[
@@ -617,8 +614,7 @@ switch(_shop) do
 					]
 				];
 			};
-
-			case (__GETC__(life_coplevel) == 8):
+	case (__GETC__(life_coplevel) == 8):
 			{
 				["Sheriff's Task Force",
 					[
@@ -662,8 +658,6 @@ switch(_shop) do
 					]
 				];
 			};
-		};
-	};		
 	
 	case "rebel":
 	{
