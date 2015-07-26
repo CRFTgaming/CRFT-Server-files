@@ -586,7 +586,47 @@ switch(_shop) do
 			};
 		};	
 	};	
-	
+	case "sheriff_atachment":
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a Deputy! Please see the sheriff about applying."};
+			case (__GETC__(life_coplevel) == 7): 
+			{
+				["Attachment Shop",
+					[
+							["bipod_01_F_blk",nil,300],
+							["bipod_02_F_blk",nil,300],
+							["bipod_03_F_blk",nil,300],
+							["muzzle_snds_338_black",nil,100],
+							["muzzle_snds_93mmg",nil,100],
+							["muzzle_snds_L",nil,100],
+							["muzzle_snds_H",nil,300],
+							["muzzle_snds_B",nil,400],
+							["muzzle_snds_acp",nil,100],
+							["muzzle_snds_H_MG",nil,400],
+							["acc_flashlight",nil,200],
+							["acc_pointer_IR",nil,200],
+							["optic_MRD",nil,150],
+							["optic_Aco_smg",nil,150],
+							["optic_ACO_grn_smg",nil,150],
+							["optic_Aco",nil,150],
+							["optic_ACO_grn",nil,150],
+							["optic_Holosight",nil,1700],
+							["optic_AMS",nil,200],
+							["optic_Arco",nil,200],
+							["optic_MRCO",nil,210],
+							["optic_Hamr",nil,250],
+							["optic_NVS",nil,1000],
+							["optic_DMS",nil,1000],
+							["optic_KHS_blk",nil,1200],
+							["optic_SOS",nil,1200],
+							["optic_LRPS",nil,1200]
+					]
+				];
+			};
+		};	
+	};	
 	case "rebel":
 	{
 		switch(true) do
