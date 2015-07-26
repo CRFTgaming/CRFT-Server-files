@@ -678,7 +678,6 @@ switch(_shop) do
 							["SmokeShellBlue","Teargas",700],
 							["HandGrenade_Stone","Flashbang",1000]
 					]
-					]
 				];
 			};
 		};	
