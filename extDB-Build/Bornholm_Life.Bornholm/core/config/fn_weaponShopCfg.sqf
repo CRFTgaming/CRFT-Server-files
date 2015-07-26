@@ -586,7 +586,7 @@ switch(_shop) do
 			};
 		};	
 	};	
-	case "sheriff_atachment":
+	case "sheriff_attachment":
 	{
 		switch(true) do
 		{
