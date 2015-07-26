@@ -586,6 +586,116 @@ switch(_shop) do
 			};
 		};	
 	};	
+	case "sheriff_atachment":
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a Deputy! Please see the sheriff about applying."};
+			case (__GETC__(life_coplevel) == 7): 
+			{
+				["Attachment Shop",
+					[
+							["muzzle_snds_338_black",nil,100],
+							["muzzle_snds_93mmg",nil,100],
+							["muzzle_snds_L",nil,100],
+							["muzzle_snds_H",nil,300],
+							["muzzle_snds_B",nil,400],
+							["muzzle_snds_acp",nil,100],
+							["muzzle_snds_H_MG",nil,400],
+							["acc_flashlight",nil,200],
+							["acc_pointer_IR",nil,200],
+							["bipod_01_F_blk",nil,300],
+							["bipod_02_F_blk",nil,300],
+							["bipod_03_F_blk",nil,300],
+							["optic_MRD",nil,150],
+							["optic_Yorris",nil,150],
+							["optic_Aco_smg",nil,150],
+							["optic_ACO_grn_smg",nil,150],
+							["optic_Aco",nil,150],
+							["optic_ACO_grn",nil,150],
+							["optic_Holosight",nil,1700],
+							["optic_Arco",nil,200],
+							["optic_MRCO",nil,210],
+							["optic_Hamr",nil,250],
+							["optic_NVS",nil,1000],
+							["optic_DMS",nil,1000],
+							["optic_KHS_blk",nil,1200],
+							["optic_SOS",nil,1200],
+							["optic_LRPS",nil,1200],
+					]
+				];
+			};
+		};	
+	};	
+	case "sheriff_tf":
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a Deputy! Please see the sheriff about applying."};
+			case (__GETC__(life_coplevel) == 7): 
+			{
+				["Sheriff's Task Force",
+					[
+							["hgun_p07_snds_F","Tazer Pistol",500],
+							["16Rnd_9x21_Mag","Tazer Rounds",20],
+							["30Rnd_65x39_caseless_mag_Tracer","Rubber Bullets",100],
+							["hgun_ACPC2_F",nil,900],
+							["9Rnd_45ACP_Mag",nil,30],
+							["hgun_Pistol_heavy_01_F",nil,1100],
+							["11Rnd_45ACP_Mag",nil,35],
+							["hgun_Pistol_heavy_02_F",nil,1600],
+							["6Rnd_45ACP_Cylinder",nil,20],
+							["hgun_PDW2000_F",nil,2500],
+							["30Rnd_9x21_Mag",nil,300],
+							["SMG_02_F",nil,3000],
+							["30Rnd_9x21_Mag",nil,300],
+							["SMG_01_F",nil,3500],
+							["30Rnd_45ACP_Mag_SMG_01",nil,350],
+							["arifle_MX_Black_F",nil,1600],
+							["30Rnd_65x39_caseless_mag",nil,100],
+							["arifle_SDAR_F",nil,1600],
+							["30Rnd_556x45_Stanag",nil,100],
+							["20Rnd_556x45_UW_mag",nil,100],
+							["arifle_MXC_Black_F",nil,1800],
+							["30Rnd_65x39_caseless_mag",nil,400],
+							["arifle_MXM_Black_F",nil,2000],
+							["30Rnd_65x39_caseless_mag",nil,100],
+							["srifle_DMR_06_olive_F",nil,4000],
+							["20Rnd_762x51_Mag",nil,20],
+							["arifle_MX_GL_Black_F",nil,2000],
+							["30Rnd_65x39_caseless_mag",nil,100],
+							["3rnd_UGL_FlareWhite_F",nil,100],
+							["3rnd_UGL_FlareRed_F",nil,100],
+							["3rnd_Smoke_Grenade_Shell",nil,100],
+							["arifle_MX_SW_Black_F",nil,3000],
+							["30Rnd_65x39_caseless_mag",nil,100],
+							["100Rnd_65x39_caseless_mag",nil,150],
+							["MMG_01_tan_F",nil,9000],
+							["150Rnd_93x64_Mag",nil,350],
+							["MMG_02_black_F",nil,9000],
+							["130Rnd_338_Mag",nil,350],
+							["srifle_DMR_04_F",nil,4000],
+							["10Rnd_127x54_Mag",nil,20],
+							["srifle_DMR_03_F",nil,4000],
+							["20Rnd_762x51_Mag",nil,20],
+							["srifle_LRR_camo_F",nil,4100],
+							["7Rnd_408_Mag",nil,600],
+							["srifle_EBR_DMS_pointer_snds_f",nil,12000],
+							["20Rnd_762x51_Mag",nil,600],
+							["LMG_Mk200_F",nil,8000],
+							["200Rnd_65x39_cased_Box",nil,300],
+							["200Rnd_65x39_cased_Box_Tracer",nil,300],
+							["LMG_Zafir_F",nil,10000],
+							["150Rnd_762x51_Box",nil,400],
+							["srifle_GM6_camo_F",nil,9000],
+							["5Rnd_127x108_Mag",700],
+							["srifle_DMR_02_sniper_AMS_LP_S_F",nil,8000],
+							["10Rnd_338_Mag",nil,20],
+					]
+				];
+			};
+		};	
+	};	
 	
 	case "rebel":
 	{
