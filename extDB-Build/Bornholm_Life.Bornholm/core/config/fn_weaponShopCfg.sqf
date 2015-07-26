@@ -551,8 +551,6 @@ switch(_shop) do
 					]
 				];
 			};
-<<<<<<< HEAD
-=======
 			case (__GETC__(life_coplevel) == 7):
 			{
 				["Bornholm Sheriff's Armory",
@@ -579,7 +577,6 @@ switch(_shop) do
 					]
 				];
 			};
->>>>>>> origin/master
 		};
 	};	
 	
