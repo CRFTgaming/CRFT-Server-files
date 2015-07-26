@@ -595,18 +595,16 @@ switch(_shop) do
 			{
 				["Attachment Shop",
 					[
+							["acc_flashlight",nil,200],
+							["acc_pointer_IR",nil,200],						
 							["bipod_01_F_blk",nil,300],
 							["bipod_02_F_blk",nil,300],
 							["bipod_03_F_blk",nil,300],
-							["muzzle_snds_338_black",nil,100],
-							["muzzle_snds_93mmg",nil,100],
 							["muzzle_snds_L",nil,100],
 							["muzzle_snds_H",nil,300],
 							["muzzle_snds_B",nil,400],
 							["muzzle_snds_acp",nil,100],
 							["muzzle_snds_H_MG",nil,400],
-							["acc_flashlight",nil,200],
-							["acc_pointer_IR",nil,200],
 							["optic_MRD",nil,150],
 							["optic_Aco_smg",nil,150],
 							["optic_ACO_grn_smg",nil,150],
@@ -619,7 +617,6 @@ switch(_shop) do
 							["optic_Hamr",nil,250],
 							["optic_NVS",nil,1000],
 							["optic_DMS",nil,1000],
-							["optic_KHS_blk",nil,1200],
 							["optic_SOS",nil,1200],
 							["optic_LRPS",nil,1200]
 					]
@@ -627,6 +624,47 @@ switch(_shop) do
 			};
 		};	
 	};	
+	case "sheriff_tf":
+	{
+		switch(true) do
+		{
+			case (playerSide != west): {"You are not a Deputy! Please see the sheriff about applying."};
+			case (__GETC__(life_coplevel) == 7): 
+			{
+				["Sheriff's Task Force",
+					[
+							["hgun_p07_snds_F","Tazer Pistol",500],
+							["16Rnd_9x21_Mag","Tazer Rounds",20],
+							["hgun_ACPC2_F","45 ACP",1500],
+							["9Rnd_45ACP_Mag","9Rnd ACP Mag",50],
+							["hgun_Pistol_heavy_01_F","4-five",2000],
+							["11Rnd_45ACP_Mag","11rd 4-five Mag",50],
+							["SMG_02_F","Sting 9mm",3500],
+							["30Rnd_9x21_Mag","30rd Sting Mag",100],
+							["SMG_01_F","Vermin",3500],
+							["30Rnd_45ACP_Mag_SMG_01","30rd Vermin Mag",100],	
+							["srifle_EBR_F","MK18 EBR",6500],
+							["20Rnd_762x51_Mag","20rd EBR Mag",150],
+							["srifle_DMR_01_F","Rahim",6500],
+							["10Rnd_762x54_Mag","10rd Rahim Mag",150],
+							["srifle_LRR_F","408 LRR",8500],
+							["7Rnd_408_Mag","7rd 408 Mag",250],
+							["srifle_DMR_02_F","MAR-10 Rifle"8500],
+							["10Rnd_338_Mag","10rd MAR-10",250],
+							["LMG_Mk200_F","MK200",8500],
+							["200Rnd_65x39_cased_Box","200rd MK Mag",250],
+							["200Rnd_65x39_cased_Box_Tracer","200rd MK Tracer",250],
+							["LMG_Zafir_F","Zafir",8500],
+							["150Rnd_762x54_Box","150rd Zafir Mag",250],	
+							["150Rnd_762x54_Box_Tracer","150rd Zafir Tracer",250],
+							["SmokeShellBlue","Teargas",700],
+							["HandGrenade_Stone","Flashbang",1000]
+					]
+				];
+			};
+		};	
+	};	
+
 	case "rebel":
 	{
 		switch(true) do
