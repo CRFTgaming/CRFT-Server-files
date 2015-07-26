@@ -660,7 +660,7 @@ switch(_shop) do
 							["10Rnd_762x54_Mag","10rd Rahim Mag",150],
 						//SNIPER RIFLES
 							["srifle_LRR_F","408 LRR",8500],
-							["7Rnd_408_Mag","7rd 408 Mag,250],
+							["7Rnd_408_Mag","7rd 408 Mag",250],
 							["srifle_DMR_02_F","MAR-10 Rifle"8500],
 							["10Rnd_338_Mag","10rd MAR-10",250],
 						//SPECIALTY WEAPONS	
