@@ -621,7 +621,7 @@ switch(_shop) do
 							["optic_DMS",nil,1000],
 							["optic_KHS_blk",nil,1200],
 							["optic_SOS",nil,1200],
-							["optic_LRPS",nil,1200],
+							["optic_LRPS",nil,1200]
 					]
 				];
 			};
@@ -690,7 +690,7 @@ switch(_shop) do
 							["srifle_GM6_camo_F",nil,9000],
 							["5Rnd_127x108_Mag",700],
 							["srifle_DMR_02_sniper_AMS_LP_S_F",nil,8000],
-							["10Rnd_338_Mag",nil,20],
+							["10Rnd_338_Mag",nil,20]
 					]
 				];
 			};
