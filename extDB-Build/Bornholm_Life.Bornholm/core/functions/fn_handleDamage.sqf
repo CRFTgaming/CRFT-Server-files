@@ -50,7 +50,7 @@ if (playerSide == independent) then {
 if(!isNull _source) then {
 	if(_source != _unit) then {
 		_curWep = currentWeapon _source;
-		if(_projectile in ["B_9x21_Ball"] && _curWep in ["hgun_P07_snds_F"]) then {
+		if (_curMag in ["DDOPP_1Rnd_X26"] && _projectile in ["DDOPP_B_Taser"]) then {
 			private["_distance","_isVehicle","_isQuad"];
 			_distance = if(_projectile == "B_9x21_Ball") then {100} else {35};
 			_isVehicle = if(vehicle player != player) then {true} else {false};
