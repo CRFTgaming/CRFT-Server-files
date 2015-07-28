@@ -51,5 +51,6 @@ switch (_className) do
 	case "Land_Wreck_Traw_F": {10000000};
 	case "Land_Wreck_Traw2_F": {10000000};
 	case "D41_Trawler": {1500};
+	case "A3L_Ship": {750};
 	default {-1};
 };
