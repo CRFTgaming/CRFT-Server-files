@@ -108,6 +108,7 @@ switch (_var) do
 	case "license_civ_bountyh": {"Bounty Hunter's Licence"};
 
 	case "life_inv_zipties": {"zipties"};
+	case "life_inv_handcuffs": {"handcuffs"};
 
 	//Prof Block
 	case "Oil_Prof": {(localize "STR_Prof_Oil")};

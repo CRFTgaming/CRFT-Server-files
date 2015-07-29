@@ -467,7 +467,7 @@ player createDiarySubject ["controls","Controls"];
 				F: Cop Siren (if cop)<br/>
 				T: Vehicle Trunk<br/>
 				L: Head lights<br/>
-				Left Shift + R (Cop): Restrain<br/>
+				Left Shift + R (Cop): Restrain (need handcuffs)<br/>
 				Left Shift + R (Rebel): Knock out<br/>
 				Left Shift + O (Rebel): Restrain with Zipties (need zipties)<br/>
 				Left Shift + G: Surrender / Hands on head<br/>

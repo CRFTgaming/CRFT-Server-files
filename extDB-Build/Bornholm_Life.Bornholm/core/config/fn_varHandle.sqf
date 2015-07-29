@@ -66,6 +66,7 @@ switch (_mode) do
 			case "storagesmall": {"life_inv_storagesmall"};
 			case "storagebig": {"life_inv_storagebig"};
 			case "zipties": {"life_inv_zipties"};
+			case "handcuffs": {"life_inv_handcuffs"};
 			case "rye": {"life_inv_rye"};
 			case "hops": {"life_inv_hops"};
 			case "yeast": {"life_inv_yeast"};
@@ -141,6 +142,7 @@ switch (_mode) do
 			case "life_inv_storagesmall": {"storagesmall"};
 			case "life_inv_storagebig": {"storagebig"};
 			case "life_inv_zipties": {"zipties"};
+			case "life_inv_handcuffs": {"handcuffs"};
 			case "life_inv_mash": {"mash"};
 			case "life_inv_yeast": {"yeast"};
 			case "life_inv_rye": {"rye"};

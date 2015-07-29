@@ -135,7 +135,11 @@ switch (_code) do
 		    !(cursorTarget getVariable "Escorting") &&
 		    !(cursorTarget getVariable "restrained") &&
 		    speed cursorTarget < 4) then {
-			[] call life_fnc_restrainAction;
+				if([false,"handcuffs",1] call life_fnc_handleInv) then {
+				[] call life_fnc_restrainAction;
+				} else {
+				hint "You have no handcuffs!";
+			};
 		};
 
 		if (_shift && playerSide == civilian && !isNull cursorTarget &&

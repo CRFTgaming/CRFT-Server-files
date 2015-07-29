@@ -31,9 +31,12 @@ if (side player == civilian) then {
 
 // Cops < lvl 2 cannot restrain other cops.
 if (side player == west) then {
+	if (life_inv_handcuffs < 1) exitWith { hint "You have no handcuffs."; };
 	if (side _unit == west) then {
 		if (__GETC__(life_coplevel) < 2) exitWith { hint "You cannot restrain another cop cadet!"; };
 	};
+	life_inv_handcuffs = life_inv_handcuffs - 1;
+	hint "Target restrained, use your interaction menu for more options";
 };
 
 //Broadcast!
