@@ -97,18 +97,17 @@ if(playerSide == west) then {
 	};
 
 	if(typeOf _curTarget == "D41_Trawler") then {
-		_Btn3 ctrlSetText "Pump Oil";
-		_Btn3 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine1";
+		_Btn4 ctrlSetText "Pump Oil";
+		_Btn4 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine1";
 		if(!isNil {(_curTarget getVariable "mining")} OR !local _curTarget && {_curTarget in life_vehicles}) then {
-			_Btn3 ctrlEnable false;
+			_Btn4 ctrlEnable false;
 		} else {
-			_Btn3 ctrlEnable true;
+			_Btn4 ctrlEnable true;
 		};
 	} else {
-		_Btn3 ctrlShow false;
+		_Btn4 ctrlShow false;
 	};
 	
-	_Btn4 ctrlShow false;
 	_Btn5 ctrlShow false;
 	_Btn6 ctrlShow false;
 };
