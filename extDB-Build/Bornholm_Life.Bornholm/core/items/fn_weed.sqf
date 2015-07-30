@@ -17,7 +17,7 @@ sleep 3;
 "radialBlur" ppEffectEnable true;
 
 
-_smoke = "SmokeShell" createVehicle position player;
+_smoke = "SmokeShellPurple" createVehicle position player;
 if (vehicle player != player) then
     {
         _smoke attachTo [vehicle player, [-0.6,-1,0]];
