@@ -382,15 +382,15 @@ buy_array =
 	["APDuniform",0],
 	["speedbomb",500000],
 	["uwsl",10000],
-	["cocainep",20],
-	["marijuana",20],
-	["extacy",20],
-	["lsdx",20],
-	["methx",20],
-	["rso",20],
-	["bho",20],
-	["hash",20],
-	["heroinp",20]
+	["cocainep",60],
+	["marijuana",45],
+	["extacy",60],
+	["lsdx",60],
+	["methx",65],
+	["rso",45],
+	["bho",45],
+	["hash",45],
+	["heroinp",65]
 ];
 __CONST__(buy_array,buy_array);
 
