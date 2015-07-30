@@ -150,6 +150,95 @@ switch (true) do
 			};
 		};
 	};
+
+	case (_item == "heroinx"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{	
+			sleep 2;
+			[] spawn fnc_Heroin;
+			titleCut ["That Heroin Made You Feel Sleepy", "BLACK IN", 5];
+			player setFatigue 1;
+		};
+	};
+
+	case (_item == "cocainep"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{	
+			player setFatigue 0;
+			life_drink = 0;
+			
+			[] spawn
+			{
+				[] call life_fnc_cocaine;
+				life_redgull_effect = time;
+				titleText["You are the Macho Man Randy Savage and are unstoppable for 5 minutes","PLAIN"];
+				player enableFatigue false;
+				waitUntil {!alive player OR ((time - life_redgull_effect) > (5 * 60))};
+				player enableFatigue true;
+				player setFatigue 0;
+			};
+			
+		};
+	};
+
+	case (_item == "marijuana"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{	
+			[] spawn life_fnc_weed;
+			
+			life_hunger = 65;
+			life_thirst = 55;
+		};
+	};
+	case (_item == "hash" or _item == "bho"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			
+			[] spawn life_fnc_weed;
+			life_hunger = 65; 
+			life_thirst = 55; 
+			
+		};
+	};
+	case (_item == "rso"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn life_fnc_rso;
+			life_thirst = 100;
+			life_hunger = 100;
+			
+			
+		};
+	};
+
+	case (_item == "methx"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{	
+			[] spawn life_fnc_meth;
+		};
+	};
+	
+	case (_item == "lsdx"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{	
+			life_thirst = 100;
+			[] spawn life_fnc_lsd;
+		};
+	};
+	case (_item == "extacy"):
+	{
+		if(([false,_item,1] call life_fnc_handleInv)) then
+		{
+			[] spawn life_fnc_club;
+		};
+	};
 	
 	default
 	{

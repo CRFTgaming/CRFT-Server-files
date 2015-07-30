@@ -105,6 +105,41 @@ class CfgSounds
     	sound[] = {"\sounds\Beedo.ogg", 1.0, 1};
     	titles[] = {};
   	};
+  	class Weedsong {
+		name = "weedsong";
+		sound[] = {"\sounds\weedsong.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class Weedsong2 {
+		name = "weedsong2";
+		sound[] = {"\sounds\weedsong2.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class Weedsong3 {
+		name = "weedsong3";
+		sound[] = {"\sounds\weedsong3.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class Weedsong4 {
+		name = "weedsong4";
+		sound[] = {"\sounds\weedsong4.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class imtheone {
+		name = "imtheone";
+		sound[] = {"\sounds\imtheone.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class cocaine {
+		name = "cocaine";
+		sound[] = {"\sounds\cocaine.ogg", 1.0, 1};
+		titles[] = {};
+	};
+	class fortuneSon {
+		name = "fortuneSon";
+		sound[] = {"\sounds\fortuneSon.ogg", 1.0, 1};
+		titles[] = {};
+	};
 };
 
 class CfgDebriefing

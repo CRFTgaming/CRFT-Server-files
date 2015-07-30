@@ -77,6 +77,13 @@ switch (_var) do
 	case "life_inv_moonshine": {"Distilled Moonshine"};
 	case "life_inv_speedbomb": {"Speed Bomb"};
 	case "life_inv_uwsl": {"Underwater explosive"}; //RENAME IT TO ANYTHING YOU LIKE
+	case "life_inv_extacy": {"Ecstacsy"};
+	case "life_inv_lsdx": {"LSD"};
+	case "life_inv_methx": {"Meth"};
+	case "life_inv_rso": {"Cannabis Oil"};
+	case "life_inv_bho": {"Hash Oil"};
+	case "life_inv_hash": {"Hash"};
+	case "life_inv_heroinp": {"Heroin"};
 	
 	//License Block
 	case "license_civ_driver": {(localize "STR_License_Driver")};

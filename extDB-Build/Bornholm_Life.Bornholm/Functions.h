@@ -386,6 +386,14 @@ class Life_Client_Core
 		class drinkmoonshine {};
 		class drinkwhiskey {};
 		class speedBomb {};
+		class weed {};
+		class meth {};
+		class lsd {};
+		class rso {};
+		class bho {};
+		class club {};
+		class cocaine {};
+		class Heroin {};
 	};
 	
 	class Dialog_Controls

@@ -191,7 +191,14 @@ life_inv_items =
 	"life_inv_cotton",
 	"life_inv_APDuniform",
 	"life_inv_speedbomb",
-	"life_inv_uwsl"
+	"life_inv_uwsl",
+	"life_inv_extacy",
+	"life_inv_lsdx",
+	"life_inv_methx",
+	"life_inv_rso",
+	"life_inv_bho",
+	"life_inv_hash",
+	"life_inv_heroinx"
 ];
 
 //Setup variable inv vars.
@@ -374,7 +381,16 @@ buy_array =
 	["cotton",0],
 	["APDuniform",0],
 	["speedbomb",500000],
-	["uwsl",10000]
+	["uwsl",10000],
+	["cocainep",20],
+	["marijuana",20],
+	["extacy",20],
+	["lsdx",20],
+	["methx",20],
+	["rso",20],
+	["bho",20],
+	["hash",20],
+	["heroinp",20]
 ];
 __CONST__(buy_array,buy_array);
 

@@ -74,5 +74,11 @@ switch (_item) do
 	case "APDuniform": {1};
 	case "speedbomb": {10};
 	case "uwsl": {5};
+	case "extacy": {1};
+	case "lsdx": {1};
+	case "methx": {1};
+	case "rso": {1};
+	case "bho": {1};
+	case "hash": {1};
 	default {1};
 };

@@ -83,6 +83,13 @@ switch (_mode) do
 			case "APDuniform": {"life_inv_APDuniform"};
 			case "speedbomb": {"life_inv_speedbomb"};
 			case "uwsl": {"life_inv_uwsl"};
+			case "extacy": {"life_inv_extacy"};
+			case "lsdx": {"life_inv_lsdx"};
+			case "methx": {"life_inv_methx"};
+			case "rso": {"life_inv_rso"};
+			case "bho": {"life_inv_bho"};
+			case "hash": {"life_inv_hash"};
+			case "heroinx": {"life_inv_heroinx"};
 
 
 		};
@@ -159,6 +166,13 @@ switch (_mode) do
 			case "life_inv_APDuniform": {"APDuniform"};
 			case "life_inv_speedbomb": {"speedbomb"};
 			case "life_inv_uwsl": {"uwsl"};
+			case "life_inv_extacy": {"extacy"};
+			case "life_inv_lsdx": {"lsdx"};
+			case "life_inv_methx": {"methx"};
+			case "life_inv_rso": {"rso"};
+			case "life_inv_bho": {"bho"};
+			case "life_inv_hash": {"hash"};
+			case "life_inv_heroinp": {"heroinp"};
 		};
 	};
 };
