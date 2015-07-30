@@ -13,7 +13,7 @@ for "_i" from 0 to 89 do
 {
     if(life_drink > 0.15) then {
 		
-		//"wetDistortion" ppEffectAdjust [random 5];
+		
 		"chromAberration" ppEffectAdjust [random 0.07,random 0.07,true];
 		"chromAberration" ppEffectCommit 1;   
 		"radialBlur" ppEffectAdjust[0.04, 0.09, 0.25, 0.29];
