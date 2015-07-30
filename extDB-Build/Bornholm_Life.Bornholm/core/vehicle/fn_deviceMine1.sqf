@@ -7,11 +7,11 @@
 private["_vehicle","_resourceZones","_zone","_weight","_item","_vInv","_itemIndex","rye_1","hops_1","yeast_1"];
 _vehicle = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _vehicle) exitWith {}; //Null was passed?
-if(!isNil {_vehicle getVariable "mining"}) exitWith {hint "Pumping in progress";}; //Mining is already in process..
+if(!isNil {_vehicle getVariable "mining"}) exitWith {hint localize "STR_NOTF_DeviceIsMining";}; //Mining is already in process..
 closeDialog 0; //Close the interaction menu.
 life_action_inUse = true; //Lock out the interaction menu for a bit..
 _weight = [_vehicle] call life_fnc_vehicleWeight;
-if((_weight select 1) >= (_weight select 0)) exitWith {hint "Holding Tank is Full"; life_action_inUse = false;};
+if((_weight select 1) >= (_weight select 0)) exitWith {hint localize "STR_NOTF_DeviceFull"; life_action_inUse = false;};
 _resourceZones = ["apple_1","apple_2","apple_3","apple_4","peaches_1","peaches_2","peaches_3","peaches_4","heroin_1","cocaine_1","weed_1","lead_1","iron_1","salt_1","sand_1","diamond_1","oil_1","oil_2","rock_1""rye_1","hops_1","yeast_1"];
 _zone = "";
 
@@ -21,7 +21,7 @@ _zone = "";
 } foreach _resourceZones;
 
 if(_zone == "") exitWith {
-	hint "Not Close Enough To Oil Derek Transfer Pump";
+	hint localize "STR_NOTF_notNearResource";
 	life_action_inUse = false;
 };
 
@@ -59,25 +59,25 @@ life_action_inUse = false; //Unlock it since it's going to do it's own thing...
 
 while {true} do {
 	if(!alive _vehicle OR isNull _vehicle) exitWith {};
-	if(isEngineOn _vehicle) exitWith {titleText["Pumping Stopped Due to Running Engine During Oil Transfer","PLAIN"];};
-	titleText["Pumping in Progress","PLAIN"];
+	if(isEngineOn _vehicle) exitWith {titleText[localize "STR_NOTF_MiningStopped","PLAIN"];};
+	titleText[localize "STR_NOTF_DeviceMining","PLAIN"];
 	_time = time + 27;
 	
 	//Wait for 27 seconds with a 'delta-time' wait.
 	waitUntil {
-		if(isEngineOn _vehicle) exitWith {titleText["Pumping Stopped Due to Running Engine During Oil Transfer","PLAIN"]; true};
+		if(isEngineOn _vehicle) exitWith {titleText[localize "STR_NOTF_MiningStopped","PLAIN"]; true};
 		if(round(_time - time) < 1) exitWith {true};
 		sleep 0.2;
 		false
 	};
-	if(isEngineOn _vehicle) exitWith {titleText["Pumping Stopped Due to Running Engine During Oil Transfer","PLAIN"];};
+	if(isEngineOn _vehicle) exitWith {titleText[localize "STR_NOTF_MiningStopped","PLAIN"];};
 	_vInv = _vehicle getVariable ["Trunk",[[],0]];
 	_items = _vInv select 0;
 	_space = _vInv select 1;
 	_itemIndex = [_item,_items] call TON_fnc_index;
 	_weight = [_vehicle] call life_fnc_vehicleWeight;
 	_sum = [_item,15,_weight select 1,_weight select 0] call life_fnc_calWeightDiff; //Get a sum base of the remaining weight.. 
-	if(_sum < 1) exitWith {titleText["Holding Tank is Full","PLAIN"];};
+	if(_sum < 1) exitWith {titleText[localize "STR_NOTF_DeviceFull","PLAIN"];};
 	_itemWeight = ([_item] call life_fnc_itemWeight) * _sum;
 	if(_itemIndex == -1) then {
 		_items pushBack [_item,_sum];
@@ -86,7 +86,7 @@ while {true} do {
 		_items set[_itemIndex,[_item,_val + _sum]];
 	};
 	
-	if(fuel _vehicle == 0) exitWith {titleText["Internal Transfer Pump Aboard Your Ship Has No Fuel","PLAIN"];};
+	if(fuel _vehicle == 0) exitWith {titleText[localize "STR_NOTF_OutOfFuel","PLAIN"];};
 	
 	//Locality checks...
 	if(local _vehicle) then {
@@ -95,12 +95,12 @@ while {true} do {
 		[[_vehicle,(fuel _vehicle)-0.04],"life_fnc_setFuel",_vehicle,false] spawn life_fnc_MP;
 	};
 	
-	if(fuel _vehicle == 0) exitWith {titleText["Internal Transfer Pump Aboard Your Ship Has No Fuel","PLAIN"];};
-	titleText[format["Gallons of Oil Transferred",_sum],"PLAIN"];
+	if(fuel _vehicle == 0) exitWith {titleText[localize "STR_NOTF_OutOfFuel","PLAIN"];};
+	titleText[format[localize "STR_NOTF_DeviceMined",_sum],"PLAIN"];
 	_vehicle setVariable["Trunk",[_items,_space + _itemWeight],true];
 	_weight = [_vehicle] call life_fnc_vehicleWeight;
 	_sum = [_item,15,_weight select 1,_weight select 0] call life_fnc_calWeightDiff; //Get a sum base of the remaining weight.. 
-	if(_sum < 1) exitWith {titleText["Holding Tank is Full","PLAIN"];};
+	if(_sum < 1) exitWith {titleText[localize "STR_NOTF_DeviceFull","PLAIN"];};
 	sleep 2;
 };
 
