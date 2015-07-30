@@ -17,10 +17,9 @@ switch (_side) do
 	case west:
 	{
 		_return = [
-			["cop_spawn_1","Kavala HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-			["cop_spawn_2","FBI HQ","\a3\ui_f\data\map\MapControl\fuelstation_ca.paa"],
-			["cop_spawn_3","Athira Reqional HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
-			["cop_spawn_4","S.W.A.T. HQ","\a3\ui_f\data\map\Markers\NATO\b_air.paa"],
+			["cop_spawn_1","Roenne HQ","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+			["cop_spawn_3","Aakirkeby HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"],
+			["cop_spawn_4","Nexoe HQ","\a3\ui_f\data\map\Markers\NATO\b_air.paa"],
 			["cop_spawn_5","Sheriff HQ","\a3\ui_f\data\map\GroupIcons\badge_rotate_0_gs.paa"]
 		];
 	};
@@ -31,9 +30,9 @@ switch (_side) do
 		if(license_civ_rebel && playerSide == civilian) then {
 			_return = [
 				["Rebelop","Rbl. Airfield","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-				["Rebelop_2","Rbl. Outpost 3","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-				["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-				["Rebelop_1","Lawless Zone","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+				["Rebelop_2","East Rebel Outpost","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+				["civ_spawn_3","AAkirkeby","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+				["Rebelop_1","Raghammer Rebel Compound","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 			];
 		};
 
@@ -41,10 +40,10 @@ switch (_side) do
 		// Civ faction.
 		if(!license_civ_rebel && playerSide == civilian) then {
 			_return = [
-				["civ_spawn_1","Kavala","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-				["civ_spawn_2","Pyrgos","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-				["civ_spawn_3","Athira","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
-				["civ_spawn_4","Sofia","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
+				["civ_spawn_1","Roenne","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+				["civ_spawn_2","Nexoe","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+				["civ_spawn_3","AAkirkeby","\a3\ui_f\data\map\MapControl\watertower_ca.paa"],
+				["civ_spawn_4","Hasle","\a3\ui_f\data\map\MapControl\watertower_ca.paa"]
 			];
 		};
 		
@@ -59,7 +58,7 @@ switch (_side) do
 		};
 
 		// See if the player is in a Gang.
-                if (count life_gangData != 0) then {
+               /* if (count life_gangData != 0) then {
 			private["_gangid", "_gangname"];
 			_gangid = (life_gangData select 0);
 			_gangname = (life_gangData select 2);
@@ -80,7 +79,7 @@ switch (_side) do
 					// Server Jerks.
                                         hint "Welcome Server Jerks";
 					_return set[count _return,["serverjerks_player_spawn","Server Jerks Base", "\a3\ui_f\data\map\MapControl\lighthouse_ca.paa"]];
-				};*/
+				};
 				case 5: {
 					// Dirty Old Bastards.
                                         hint "Welcome Dirty Old Bastards!";
@@ -146,9 +145,9 @@ switch (_side) do
 	
 	case independent: {
 		_return = [
-			["medic_spawn_1","Kavala Hospital","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
-			["medic_spawn_2","Athira Regional","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
-			["medic_spawn_3","Pygros Hospital","\a3\ui_f\data\map\MapControl\hospital_ca.paa"]
+			["medic_spawn_1","Roenne Hospital","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
+			["medic_spawn_2","AAkirkeby Regional","\a3\ui_f\data\map\MapControl\hospital_ca.paa"],
+			["medic_spawn_3","Nexoe Hospital","\a3\ui_f\data\map\MapControl\hospital_ca.paa"]
 		];
 	};
 };
