@@ -39,7 +39,6 @@ class RscTitles
 class CfgFunctions
 {
 	#include "Functions.h"
-	#include "SHK_cruise\cfgfunctions.hpp"
 };
 
 class CfgSounds
