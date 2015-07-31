@@ -107,6 +107,18 @@ if(playerSide == west) then {
 	} else {
 		_Btn4 ctrlShow false;
 	};
+
+	if(typeOf _curTarget == "A3L_Ship") then {
+		_Btn5 ctrlSetText "Pump Oil";
+		_Btn5 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_deviceMine1";
+		if(!isNil {(_curTarget getVariable "mining")} OR !local _curTarget && {_curTarget in life_vehicles}) then {
+			_Btn5 ctrlEnable false;
+		} else {
+			_Btn5 ctrlEnable true;
+		};
+	} else {
+		_Btn5 ctrlShow false;
+	};
 	
 	_Btn5 ctrlShow false;
 	_Btn6 ctrlShow false;
