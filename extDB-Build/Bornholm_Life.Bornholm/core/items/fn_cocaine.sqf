@@ -7,7 +7,7 @@ closeDialog 0;
 hint "snnnnnnniiiiiiiiiffffffffffffffff!!!!!!";
 sleep 3;
 hint "Ohhhhhhhhhhhhh Yeaahhhhhhhh! (**macho man voice**)";
-_rndSong = round(random 2) + 1;
+_rndSong = round(random 1) + 1;
 sleep 2;
 if (_rndSong == 1) then {  playSound "cocaine"; };
 if (_rndSong == 2) then {  playSound "cocaine1"; };
