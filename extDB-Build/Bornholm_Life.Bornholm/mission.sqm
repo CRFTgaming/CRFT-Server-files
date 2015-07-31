@@ -172,6 +172,7 @@ class Mission
 		"A3_Structures_F_Ind_Pipes",
 		"A3_Structures_F_Ind_ReservoirTank",
 		"A3_Structures_F_Mil_BagBunker",
+		"A3_Structures_F_Civ_Garbage",
 		"bornholm"
 	};
 	randomSeed=11436605;
@@ -4938,7 +4939,7 @@ class Mission
 	};
 	class Vehicles
 	{
-		items=3157;
+		items=3158;
 		class Item0
 		{
 			position[]={1006.7673,1.8882458,6982.4238};
@@ -38453,6 +38454,15 @@ class Mission
 			vehicle="Land_Cargo_Patrol_V1_F";
 			skill=0.60000002;
 			init="this enableSimulation true;this setdir 295.619;this setposATL [17553.5,17646.283203,78.945];this setVectorUp [0,0,1]";
+		};
+		class Item3157
+		{
+			position[]={19304.184,6.3699636,22350.652};
+			id=3440;
+			side="EMPTY";
+			vehicle="Land_Garbage_line_F";
+			skill=0.60000002;
+			text="bank_obj";
 		};
 	};
 	class Markers
