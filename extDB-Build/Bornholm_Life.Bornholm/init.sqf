@@ -38,4 +38,3 @@ StartProgress = true;
 		"];
 	};
 };
-if (isNil "lck_markercnt") then {lck_markercnt=0;};
