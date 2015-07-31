@@ -75,7 +75,9 @@ switch (_filter) do
 			["G_Sport_BlackWhite",nil,20],
 			["G_Squares",nil,20],
 			["G_Lowprofile",nil,20],
-			["G_Combat",nil,40]
+			["G_Combat",nil,40],
+			["G_Tactical_Clear",nil,40],
+			["G_Tactical_Black",nil,40]
 		];
 	};
 	
