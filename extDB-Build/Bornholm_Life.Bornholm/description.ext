@@ -135,9 +135,9 @@ class CfgSounds
 		sound[] = {"\sounds\cocaine.ogg", 1.0, 1};
 		titles[] = {};
 	};
-	class fortuneSon {
-		name = "fortuneSon";
-		sound[] = {"\sounds\fortuneSon.ogg", 1.0, 1};
+	class cocaine1 {
+		name = "cocaine1";
+		sound[] = {"\sounds\cocaine1.ogg", 1.0, 1};
 		titles[] = {};
 	};
 };
