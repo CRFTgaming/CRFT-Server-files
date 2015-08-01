@@ -20,7 +20,6 @@ StartProgress = true;
 [] execVM "R3F_LOG\init.sqf";
 [] execVM "IgiLoad\IgiLoadInit.sqf";
 [] execVM "addons\teargas.sqf";
-[] execVM "addons\AUSMD_tactical_glasses.sqf";
 []spawn
 {
 	if (local player) then

@@ -92,7 +92,6 @@ switch (_filter) do
 		{
 			_ret pushBack ["G_Lowprofile",nil,30];
 			_ret pushBack ["G_Combat",nil,45];
-			_ret pushBack ["G_Tactical_Clear",nil,55];
 		};
 		if(__GETC__(life_coplevel) > 5) then
 		{
