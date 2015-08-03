@@ -103,7 +103,6 @@ switch (_vehicle) do
 			["textures\civilian\veh\Fast&Furious.jpg","civ"],
 			["textures\cop\veh\suv_01_ext_police_co.jpg","cop"],
 			["textures\med\EMS_SUV.jpg","med"],
-			["textures\civilian\veh\epiksuv1.jpg","civ"],
 			["textures\civilian\veh\suv_ferrari.jpg","civ"]
 		];
 	};

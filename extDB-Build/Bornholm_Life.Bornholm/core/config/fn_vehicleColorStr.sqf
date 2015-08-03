@@ -93,8 +93,7 @@ switch (_vehicle) do
 			case 7: {_color = "Fast & Furious";};
 			case 8: {_color = "Cop Intercepter"};
 			case 9: {_color = "EMS"};
-			case 10: {_color = "EpikGaming SUV"};
-			case 11: {_color = "Ferrari"};
+			case 10: {_color = "Ferrari"};
 		};
 	};
 
