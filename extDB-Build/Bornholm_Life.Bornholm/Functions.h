@@ -246,6 +246,7 @@ class Life_Client_Core
 		class grabSkills {};
 		class prisionbreak {};
 		class progressBaren {};
+		class emptyFuel {};
 	};
 	
 	class Network
