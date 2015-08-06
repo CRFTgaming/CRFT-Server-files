@@ -97,6 +97,7 @@ class CfgFunctions
 			class getVehicles {};
 			class vehicleStore {};
 			class vehicleDelete {};
+			class vehicleIsDead {};
 			class spikeStrip {};
 			class logIt {};
 			class federalUpdate {};

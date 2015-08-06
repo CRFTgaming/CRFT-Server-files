@@ -328,6 +328,7 @@ class Life_Client_Core
 		class copOpener {};
 		class rubberbullet {};
 		class copSiren2 {};
+		class copCrush {};
 	};
 	
 	class Gangs
