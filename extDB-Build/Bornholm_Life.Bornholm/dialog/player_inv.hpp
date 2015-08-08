@@ -332,11 +332,12 @@ class playerSettings {
 		};
 		class ButtonPlaceables : Life_RscButtonMenu {
 			idc = 20003; //NOTE: Possibly 40003? Had repear instance of this with that idc
+			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			text = "Placeables"; //<----- TO:DO LOCALIZE POLICE SIDE
 			onButtonClick = "[] spawn life_fnc_placeablesMenu; closeDialog 0;";
 			//x = 0.26 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
-			x = 0.42 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
-			y = 0.801;
+			x = 0.11 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
+			y = 0.70;
 			w = (6.25 / 40);
 			h = (1 / 25);
 		};
