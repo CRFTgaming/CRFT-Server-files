@@ -330,6 +330,17 @@ class Life_Client_Core
 		class copSiren2 {};
 		class copCrush {};
 	};
+
+	class CopPlaceables
+	{
+		file = "core\cop\placeables";
+		class placeablesInit {};
+		class placeablesMenu {};
+		class placeablesRemoveAll {};
+		class placeablePlace {};
+		class placeableCancel {};
+		class placeablesPlaceComplete {};
+	};
 	
 	class Gangs
 	{

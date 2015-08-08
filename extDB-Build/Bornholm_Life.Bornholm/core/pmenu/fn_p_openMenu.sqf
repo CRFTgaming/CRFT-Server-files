@@ -38,12 +38,14 @@ switch(playerSide) do
 	{
 		// Enable or disable buttons for civilians.
 		if(!license_civ_bountyh) then {ctrlShow[InvButtonWantedMenu, false];} //<--for bounty hunters to see wanted list
+		ctrlShow[20003,false]; // COP Placeables
 	};
 	case independent:
 	{
 		//Disable wanted menu
 		ctrlShow[InvButtonWantedMenu, false];
 		ctrlShow[InvButtonGang, false];
+		ctrlShow[20003,false]; // COP Placeables
 	};
 };
 

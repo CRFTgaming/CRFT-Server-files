@@ -28,3 +28,4 @@
 #include "prof.hpp"
 #include "compensate.hpp"
 #include "prision_list.hpp"
+#include "placeables.hpp" //Maxi Cop objects

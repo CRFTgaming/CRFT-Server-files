@@ -467,6 +467,17 @@ switch (_code) do
 		};
 		_handled = true;
 	};
+
+	if (life_barrier_active) then {
+    switch (_code) do
+    {
+        case 57: //space key
+        {
+            [] spawn life_fnc_placeablesPlaceComplete;
+        };
+    };
+    true;
+};
 };
 
 
