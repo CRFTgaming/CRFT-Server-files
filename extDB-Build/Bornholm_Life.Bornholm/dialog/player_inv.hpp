@@ -336,7 +336,7 @@ class playerSettings {
 			text = "Placeables"; //<----- TO:DO LOCALIZE POLICE SIDE
 			onButtonClick = "[] spawn life_fnc_placeablesMenu; closeDialog 0;";
 			//x = 0.26 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
-			x = 0.11 + (6.25 / 19.8) + (1 / 250 / (safezoneW / safezoneH));
+			x = 0.1 + (6.25 / 40) + (1 / 250 / (safezoneW / safezoneH));
 			y = 0.70;
 			w = (6.25 / 40);
 			h = (1 / 25);
