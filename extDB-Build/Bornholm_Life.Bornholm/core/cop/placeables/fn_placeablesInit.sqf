@@ -47,8 +47,16 @@ life_placeables =
         "Land_PortableLight_double_F"
     ],
     [
-        "UK flag pole",
-        "Flag_UK_F"
+        "Concrete Barrier w/ Stripes",
+        "Land_CncBarrier_stripes_F"
+    ],
+    [
+        "Concrete Barrier - No Stripes",
+        "Land_CncBarrier_F"
+    ],
+    [
+        "Red-White Tape Barrier",
+        "TapeSign_F"
     ]
 ];
 life_bar_limit = 2500;
