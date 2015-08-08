@@ -19,7 +19,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 {
     _vehicleData = _vehicle getVariable["vehicle_info_owners",[]];
     _vehicleName = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
-    [[0,format["%1 your %2 is being crushed by the police!",(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+    [[0,format["%1 your %2 is being seized by the police!",(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
     life_action_inUse = true;
     
     _upp = "Crushing";
@@ -44,7 +44,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
     };
     5 cutText ["","PLAIN"];
     
-    if(player distance _vehicle > 10) exitWith {hint "Crushing Canceled"; life_action_inUse = false;};
+    if(player distance _vehicle > 10) exitWith {hint "seizing Canceled"; life_action_inUse = false;};
     if(!alive player) exitWith {life_action_inUse = false;};
     if((count crew _vehicle) == 0) then
     {
@@ -66,13 +66,13 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
                 deleteVehicle _this;
             };
         };
-        hint format["You have received %2 for crushing this %1",_type,_price];
-        [[0,format["%2 your %3 has been crushed by %1",profileName,(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
+        hint format["You have received %2 for seizing this %1",_type,_price];
+        [[0,format["%2 your %3 has been seized by %1",profileName,(_vehicleData select 0) select 1,_vehicleName]],"life_fnc_broadcast",true,false] spawn life_fnc_MP;
         ["atm","add",_price] call life_fnc_updateCash; //replace with life_atmcash = life_atmcash + _price;
     }
         else
     {
-        hint "Crushing Canceled";
+        hint "seizing Canceled";
     };
 };
 life_action_inUse = false;

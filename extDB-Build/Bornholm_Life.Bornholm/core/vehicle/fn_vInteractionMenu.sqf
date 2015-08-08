@@ -69,7 +69,7 @@ if(playerSide == west) then {
 	if(playerSide == west) then {
 		_Btn7 ctrlShow true;
 		_Btn7 ctrlEnable true;
-		_Btn7 ctrlSetText "Crush";
+		_Btn7 ctrlSetText "Seize Vehicle";
 		_Btn7 buttonSetAction "[life_vInact_curTarget] spawn life_fnc_copCrush;";
 	} else {
 	_Btn7 ctrlShow false;
