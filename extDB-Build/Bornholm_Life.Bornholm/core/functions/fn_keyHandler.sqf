@@ -81,6 +81,11 @@ switch (_code) do
 			[[player,false],"life_fnc_jumpFnc",nil,FALSE] call life_fnc_MP; //Global execution 
 			_handled = true;
 		};
+		if (life_barrier_active) then {
+    	switch (_code) do
+    	{
+            [] spawn life_fnc_placeablesPlaceComplete;
+    	};
 	};
 	
 	//Map Key
@@ -467,15 +472,6 @@ switch (_code) do
 		};
 		_handled = true;
 	};
-
-	if (life_barrier_active) then {
-    switch (_code) do
-    {
-        case 57: //space key
-        {
-            [] spawn life_fnc_placeablesPlaceComplete;
-        };
-    };
     true;
 };
 };
