@@ -162,3 +162,14 @@
 		sleep 20;
 	};
 };
+
+[] spawn
+{
+	while {true} do
+	{
+		waitUntil {("ItemRadio" in (assignedItems  player))};
+		[[player,life_sidechat,playerSide,1],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
+		waitUntil {!("ItemRadio" in (assignedItems  player))};
+		[[player,life_sidechat,playerSide,0],"TON_fnc_managesc",false,false] spawn life_fnc_MP;
+	};
+};
