@@ -55,7 +55,7 @@ class introLife
             sizeEx = 0.05; 
             colorBackground[] = {1,1,1,0};
             colorText[] = {1,1,1,1};
-            text = "textures\crftlogo.paa";      <---- this is your logo before camera
+            text = "textures\crftlogo.paa";
             lineSpacing = 1;
         }; 
     }; 
