@@ -40,6 +40,9 @@ life_nlrtimer_stop = false;
 life_nlrtimer_running = false;
 //Insert EarPlugs
 life_fadeSound = false;
+life_god = false; //Add this
+life_frozen = false; //And this
+life_markers = false; //Finally this
 
 //Persistent Saving
 __CONST__(life_save_civ,TRUE); //Save weapons for civs?
