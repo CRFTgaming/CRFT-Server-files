@@ -4,6 +4,7 @@ X_Server = false;
 X_Client = false;
 X_JIP = false;
 StartProgress = false;
+introSpawn = nil;
 
 if(!isDedicated) then { X_Client = true;};
 enableSaving[false,false];

@@ -63,8 +63,18 @@ if(count life_spawn_point == 0) then
 	titleText[format["%2 %1",life_spawn_point select 1,localize "STR_Spawn_Spawned"],"BLACK IN"];
 };
 
-if(life_firstSpawn) then {
-	life_firstSpawn = false;
-	[] call life_fnc_welcomeNotification;
+
+[] spawn
+{
+   private["_handle"];
+   cutText ["","BLACK IN"];
+   [] execVM "addons\scripts\cameraScreen.sqf";
+   _handle = [] execVM "addons\scripts\cameraHeight.sqf";
+   waitUntil {scriptDone _handle};
+ 
+   if(life_firstSpawn) then {
+      life_firstSpawn = false;
+      [] call life_fnc_welcomeNotification;
+   };
+   [] call life_fnc_hudSetup;
 };
-[] call life_fnc_hudSetup;
