@@ -21,6 +21,7 @@ StartProgress = true;
 [] execVM "R3F_LOG\init.sqf";
 [] execVM "IgiLoad\IgiLoadInit.sqf";
 [] execVM "addons\teargas.sqf";
+[] execVM "addons\scripts\3Dmarkers.sqf";
 []spawn
 {
 	if (local player) then
