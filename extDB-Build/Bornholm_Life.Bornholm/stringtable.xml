@@ -163,20 +163,6 @@
 			<Italian>Non hai selezionato nulla.</Italian>
 			<Portuguese>Você não selecionou nada.</Portuguese>
 		</Key>
-		<Key ID="STR_Global_Yes">
-			<Original>Yes</Original>
-			<German>Ja</German>
-			<French>Oui</French>
-			<Italian>Si</Italian>
-			<Portuguese>Sim</Portuguese>
-		</Key>
-		<Key ID="STR_Global_No">
-			<Original>No</Original>
-			<German>Nein</German>
-			<French>Aucun</French>
-			<Italian>No</Italian>
-			<Portuguese>Não</Portuguese>
-		</Key>
 		<Key ID="STR_Global_Cancel">
 			<Original>Cancel</Original>
 			<German>Abbrechen</German>
@@ -308,12 +294,6 @@
 			<German>To Be Changed</German>
 			<French>Votre Niveau admin n'est pas suffisamment élevée</French>
 		</Key>
-		<Key ID="STR_NOTF_ActionCancel">
-			<Original>Action Cancelled</Original>
-			<English>Action Cancelled</English>
-			<German>Aktion abgebrochen</German>
-			<French>Action Annulée</French>
-		</Key>
 		<Key ID="STR_Global_Yes">
 			<Original>Yes</Original>
 			<English>Yes</English>
@@ -355,54 +335,6 @@
 			<French>Le joueur ne semble pas exister</French>
 			<Italian>Il giocatore non esiste più</Italian>
 			<Portuguese>Jogador não existe mais?</Portuguese>
-		</Key>
-		<Key ID="STR_ANOTF_CompWarn">
-			<Original>You are about to give yourself $%1 to compensate to another player &lt;br/&gt;&lt;br/&gt;You must give this cash to the person you are compensating manually.</Original>
-			<English>You are about to give yourself $%1 to compensate to another player &lt;br/&gt;&lt;br/&gt;You must give this cash to the person you are compensating manually.</English>
-			<German>To Be Changed</German>
-			<French>Vous êtes sur le point de vous donner $%1 pour compenser à un autre joueur &lt;br/&gt;&lt;br/&gt; S'il vous plaît donner à cette à la personne vous compensez manuellement</French>
-		</Key>
-		<Key ID="STR_ANOTF_Success">
-			<Original>You have added $%1 to your account.</Original>
-			<English>You have added $%1 to your account.</English>
-			<German>To Be Changed</German>
-			<French>Vous avez ajouté $%1 à votre compte</French>
-		</Key>
-		<Key ID="STR_ANOTF_Fail">
-			<Original>You can not go above 999999.</Original>
-			<English>You can not go above 999999.</English>
-			<German>To Be Changed</German>
-			<French>Vous ne pouvez pas aller au-dessus $999999</French>
-		</Key>
-		<Key ID="STR_ANOTF_Amount">
-			<Original>Please type in the amount to compensate.</Original>
-			<English>Please type in the amount to compensate.</English>
-			<German>To Be Changed</German>
-			<French>S'il vous plaît entrer la quantité pour compenser</French>
-		</Key>
-		<Key ID="STR_ANOTF_Frozen">
-			<Original>You have disabled %1's input.</Original>
-			<English>You have disabled %1's input.</English>
-			<German>To Be Changed</German>
-			<French>Vous avez désactivé %1's contrôles</French>
-		</Key>
-		<Key ID="STR_ANOTF_Unfrozen">
-			<Original>You have enabled %1's input.</Original>
-			<English>You have enabled %1's input.</English>
-			<German>To Be Changed</German>
-			<French>Vous avez permis %1's contrôles</French>
-		</Key>
-		<Key ID="STR_ANOTF_Error">
-			<Original>You can't do that dumbass.</Original>
-			<English>You can't do that dumbass.</English>
-			<German>To Be Changed</German>
-			<French>Vous ne pouvez pas le faire sur vous-même</French>
-		</Key>
-		<Key ID="STR_ANOTF_ErrorLevel">
-			<Original>Your Admin Level is not high enough.</Original>
-			<English>Your Admin Level is not high enough.</English>
-			<German>To Be Changed</German>
-			<French>Votre Niveau admin n'est pas suffisamment élevée</French>
 		</Key>
 	</Package>
 	<Package name="ATM_Strings">
