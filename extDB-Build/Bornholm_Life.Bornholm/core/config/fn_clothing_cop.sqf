@@ -22,7 +22,6 @@ switch (_filter) do
 		_ret pushBack ["U_Rangemaster","Cop Uniform",100];
 		if(__GETC__(life_coplevel) > 1) then
 		{
-			_ret pushBack ["U_Competitor","Sherrif Uniform",100];
 			_ret pushBack ["U_B_HeliPilotCoveralls","Air Patrol Flight Suit",200];
 		};
 		if(__GETC__(life_coplevel) > 4) then
@@ -42,6 +41,11 @@ switch (_filter) do
 		};
 		if(__GETC__(life_coplevel) > 6) then
 		{
+			_ret pushBack ["U_Competitor","Sheriff Uniform",100];
+			_ret pushBack ["U_PMC_RedPlaidShirt_DenimCords","Sheriff Undercover",100];
+			_ret pushBack ["U_PMC_BluePlaidShirt_BeigeCords","Sheriff undercover 1",100];
+			_ret pushBack ["U_PMC_IndUniformLS_BSBPBB","Sheriff Black Tactical",200];
+			_ret pushBack ["U_PMC_IndUniformLS_GSBPBB","Sheriff Green Tactical",200];
 		};
 	};
 	
@@ -77,6 +81,10 @@ switch (_filter) do
 			_ret pushBack ["H_HelmetB_light_black",nil,200];
 			_ret pushBack ["H_Cap_blk_CMMG",nil,200];
 		};
+		if(__GETC__(life_coplevel) > 6) then
+		{
+			_ret pushBack ["H_Cap_blk","Sheriff Hat",50];
+		};
 		
 	};
 	
@@ -97,6 +105,9 @@ switch (_filter) do
 		{
 			_ret pushBack ["G_Diving",nil,55];
 			_ret pushBack ["G_Tactical_Black",nil,55];
+		};
+		if(__GETC__(life_coplevel) > 6) then
+		{
 		};
 	};
 	
@@ -123,6 +134,10 @@ switch (_filter) do
 			_ret pushBack ["V_PlateCarrierSpec_blk","SWAT Heavy Rig",1200];
 			_ret pushBack ["V_PlateCarrierGL_blk","SWAT Heavy GL Rig",1200];
 		};
+		if(__GETC__(life_coplevel) > 6) then
+		{
+			_ret pushBack ["V_Rangemaster_belt",Sheriff's Duty Belt,100];
+		};
 	};
 	
 	//Backpacks
@@ -131,9 +146,15 @@ switch (_filter) do
 		_ret =
 		[
 			["B_AssaultPack_cbr",nil,80],
+			["PMC_AssaultPack_Tan",nil,80],
+			["PMC_AssaultPack_Blk",nil,80],
+			["PMC_AssaultPack_Rgr",nil,80],
 			["B_Kitbag_cbr",nil,100],
+			["PMC_B_Kitbag_blk",nil,100],
 			["B_FieldPack_cbr",nil,150],
 			["B_Bergen_sgg",nil,200],
+			["B_Bergen_rgr_Exp",nil,200],
+			["PMC_B_Carryall_blk",nil,250],
 			["B_Carryall_cbr",nil,250]
 		];
 	};
