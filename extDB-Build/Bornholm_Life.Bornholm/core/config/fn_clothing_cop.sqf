@@ -47,8 +47,6 @@ switch (_filter) do
 			_ret pushBack ["U_PMC_IndUniformLS_BSBPBB","Sheriff Black Tactical",200];
 			_ret pushBack ["U_PMC_IndUniformLS_GSBPBB","Sheriff Green Tactical",200];
 			_ret pushBack ["45KOso_black","Sheriff SWAT",200];
-			_ret pushBack ["TRYK-U_B_woodR_CombatUniformTshirt","Sheriff Woodland Tactical(TF)",200];
-			_ret pushBack ["TRYK-U_B_woodR_BLK3CD","Sheriff Black Tactical(TF)",200];
 		};
 	};
 	
