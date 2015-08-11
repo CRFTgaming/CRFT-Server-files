@@ -578,7 +578,7 @@ switch(_shop) do
 							["arifle_mas_m1014","Benelli",3500],
 							["7Rnd_mas_12Gauge_Slug","7rd 12g Slugs",100],
 							["PMC_m4","M4 Rifle",3500],
-							["30Rnd_mas_556x45_Stanag","M4 30rd Mag"100],
+							["30Rnd_mas_556x45_Stanag","M4 30rd Mag",100],
 							["arifle_mas_m16","M16",3500],
 							["30Rnd_mas_556x45_Stanag","M16 30rd Mag",100]
 					]
