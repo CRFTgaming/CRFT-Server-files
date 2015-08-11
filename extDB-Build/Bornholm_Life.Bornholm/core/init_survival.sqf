@@ -50,7 +50,7 @@
         waitUntil {backpack player != ""};
         _bp = backpack player;
         _cfg = getNumber(configFile >> "CfgVehicles" >> (backpack player) >> "maximumload");
-        _load = round(_cfg / 5);
+        _load = round(_cfg / 8);
         life_maxWeight = life_maxWeightT + _load;		
 		
 		if(playerSide == west) then 
@@ -61,11 +61,11 @@
 		};
 		
 		if(playerSide == independent) then 
-+		{
-+		waitUntil {backpack player == "B_FieldPack_ocamo"};
-+		(backpackContainer player) setObjectTextureGlobal [0,"textures\med\clothing\backpack_gorod_hex_co_EMS.jpg"];
-+		waitUntil {backpack player == "B_FieldPack_ocamo"};
-+		};
+		{
+		waitUntil {backpack player == "B_FieldPack_ocamo"};
+		(backpackContainer player) setObjectTextureGlobal [0,"textures\med\clothing\backpack_gorod_hex_co_EMS.jpg"];
+		waitUntil {backpack player == "B_FieldPack_ocamo"};
+		};
 		
         waitUntil {backpack player != _bp};
         if(backpack player == "") then
