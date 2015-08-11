@@ -46,6 +46,9 @@ switch (_filter) do
 			_ret pushBack ["U_PMC_BluePlaidShirt_BeigeCords","Sheriff Undercover 1",100];
 			_ret pushBack ["U_PMC_IndUniformLS_BSBPBB","Sheriff Black Tactical",200];
 			_ret pushBack ["U_PMC_IndUniformLS_GSBPBB","Sheriff Green Tactical",200];
+			_ret pushBack ["45KOso_black","Sheriff SWAT",200];
+			_ret pushBack ["TYRK-U_B_woodR_CombatUniformTshirt","Sheriff Woodland Tactical(TF)",200];
+			_ret pushBack ["TYRK-U_B_woodR_BLK3CD","Sheriff Black Tactical(TF)",200];
 		};
 	};
 	
@@ -84,6 +87,9 @@ switch (_filter) do
 		if(__GETC__(life_coplevel) > 6) then
 		{
 			_ret pushBack ["H_Cap_blk","Sheriff Hat",50];
+			_ret pushBack ["H_HelmetB_plain_blk","Ballistic Helmet",50];
+			_ret pushBack ["Vdo_opscore_black_3_peltor","Voodoo Helmet Blk",50];
+			_ret pushBack ["45KOso_helmet_alpha","Sheriff SWAT Helmet",50];
 		};
 		
 	};
@@ -137,6 +143,11 @@ switch (_filter) do
 		if(__GETC__(life_coplevel) > 6) then
 		{
 			_ret pushBack ["V_Rangemaster_belt","Sheriff's Duty Belt",100];
+			_ret pushBack ["TRYK_v_Sheriff_BA_OD","Sheriff's Duty Vest",200];
+			_ret pushBack ["TRYK_V_tacv1lc_SRF_OD","Sheriff's TF Vest (OD)",500];
+			_ret pushBack ["TRYK_V_tacv1lc_SRF_BK","Sheriff's TF Vest(BLK)",500];
+			_ret pushBack ["TRYK_V_tacv1lc_SRF2_OD","Sheriff's SWAT (OD)",650];
+			_ret pushBack ["TRYK_V_tacv1lc_SRF2_BK","Sheriff's SWAT (BLK)",650];
 		};
 	};
 	
