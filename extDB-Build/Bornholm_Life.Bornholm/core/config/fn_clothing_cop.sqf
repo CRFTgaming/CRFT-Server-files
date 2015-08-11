@@ -43,7 +43,7 @@ switch (_filter) do
 		{
 			_ret pushBack ["U_Competitor","Sheriff Uniform",100];
 			_ret pushBack ["U_PMC_RedPlaidShirt_DenimCords","Sheriff Undercover",100];
-			_ret pushBack ["U_PMC_BluePlaidShirt_BeigeCords","Sheriff undercover 1",100];
+			_ret pushBack ["U_PMC_BluePlaidShirt_BeigeCords","Sheriff Undercover 1",100];
 			_ret pushBack ["U_PMC_IndUniformLS_BSBPBB","Sheriff Black Tactical",200];
 			_ret pushBack ["U_PMC_IndUniformLS_GSBPBB","Sheriff Green Tactical",200];
 		};
@@ -136,7 +136,7 @@ switch (_filter) do
 		};
 		if(__GETC__(life_coplevel) > 6) then
 		{
-			_ret pushBack ["V_Rangemaster_belt",Sheriff's Duty Belt,100];
+			_ret pushBack ["V_Rangemaster_belt","Sheriff's Duty Belt",100];
 		};
 	};
 	
