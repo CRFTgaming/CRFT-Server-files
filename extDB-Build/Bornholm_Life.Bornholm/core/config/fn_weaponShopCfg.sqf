@@ -705,7 +705,7 @@ switch(_shop) do
 				["Mohammed's Jihadi Shop",
 					[
 						["hgun_mas_mak_F","Makarov",250],
-						["8Rnd_mas_9x18_Mag",8rd Makarov Mag,50],
+						["8Rnd_mas_9x18_Mag","8rd Makarov Mag",50],
 						["hgun_mas_grach_F","Grach",500],
 						["15Rnd_mas_9x21_Mag","15rd Grach Mag",50],
 						["hgun_mas_glock_F","Glock 17",500],
