@@ -118,7 +118,7 @@ switch (_filter) do
 	//Vest
 	case 3:
 	{
-		_ret pushBack ["V_Rangemaster_belt",nil,100];
+		_ret pushBack ["V_Rangemaster_belt_blk",nil,100];
 		if(__GETC__(life_coplevel) > 0) then
 		{
 			_ret pushBack ["V_TacVest_blk_POLICE",nil,200];
@@ -140,7 +140,7 @@ switch (_filter) do
 		};
 		if(__GETC__(life_coplevel) > 6) then
 		{
-			_ret pushBack ["V_Rangemaster_belt","Sheriff's Duty Belt",100];
+			_ret pushBack ["V_Rangemaster_belt_blk","Sheriff's Duty Belt",100];
 			_ret pushBack ["TRYK_v_Sheriff_BA_OD","Sheriff's Duty Vest",200];
 			_ret pushBack ["TRYK_V_tacv1lc_SRF_OD","Sheriff's TF Vest (OD)",500];
 			_ret pushBack ["TRYK_V_tacv1lc_SRF_BK","Sheriff's TF Vest(BLK)",500];
