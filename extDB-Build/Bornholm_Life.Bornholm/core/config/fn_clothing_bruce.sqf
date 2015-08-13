@@ -19,7 +19,6 @@ switch (_filter) do
 	{
 		[
 			["U_C_Poor_1","Poor Folk Clothes",10],
-			["U_C_Poor_2","Rag tagged clothes",10],	
 			["U_C_Poloshirt_blue","Poloshirt Blue",100],
 			["U_C_Poloshirt_burgundy","Poloshirt Burgundy",100],
 			["U_C_Poloshirt_redwhite","Poloshirt Red/White",100],
@@ -76,9 +75,7 @@ switch (_filter) do
 			["H_Cap_grn_BI",nil,60],
 			["H_Cap_oli",nil,60],
 			["H_Cap_red",nil,60],
-			["H_Cap_tan",nil,60],
-			["H_CrewHelmetHeli_O","Altis Air Crew Helmet",400],
-			["H_PilotHelmetHeli_O","Altis Air Pilot Helmet",450]
+			["H_Cap_tan",nil,60]
 		];
 	};
 	
