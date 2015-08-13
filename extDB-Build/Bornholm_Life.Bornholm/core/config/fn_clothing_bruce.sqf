@@ -32,6 +32,7 @@ switch (_filter) do
 		["U_C_HunterBody_grn","The Hunters Look",400],
 		["U_C_WorkerCoveralls","Mechanic Coveralls",500],
 		["U_NikosAgedBody","Casual Wears",500],
+		["TRYK_SUITS_BLK_F","Black Suit",500],
 		["U_I_pilotCoveralls",nil,600],
 		["U_I_HeliPilotCoveralls","Altis Air Flight Suit",700]
 		];

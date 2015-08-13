@@ -47,7 +47,10 @@ switch (_filter) do
 			_ret pushBack ["TRYK_U_denim_jersey_blu","Sheriff Undercover 1",100];
 			_ret pushBack ["U_PMC_IndUniformLS_BSBPBB","Sheriff Black Tactical",200];
 			_ret pushBack ["U_PMC_IndUniformLS_GSBPBB","Sheriff Green Tactical",200];
+			_ret pushBack ["TRYK_U_B_wood_CombatUniform","Sheriff Woodland",200];
+			_ret pushBack ["TRYK_U_B_Woodland","Sheriff Woodland 2",200];
 			_ret pushBack ["45KOso_black","Sheriff SWAT",200];
+			_ret pushBack ["TRYK_B_USMC_R","Sheriff SWAT 2",200];
 		};
 	};
 	
@@ -57,6 +60,7 @@ switch (_filter) do
 		if(__GETC__(life_coplevel) > 1) then
 		{
 			_ret pushBack ["H_Cap_blk",nil,50];
+			_ret pushBack ["H_Cap_police","Police Hat",50];
 			_ret pushBack ["H_HelmetB_plain_mcamo",nil,200];
 			_ret pushBack ["H_PilotHelmetHeli_B","Air Patrol Helmet",350];
 		};
@@ -90,6 +94,7 @@ switch (_filter) do
 			_ret pushBack ["H_HelmetB_plain_blk","Ballistic Helmet",50];
 			_ret pushBack ["Vdo_opscore_black_3_peltor","Voodoo Helmet Blk",50];
 			_ret pushBack ["45KOso_helmet_alpha","Sheriff SWAT Helmet",50];
+			_ret pushBack ["H_HelmetB_light_snakeskin","Sheriff SWAT Helmet 2",50];
 		};
 		
 	};
@@ -129,6 +134,7 @@ switch (_filter) do
 		if(__GETC__(life_coplevel) > 1) then
 		{
 			_ret pushBack ["V_Chestrig_khk","Air Patrol Rig",300];
+			_ret pushBack ["TRYK_V_tacv1_P_BK","Police Vest",300];
 			_ret pushBack ["V_TacVestIR_blk",nil,300];
 		};
 		if(__GETC__(life_coplevel) > 4) then
@@ -150,6 +156,7 @@ switch (_filter) do
 			_ret pushBack ["TRYK_V_tacv1lc_SRF_BK","Sheriff's TF Vest(BLK)",500];
 			_ret pushBack ["TRYK_V_tacv1lc_SRF2_OD","Sheriff's SWAT (OD)",650];
 			_ret pushBack ["TRYK_V_tacv1lc_SRF2_BK","Sheriff's SWAT (BLK)",650];
+			_ret pushBack ["V_PlateCarrier1_PMC_marpat","Sheriff's SWAT Marpat",650];
 		};
 	};
 	
