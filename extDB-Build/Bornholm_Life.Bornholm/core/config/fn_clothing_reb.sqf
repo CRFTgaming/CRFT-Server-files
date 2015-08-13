@@ -18,26 +18,32 @@ switch (_filter) do
 	case 0:
 	{
 		[
-			["TRYK_ZARATAKI",nil,300],
-			["TRYK_ZARATAKI2",nil,300],
-			["TRYK_ZARATAKI3",nil,300],
-			["U_O_CombatUniform_oucamo",nil,300],
-			["U_O_SpecopsUniform_ocamo",nil,300],
-			["U_O_SpecopsUniform_blk",nil,300],
-			["U_O_OfficerUniform_ocamo",nil,300],
-			["U_I_OfficerUniform",nil,400],
-			["U_BG_Guerilla1_1",nil,400],
-			["U_IG_leader","Guerilla Leader",900],
-			["U_I_G_resistanceLeader_F",nil,900],
-			["U_C_Scientist",nil,1200],
-			["U_I_pilotCoveralls",nil,1200],
-			["U_O_PilotCoveralls",nil,1200],
-			["U_I_Wetsuit",nil,1500],
-			["U_O_Wetsuit",nil,1500],
-			["U_I_GhillieSuit",nil,1700],
-			["U_O_FullGhillie_ard",nil,1700],
-			["U_O_FullGhillie_lsh",nil,1700],
-			["U_O_FullGhillie_sard",nil,1700]
+			["TRYK_ZARATAKI","Zarataki",300],
+			["TRYK_ZARATAKI2","Zarataki2",300],
+			["TRYK_ZARATAKI3","Zarataki3",300],
+			["TRYK_U_B_wood_CombatUniform","Woodland Camo",1000],
+			["TRYK_U_B_JSDF_CombatUniform","Woodland Camo2",1000],
+			["TRYK_U_B_Woodland_Tshirt","Woodland Camo3",1000],
+			["TRYK_U_B_Wood_T","Woodland Camo T Shirt",1000],
+			["TRYK_U_pad_hood_CSATBlk","SF Hoodie CSAT",1000],
+			["TRYK_U_pad_hood_Blod","SF Hoodie OD",1000],
+			["TRYK_U_B_ARO2_CombatUniform","BAF Combat Uniform",1000],
+			["TRYK_C_AOR2_T","BAF Combat Uniform2",1000],
+			["TRYK_U_B_AOR2_OD_CombatUniform","BAF Combat Uniform3",1000],
+			["TRYK_U_B_AOR2_BLK_CombatUniform","BAF Combat Uniform4",1000],
+			["U_O_CombatUniform_oucamo","Urban Fatigues",300],
+			["U_O_SpecopsUniform_ocamo","Recon Fatigues",300],
+			["U_O_SpecopsUniform_blk","Recon Fatigues BLK",300],
+			["U_O_OfficerUniform_ocamo","Officer Fatigues",300],
+			["U_I_GhillieSuit","Ghillie Suit",1000],
+			["U_O_FullGhillie_ard","Ghillie Arid",1000],
+			["U_O_FullGhillie_lsh","Ghillie Lush",1000],
+			["U_O_FullGhillie_sard","Ghillie Semi Arid",1000],
+			["U_I_HeliPilotCoveralls","Heli Pilot Coveralls AAF",1000],
+			["U_O_PilotCoveralls","Pilot Coveralls CSAT",1000],
+			["U_I_pilotCoveralls","Pilot Coveralls AAF",1000],
+			["U_I_Wetsuit","Wetsuit AAF",1500],
+			["U_O_Wetsuit","Wetsuit CSAT",1500]
 		];
 	};
 	
@@ -45,7 +51,7 @@ switch (_filter) do
 	case 1:
 	{
 		[
-			["TRYK_H_pakol2	",nil,10],
+			["TRYK_H_pakol2",nil,10],
 			["TRYK_H_pakol",nil,10],
 			["H_Bandanna_camo",nil,10],
 			["H_Cap_brn_SPECOPS",nil,15],
@@ -56,9 +62,13 @@ switch (_filter) do
 			["H_Shemag_olive",nil,40],
 			["H_ShemagOpen_khk",nil,40],
 			["H_Shemag_olive_hs",nil,40],
+			["TRYK_H_Booniehat_WOOD","Woodland BoonieHat",50],
+			["TRYK_H_AOR2","BAF BoonieHat",50],
 			["H_HelmetCrew_I",nil,100],
 			["H_HelmetCrew_O",nil,150],
 			["H_HelmetO_ocamo",nil,200],
+			["TRYK_H_Helmet_WOOD","WOODLAND HELMET",200],
+			["TRYK_H_AOR2","BAF Lite Helmet",200],
 			["H_HelmetSpecO_ocamo",nil,250],
 			["H_HelmetSpecO_blk",nil,250],
 			["H_HelmetLeaderO_ocamo",nil,300],
@@ -88,27 +98,29 @@ switch (_filter) do
 	case 3:
 	{
 		[
-			["V_BandollierB_cbr",nil,200],
-			["V_BandollierB_khk",nil,200],
-			["V_BandollierB_blk",nil,200],
-			["V_Chestrig_blk",nil,250],
-			["V_Chestrig_rgr",nil,250],
-			["V_Chestrig_khk",nil,250],
-			["V_HarnessO_brn",nil,300],
-			["V_HarnessO_gry",nil,300],
-			["V_HarnessOGL_brn",nil,300],
-			["V_HarnessOGL_gry",nil,300],
-			["V_HarnessOSpec_brn",nil,300],
-			["V_HarnessOSpec_gry",nil,300],
-			["V_TacVest_khk",nil,350],
-			["V_TacVest_brn",nil,350],
-			["V_TacVest_camo",nil,350],
-			["V_TacVestCamo_khk",nil,350],
-			["V_PlateCarrier2_rgr",nil,1200],
-			["V_RebreatherIR",nil,3000],
-			["V_PlateCarrierSpec_mtp",nil,3000],
-			["V_PlateCarrierGL_mtp",nil,3000],
-			["V_PlateCarrierIAGL_oli",nil,3000]
+			["V_BandollierB_cbr","Bandollier CBR",200],
+			["V_BandollierB_khk","Bandollier KHK",200],
+			["V_BandollierB_blk","Bandollier BLK",200],
+			["V_BandollierB_rgr","Bandollier RGR",200],
+			["V_Chestrig_blk","Black Chest Rig",250],
+			["V_Chestrig_rgr","Green Chest Rig",250],
+			["V_Chestrig_khk","Khaki Chest Rig",250],
+			["TRYK_V_ChestRig_L","Chest Rig",250],
+			["TRYK_V_ChestRig","Chest Rig Lite",250],
+			["V_TacVest_khk","Khaki Tac Vest",350],
+			["V_TacVest_brn","Brown Tac Vest",350],
+			["V_TacVest_camo","Camo Tac Vest",350],
+			["TRYK_V_Sheriff_BA_T","Tac Vest OD",1000],
+			["TRYK_V_Sheriff_BA_TB","Tac Vest BLK",1000],
+			["TRYK_V_Sheriff_BA_T3","CQB Vest OD",1250],
+			["TRYK_V_Sheriff_BA_TB3","CQB Vest BLK",1250],
+			["TRYK_V_tacv1LC_OD","CQB Heavy OD",1250],
+			["TRYK_V_PlateCarrier_wood_L","Woodland Heavy",1500],
+			["TRYK_V_PlateCarrier_wood","Woodland Carrier",1500],
+			["TRYK_V_ArmorVest_AOR2_2","BAF Vest",1500],
+			["TRYK_V_ArmorVest_AOR2","BAF Vest2",1500],
+			["TRYK_V_PlateCarrier_JSDF","BAF Vest Heavy",1650],
+			["V_RebreatherIR","Rebreather",3000]
 		];
 	};
 	
@@ -136,7 +148,8 @@ switch (_filter) do
 			["B_Carryall_oucamo",nil,250],
 			["B_Carryall_cbr",nil,250],
 			["B_Carryall_mcamo",nil,250],
-			["B_Carryall_khk",nil,250]
+			["B_Carryall_khk",nil,250],
+			["TRYK_B_Carryall_wood","Woodland Carry-all",250]
 		];
 	};
 };
