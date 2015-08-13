@@ -91,7 +91,9 @@ switch (_filter) do
 	case 3:
 	{
 		[
-		 	["V_Press_F","Press Vest",100]
+		 	["V_Press_F","Press Vest",100],
+			["TRYK_V_Bulletproof_BL",nil,100],
+			["TRYK_V_Bulletproof_BLK",nil,100]
 		];
 	};
 	

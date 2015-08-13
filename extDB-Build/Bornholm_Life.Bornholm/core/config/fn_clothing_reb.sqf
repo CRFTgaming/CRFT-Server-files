@@ -18,6 +18,9 @@ switch (_filter) do
 	case 0:
 	{
 		[
+			["TRYK_ZARATAKI",nil,300],
+			["TRYK_ZARATAKI2",nil,300],
+			["TRYK_ZARATAKI3",nil,300],
 			["U_O_CombatUniform_oucamo",nil,300],
 			["U_O_SpecopsUniform_ocamo",nil,300],
 			["U_O_SpecopsUniform_blk",nil,300],
@@ -42,6 +45,8 @@ switch (_filter) do
 	case 1:
 	{
 		[
+			["TRYK_H_pakol2	",nil,10],
+			["TRYK_H_pakol",nil,10],
 			["H_Bandanna_camo",nil,10],
 			["H_Cap_brn_SPECOPS",nil,15],
 			["H_Watchcap_blk",nil,20],
