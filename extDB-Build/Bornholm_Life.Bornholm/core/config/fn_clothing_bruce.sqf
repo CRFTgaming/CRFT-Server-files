@@ -107,8 +107,8 @@ switch (_filter) do
 	{
 		[
 		 	["V_Press_F","Press Vest",100],
-			["TRYK_V_Bulletproof_BL",nil,100],
-			["TRYK_V_Bulletproof_BLK",nil,100]
+			["TRYK_V_Bulletproof_BL","BulletProof Vest",100],
+			["TRYK_V_Bulletproof_BLK","BulletProof Vest2",100]
 		];
 	};
 	

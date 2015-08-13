@@ -961,7 +961,7 @@ switch(_shop) do
 						["20Rnd_762x51_Mag",nil,200],
 						["optic_ACO_grn_smg",nil,250],
 						["optic_DMS",nil,1100],
-						["V_Rangemaster_belt",nil,200],
+						["V_Rangemaster_belt_blk",nil,200],
 						["ItemRadio","CellPhone",500]
 					]
 				];
