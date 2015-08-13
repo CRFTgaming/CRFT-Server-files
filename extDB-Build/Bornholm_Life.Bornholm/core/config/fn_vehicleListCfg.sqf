@@ -199,6 +199,10 @@ switch (_shop) do
     	if (__GETC__(life_coplevel) < 7) exitWith {};
     	// Vehicles available to cops level 7 or higher. Superintendant and Chiefs
     	_return pushBack ["I_Heli_Transport_02_F",8000];
+		_return pushBack ["dezkit_b206_police",8000];
+		_return pushBack ["dezkit_b206_ems",8000];
+		_return pushBack ["dezkit_b206_fbi",8000];
+		_return pushBack ["dezkit_b206x_armed",8000];
 	
     	if (__GETC__(life_coplevel) < 8) exitWith {};
     	// Vehicles available to cops level 8 or higher.
