@@ -51,7 +51,6 @@ class Mission
 		"bornholm",
 		"A3_Structures_F_System",
 		"A3_Structures_F_Ind_Transmitter_Tower",
-		"CHO_LHD",
 		"A3_Structures_F_Naval_Piers",
 		"A3_Structures_F_Households_House_Shop01",
 		"A3_Structures_F_Dominants_Lighthouse",
@@ -149,7 +148,6 @@ class Mission
 		"A3_Signs_F_AD",
 		"A3_Structures_F_System",
 		"A3_Structures_F_Ind_Transmitter_Tower",
-		"CHO_LHD",
 		"A3_Structures_F_Naval_Piers",
 		"A3_Structures_F_Households_House_Shop01",
 		"A3_Structures_F_Dominants_Lighthouse",
@@ -9796,7 +9794,7 @@ class Mission
 			special="NONE";
 			id=722;
 			side="EMPTY";
-			vehicle="CHO_LHD";
+			vehicle="Land_Atm_02_F";
 			leader=1;
 			skill=0.60000002;
 		};
@@ -9807,7 +9805,7 @@ class Mission
 			special="NONE";
 			id=723;
 			side="EMPTY";
-			vehicle="CHO_LHD";
+			vehicle="Land_Atm_02_F";
 			leader=1;
 			skill=0.60000002;
 		};
@@ -9818,7 +9816,7 @@ class Mission
 			special="NONE";
 			id=724;
 			side="EMPTY";
-			vehicle="CHO_LHD";
+			vehicle="Land_Atm_02_F";
 			leader=1;
 			skill=0.60000002;
 		};
