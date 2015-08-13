@@ -37,6 +37,7 @@ switch (_shop) do
 		_return = [
 			["C_Heli_Light_01_civil_F",5000],
 			["O_Heli_Light_02_unarmed_F",7500],
+			["dezkit_b206_ems",8000],
 			["O_Heli_Transport_04_medevac_black_F",10000]
 		];
 	};
@@ -199,10 +200,13 @@ switch (_shop) do
     	if (__GETC__(life_coplevel) < 7) exitWith {};
     	// Vehicles available to cops level 7 or higher. Superintendant and Chiefs
     	_return pushBack ["I_Heli_Transport_02_F",8000];
-		_return pushBack ["dezkit_b206_police",8000];
-		_return pushBack ["dezkit_b206_ems",8000];
 		_return pushBack ["dezkit_b206_fbi",8000];
-		_return pushBack ["dezkit_b206x_armed",8000];
+		_return pushBack ["dezkit_b206_rescue",8000];
+		_return pushBack ["dezkit_b206_fl",8000];
+		_return pushBack ["dezkit_b206_hs",8000];
+		_return pushBack ["GNT_C185T",8000];
+		_return pushBack ["GNT_C185",8000];
+
 	
     	if (__GETC__(life_coplevel) < 8) exitWith {};
     	// Vehicles available to cops level 8 or higher.
