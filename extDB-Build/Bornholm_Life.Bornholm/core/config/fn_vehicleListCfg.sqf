@@ -38,6 +38,8 @@ switch (_shop) do
 			["C_Heli_Light_01_civil_F",5000],
 			["O_Heli_Light_02_unarmed_F",7500],
 			["dezkit_b206_ems",8000],
+			["EC635_SAR",8000],
+			["dezkit_b206_rescue",8000],
 			["O_Heli_Transport_04_medevac_black_F",10000]
 		];
 	};
@@ -50,6 +52,11 @@ switch (_shop) do
 			["C_Hatchback_01_F",800],
 			["C_Offroad_01_F",1500],
 			["C_Van_01_transport_F",2500],
+			["A3L_F350Black",4500],
+			["A3L_F350Blue",4500],
+			["A3L_F350Red",4500],
+			["A3L_F350White",4500],
+			["A3L_F350Mex",4500],
 			["C_Van_01_Box_F",2500],
 			["C_SUV_01_F",1300],
 			["C_Hatchback_01_sport_F",1100]
@@ -88,7 +95,13 @@ switch (_shop) do
 			["B_Quadbike_01_F",650],
 			["B_G_Offroad_01_F",1500],
 			["O_MRAP_02_F",1800],
-			["B_Heli_Light_01_F",10530]
+			["A3L_F350Black",4500],
+			["A3L_F350Blue",4500],
+			["A3L_F350Red",4500],
+			["A3L_F350White",4500],
+			["A3L_F350Mex",4500],
+			["B_Heli_Light_01_F",10530],
+			["USAF_HH60G",10530]
 		];
 		
 		if(license_civ_rebel) then
@@ -154,8 +167,13 @@ switch (_shop) do
 			["O_Heli_Light_02_unarmed_F",12500],
 			["I_Heli_Transport_02_F",21000],
 			["O_Heli_Transport_04_F",25000],
+			["EC635",25000],
 			["O_Heli_Transport_04_box_F",25000],
-			["B_Heli_Transport_03_unarmed_F",20000]
+			["B_Heli_Transport_03_unarmed_F",20000],
+			["USAF_CV22",20000],
+			["USAF_HH60GMED",20000],
+			["ARMSCor_A109_Civ",20000],
+			["dezkit_b206_ls",20000]
 		];
 	};
 
@@ -228,10 +246,12 @@ switch (_shop) do
 		_return =
 		[
 			["C_Rubberboat",500],
+			["A3L_JetSki",500],
 			["C_Boat_Civil_01_F",2200],
 			["B_SDV_01_F",3200],
 			["D41_Trawler",10000],
-			["A3L_Ship",5000]
+			["A3L_Ship",5000],
+			["Burnes_MK10_1",15000]
 		];
 	};
 

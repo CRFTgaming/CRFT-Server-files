@@ -469,6 +469,20 @@ life_garage_prices =
 	["B_SDV_01_F",25000],
 	["B_MRAP_01_F",7500],
 	["D41_Trawler",5000],
+	["EC635_SAR",4000],
+	["dezkit_b206_rescue",4000],
+	["dezkit_b206_ems",4000],
+	["A3L_F350Black",2250],
+	["A3L_F350Blue",2250],
+	["A3L_F350Red",2250],
+	["A3L_F350White",2250],
+	["A3L_F350Mex",2250],
+	["USAF_HH60G",5250],
+	["USAF_CV22",8000],
+	["USAF_HH60GMED",8000],
+	["ARMSCor_A109_Civ",8000],
+	["dezkit_b206_ls",8000],
+	["Burnes_MK10_1",8000],
 	["A3L_Ship",2500]
 ];
 __CONST__(life_garage_prices,life_garage_prices);
@@ -498,6 +512,22 @@ life_garage_sell =
 	["C_Boat_Civil_01_police_F",4950],
 	["B_Boat_Armed_01_minigun_F",21000],
 	["B_SDV_01_F",45000],
-	["B_MRAP_01_F",6000]
+	["B_MRAP_01_F",6000],
+	["D41_Trawler",5000],
+	["EC635_SAR",4000],
+	["dezkit_b206_rescue",4000],
+	["dezkit_b206_ems",4000],
+	["A3L_F350Black",2250],
+	["A3L_F350Blue",2250],
+	["A3L_F350Red",2250],
+	["A3L_F350White",2250],
+	["A3L_F350Mex",2250],
+	["USAF_HH60G",5250],
+	["USAF_CV22",8000],
+	["USAF_HH60GMED",8000],
+	["ARMSCor_A109_Civ",8000],
+	["dezkit_b206_ls",8000],
+	["Burnes_MK10_1",8000],
+	["A3L_Ship",2500]
 ];
 __CONST__(life_garage_sell,life_garage_sell);
