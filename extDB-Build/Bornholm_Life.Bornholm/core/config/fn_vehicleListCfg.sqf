@@ -70,30 +70,30 @@ switch (_shop) do
 			["C_Van_01_fuel_F",2500],
 			["C_Van_01_Box_F",2500],
 			["C_Van_01_transport_F",2500],
+			["B_Truck_01_transport_F",4000],
 			["I_Truck_02_transport_F",4000],
-			["I_Truck_02_covered_F",4500],
-			["O_Truck_03_transport_F",6000],
-			["O_Truck_03_covered_F",6500],
+			["O_Truck_03_transport_F",4000],
+			["B_Truck_01_covered_F",5000],
+			["I_Truck_02_covered_F",5000],
+			["O_Truck_03_covered_F",5000],
+			["B_Truck_01_fuel_F",7000],
 			["I_Truck_02_fuel_F",7000],
-			["I_Truck_02_box_F",8000],
-			["O_Truck_03_fuel_F",8500],
-			["O_Truck_03_repair_F",9500],
+			["O_Truck_03_fuel_F",7000],
+			["B_Truck_01_Repair_F",9000],
+			["O_Truck_03_repair_F",9000],
+			["I_Truck_02_box_F",9000],
+			["B_Truck_01_box_F",15000],
 			["B_Truck_01_mover_F",10000],
-			["B_Truck_01_transport_F",12500],
-			["B_Truck_01_covered_F",13500],
-			["B_Truck_01_fuel_F",15000],
-			["B_Truck_01_box_F",20000],
 			["O_Truck_03_device_F",20000]
 		];	
 	};
-	
 	
 	case "reb_car":
 	{
 		_return =
 		[
-			["B_Quadbike_01_F",650],
-			["B_G_Offroad_01_F",1500],
+			["O_G_Quadbike_01_F",650],
+			["I_G_Offroad_01_F",1500],
 			["O_MRAP_02_F",1800],
 			["A3L_F350Black",4500],
 			["A3L_F350Blue",4500],
@@ -102,16 +102,47 @@ switch (_shop) do
 			["A3L_F350Mex",4500],
 			["B_Heli_Light_01_F",10530],
 			["USAF_HH60G",10530]
+			["B_Heli_Light_01_F",10500]
 		];
 		
 		if(license_civ_rebel) then
 		{
 			_return pushBack
-			["B_G_Offroad_01_armed_F",7000];
+			["O_G_Offroad_01_armed_F",7000];
 			_return pushBack
-			["B_Heli_Transport_01_F",18500];
+			["O_MRAP_02_hmg_F",10000];
 			_return pushBack
-    		["B_Heli_Transport_03_F",22000];
+			["O_MRAP_02_gmg_F",15000];
+			_return pushBack
+			["O_Truck_03_transport_F",10000];
+			_return pushBack
+			["O_Truck_03_covered_F",12500];
+			_return pushBack
+			["O_Truck_03_repair_F",15000];
+			_return pushBack
+			["O_Truck_03_ammo_F",15000];
+			_return pushBack
+			["O_Truck_03_fuel_F",15000];
+			_return pushBack
+			["O_Truck_03_medical_F",15000];
+			_return pushBack
+			["O_Truck_03_device_F",20000];			
+			_return pushBack
+			["I_Heli_light_03_unarmed_F",18500];
+			_return pushBack
+    		["I_Heli_Transport_02_F",25000];
+			_return pushBack
+    		["O_Heli_Light_02_F",25000];
+			_return pushBack
+    		["B_Heli_Transport_01_camo_F",30000];
+			_return pushBack
+    		["O_Heli_Transport_04_F",30000];
+			_return pushBack
+    		["O_Heli_Transport_04_bench_F",30000];
+		     _return pushBack
+    		["B_Heli_Transport_03_unarmed_green_F",30000];
+			_return pushBack
+    		["B_Heli_Transport_03_F",35000];
 		};
 	};
 	
@@ -156,6 +187,9 @@ switch (_shop) do
     	};
     	if(__GETC__(life_coplevel) > 7) then // Vehicles available to cops level 8 or higher.
     	{
+			_return pushBack ["B_APC_Tracked_01_CRV_F",15000];
+			_return pushBack ["B_APC_Tracked_01_rcws_F",15000];
+			
     	};
   	};
 	
@@ -165,6 +199,7 @@ switch (_shop) do
 		[
 			["B_Heli_Light_01_F",10530],
 			["O_Heli_Light_02_unarmed_F",12500],
+			["dezkit_b206_fl",15000],
 			["I_Heli_Transport_02_F",21000],
 			["O_Heli_Transport_04_F",25000],
 			["EC635",25000],
@@ -219,11 +254,9 @@ switch (_shop) do
     	// Vehicles available to cops level 7 or higher. Superintendant and Chiefs
     	_return pushBack ["I_Heli_Transport_02_F",8000];
 		_return pushBack ["dezkit_b206_fbi",8000];
-		_return pushBack ["dezkit_b206_rescue",8000];
-		_return pushBack ["dezkit_b206_fl",8000];
-		_return pushBack ["dezkit_b206_hs",8000];
-		_return pushBack ["GNT_C185T",8000];
-		_return pushBack ["GNT_C185",8000];
+		_return pushBack ["I_Heli_light_03_unarmed_F",10000];
+		
+
 
 	
     	if (__GETC__(life_coplevel) < 8) exitWith {};
