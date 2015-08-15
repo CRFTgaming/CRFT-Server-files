@@ -117,16 +117,117 @@ if (isnil "IL_Variables") then
 	IL_Mass = true;
 	
 	// Supported vehicles
-	IL_Supported_Vehicles_OFFROAD = ["C_Offroad_01_F", "B_G_Offroad_01_F", "B_mas_mar_Offroad_01_F"];
-	IL_Supported_Vehicles_VAN = ["C_Van_01_box_F", "B_G_Van_01_transport_F", "C_Van_01_transport_F"];
-	IL_Supported_Vehicles_HEMTT = ["B_Truck_01_covered_F", "B_Truck_01_transport_F", "B_Truck_01_box_F", "Marinir_Truck_01_box_FG", "Marinir_Truck_01_transport_FG", "Marinir_Truck_01_covered_FG", "B_mas_mar_Truck_01_covered_F", "B_mas_mar_Truck_01_transport_F"];
-	IL_Supported_Vehicles_KAMAZ = ["I_Truck_02_transport_F", "O_Truck_02_transport_F", "I_Truck_02_covered_F", "O_Truck_02_covered_F", "caf_HLVW_open_AR", "caf_HLVW_open", "caf_HLVW_covered_ar", "caf_HLVW_covered"];
-	IL_Supported_Vehicles_TEMPEST = ["O_Truck_03_transport_F", "O_Truck_03_covered_F", "O_Truck_03_device_F"];
-	IL_Supported_Vehicles_MOHAWK = ["I_Heli_Transport_02_F", "CH49_Mohawk_FG", "Marinir_CH49_Mohawk_FG"];
-	IL_Supported_Vehicles_CHINOOK = ["CH_147F", "CH_47F", "kyo_MH47E_HC", "kyo_MH47E_Ramp", "kyo_MH47E_base", "B_Heli_Transport_03_F", "B_Heli_Transport_03_unarmed_F"];
-	IL_Supported_Vehicles_MH9 = ["B_Heli_Light_01_F", "B_mas_mar_Heli_Light_01_F", "C_Heli_Light_01_civil_F"];
-	IL_Supported_Vehicles_C130J = ["C130J_Cargo", "C130J"];
-	IL_Supported_Vehicles_C17 = ["globemaster_c17_altus", "globemaster_c17_701", "globemaster_c17_703", "globemaster_c17_704", "globemaster_c17_705", "globemaster_c17_dover", "globemaster_c17_edwards", "globemaster_c17_Elmendorf", "globemaster_c17", "globemaster_c17_hickam", "globemaster_c17_IAF", "globemaster_c17_March", "globemaster_c17_mcchord", "globemaster_c17_McGuire", "globemaster_c17_Mississipi", "globemaster_c17_NATO", "globemaster_c17_natoPAPA", "globemaster_c17_Qatar", "globemaster_c17_RAAF", "globemaster_c17_ZZ172_RAF", "globemaster_c17_RCAF", "globemaster_c17_Stewart", "globemaster_c17_therock", "globemaster_c17_travis", "globemaster_c17_UAE", "globemaster_c17_wright_patt"];
+	IL_Supported_Vehicles_OFFROAD = [
+	"C_Offroad_01_F", 
+	"B_G_Offroad_01_F", 
+	"B_mas_mar_Offroad_01_F"
+	];
+	IL_Supported_Vehicles_VAN = [
+	"C_Van_01_box_F", 
+	"B_G_Van_01_transport_F", 
+	"C_Van_01_transport_F"
+	];
+	IL_Supported_Vehicles_HEMTT = [
+	"B_Truck_01_covered_F", 
+	"B_Truck_01_transport_F", 
+	"B_Truck_01_box_F", 
+	"Marinir_Truck_01_box_FG", 
+	"Marinir_Truck_01_transport_FG", 
+	"Marinir_Truck_01_covered_FG", 
+	"B_mas_mar_Truck_01_covered_F", 
+	"B_mas_mar_Truck_01_transport_F"
+	];
+	IL_Supported_Vehicles_KAMAZ = [
+	"I_Truck_02_transport_F", 
+	"O_Truck_02_transport_F", 
+	"I_Truck_02_covered_F", 
+	"O_Truck_02_covered_F", 
+	"caf_HLVW_open_AR", 
+	"caf_HLVW_open", 
+	"caf_HLVW_covered_ar", 
+	"caf_HLVW_covered"
+	];
+	IL_Supported_Vehicles_TEMPEST = [
+	"O_Truck_03_transport_F", 
+	"O_Truck_03_covered_F", 
+	"O_Truck_03_device_F"
+	];
+	IL_Supported_Vehicles_MOHAWK = [
+	"I_Heli_Transport_02_F", 
+	"CH49_Mohawk_FG", 
+	"Marinir_CH49_Mohawk_FG"
+	];
+	IL_Supported_Vehicles_CHINOOK = [
+	"CH_147F", 
+	"CH_47F", 
+	"kyo_MH47E_HC", 
+	"kyo_MH47E_Ramp", 
+	"kyo_MH47E_base", 
+	"B_Heli_Transport_03_F", 
+	"B_Heli_Transport_03_unarmed_F"
+	];
+	IL_Supported_Vehicles_MH9 = [
+	"B_Heli_Light_01_F", 
+	"B_mas_mar_Heli_Light_01_F", 
+	"C_Heli_Light_01_civil_F",
+	"EC635",
+	"EC635_AT",
+	"EC635_unarmed",
+	"EC635_CSAT",
+	"EC635_AT_CSAT",
+	"EC635_Unarmed_CSAT",
+	"EC635_SAR",
+	"EC635_BW",
+	"EC635_AT_BW",
+	"EC635_Unarmed_BW",
+	"EC635_ADAC",
+	"ARMSCor_A109_Civ",
+	"ARMSCor_A109LUH_B",
+	"ARMSCor_A109LUH_D",
+	"ARMSCor_A109LUH_I",
+	"ARMSCor_A109LAH_B",
+	"ARMSCor_A109LAH_I",
+	"dezkit_b206_ls",
+	"dezkit_b206_hs",
+	"dezkit_b206_fl",
+	"dezkit_b206_rescue",
+	"dezkit_b206_ems",
+	"dezkit_b206_news",
+	"dezkit_b206_police",
+	"dezkit_b206_fbi",
+	"dezkit_b206x_armed",
+	"dezkit_b206x_unarmed"
+	];
+	IL_Supported_Vehicles_C130J = [
+	"sab_C130_J",
+	"sab_C130_JT",
+	"sab_c130_JC",
+	"sab_C130_JE",
+	"sab_c130_JEC",
+	"sab_C130_H",
+	"sab_C130_HC",
+	"sab_C130_HEC",
+	"sab_C130_HEC",
+	"sab_C130_H_CSAT",
+	"sab_C130_H_CSAT2",
+	"sab_C130_H_CSAT3",
+	"sab_C130_H_AAF",
+	"sab_C130_H_AAF2",
+	"sab_C130_H_AAF3",
+	"sab_C130_FA",
+	"sab_C130_CG",
+	"sab_C130_J_FF",
+	"sab_C130_J_FF2",
+	"sab_C130_FP",
+	"sab_C130_LC",
+	"sab_C130_LC_Ski",
+	"sab_C130_CSP",
+	"sab_L100_AL"
+	];
+	IL_Supported_Vehicles_C17 = [
+	"USAF_C17",
+	"usaf_c5"
+	];
 	
 	IL_Supported_Vehicles_All = IL_Supported_Vehicles_C130J + IL_Supported_Vehicles_C17 + IL_Supported_Vehicles_MH9 + IL_Supported_Vehicles_MOHAWK + IL_Supported_Vehicles_KAMAZ + IL_Supported_Vehicles_TEMPEST + IL_Supported_Vehicles_HEMTT + IL_Supported_Vehicles_VAN + IL_Supported_Vehicles_OFFROAD + IL_Supported_Vehicles_CHINOOK;
 
@@ -134,28 +235,227 @@ if (isnil "IL_Variables") then
 	IL_Para_Drop_Vehicles = IL_Supported_Vehicles_MH9 + IL_Supported_Vehicles_MOHAWK + IL_Supported_Vehicles_C130J + IL_Supported_Vehicles_C17 + IL_Supported_Vehicles_CHINOOK;
 
 	//Supported cargo
-	IL_Supported_HEMTT = ["B_Truck_01_covered_F", "B_Truck_01_transport_F", "B_Truck_01_box_F", "Marinir_Truck_01_box_FG", "Marinir_Truck_01_transport_FG", "Marinir_Truck_01_covered_FG", "B_mas_mar_Truck_01_covered_F", "B_mas_mar_Truck_01_transport_F", "B_Truck_01_mover_F", "B_Truck_01_ammo_F", "B_Truck_01_fuel_F", "B_Truck_01_medical_F", "B_Truck_01_Repair_F"];
-	IL_Supported_KAMAZ = ["I_Truck_02_transport_F", "O_Truck_02_transport_F", "I_Truck_02_covered_F", "O_Truck_02_covered_F", "caf_HLVW_open_AR", "caf_HLVW_open", "caf_HLVW_covered_ar", "caf_HLVW_covered"];
-	IL_Supported_TEMPEST = ["O_Truck_03_transport_F", "O_Truck_03_covered_F"];
-	IL_Supported_Strider = ["I_MRAP_03_F", "I_MRAP_03_gmg_F", "I_MRAP_03_hmg_F", "CAF_TAPV_ar", "caf_tapv_gl_ar", "caf_tapv_50_ar", "CAF_TAPV_tw", "caf_tapv_gl_tw", "caf_tapv_50_tw", "Night_B_MRAP_03_F", "Night_B_MRAP_03_gmg_F", "Night_B_MRAP_03_hmg_F"];
-	IL_Supported_Hunter = ["B_MRAP_01_F", "B_MRAP_01_gmg_F", "B_MRAP_01_hmg_F", "Marinir_B_MRAP_01_FG" , "Marinir_MRAP_01_gmg_FG", "Marinir_MRAP_01_hmg_FG", "B_mas_mar_MRAP_01_med_F", "B_mas_mar_MRAP_01_F", "B_mas_mar_MRAP_01_gmg_F", "B_mas_mar_MRAP_01_hmg_F"];
-	IL_Supported_Ifrit = ["O_MRAP_02_F", "O_MRAP_02_gmg_F", "O_MRAP_02_hmg_F"];
-	IL_Supported_UGV = ["B_UGV_01_rcws_F", "B_UGV_01_F", "O_UGV_01_rcws_F", "O_UGV_01_F", "I_UGV_01_rcws_F", "I_UGV_01_F"];
-	IL_Supported_VAN = ["C_Van_01_box_F", "B_G_Van_01_transport_F", "C_Van_01_transport_F"];
-	IL_Supported_OFFROAD = ["C_Offroad_01_F", "B_G_Offroad_01_F", "B_G_Offroad_01_armed_F", "JTF2_Offroad_armed_01", "B_mas_mar_Offroad_01_F", "B_mas_mar_Offroad_01_armed_F"];
-	IL_Supported_SUV = ["C_SUV_01_F", "C_Kart_01_Vrana_F", "C_Kart_01_Red_F", "C_Kart_01_Blu_F", "C_Kart_01_Fuel_F", "C_Kart_01_F"];
-	IL_Supported_Hatchback = ["C_Hatchback_01_F", "C_Hatchback_01_sport_F"];
-	IL_Supported_Hummvee = ["rc_hmmwv", "HMMWV2", "HMMWV_M1035", "M1114_AGS_ACR", "HMMWV_M1151_M2", "HMMWV2_M2", "HMMWV2_MK19", "HMMWV2_TOW", "HMMWV", "HMMWV_M2", "HMMWV_MK19", "HMMWV_TOW"];
-	IL_Supported_Quadbike = ["I_Quadbike_01_F", "C_Quadbike_01_F", "O_Quadbike_01_F", "B_G_Quadbike_01_F", "B_Quadbike_01_F", "CAF_Quadbike_OD", "CAF_Quadbike_AR", "Marinir_Quadbike_01_FG", "B_mas_mar_Quadbike_01_F"];
-	IL_Supported_Supply_Crate = ["B_supplyCrate_F", "IG_supplyCrate_F", "O_supplyCrate_F", "I_supplyCrate_F", "C_supplyCrate_F"];
-	IL_Supported_Veh_Ammo = ["Box_NATO_AmmoVeh_F", "Box_East_AmmoVeh_F", "Box_IND_AmmoVeh_F", "Land_CargoBox_V1_F", "ASC_B_box"];
-	IL_Supported_Barrel = ["Land_BarrelEmpty_F", "Land_BarrelEmpty_grey_F", "Land_BarrelSand_F", "Land_BarrelSand_grey_F", "Land_BarrelTrash_F", "Land_BarrelTrash_grey_F", "Land_BarrelWater_F", "Land_BarrelWater_grey_F", "Land_MetalBarrel_F"];//, "Land_MetalBarrel_empty_F", "MetalBarrel_burning_F"];
-	IL_Supported_Tank = ["Land_WaterBarrel_F", "Land_WaterTank_F"];
-	IL_Supported_Rubberboat = ["I_Boat_Transport_01_F", "O_Boat_Transport_01_F", "B_G_Boat_Transport_01_F", "B_Boat_Transport_01_F", "C_Rubberboat", "O_Lifeboat", "B_Lifeboat", "Marinir_duck_base_F", "B_mas_mar_Boat_Transport_01_F"];
-	IL_Supported_SDV = ["I_SDV_01_F", "O_SDV_01_F", "B_SDV_01_F", "B_mas_mar_SDV_01_F"];
-	IL_Supported_Box_H1 = ["Box_NATO_Wps_F", "Box_East_Wps_F", "Box_IND_Wps_F", "Box_East_WpsLaunch_F", "Box_NATO_WpsLaunch_F", "Box_IND_WpsLaunch_F", "Box_IND_WpsSpecial_F", "Box_East_WpsSpecial_F", "Box_NATO_WpsSpecial_F", "Box_mas_all_rifle_Wps_F", "Box_mas_us_rifle_Wps_F", "Box_mas_ru_rifle_Wps_F", "Box_mas_mar_NATO_equip_F", "Box_mas_mar_NATO_Wps_F"];
-	IL_Supported_Box_H2 = ["Box_NATO_AmmoOrd_F", "Box_East_AmmoOrd_F", "Box_IND_AmmoOrd_F", "Box_NATO_Grenades_F", "Box_East_Grenades_F", "Box_IND_Grenades_F", "Box_NATO_Ammo_F", "Box_East_Ammo_F", "Box_IND_Ammo_F", "Box_IND_Support_F", "Box_East_Support_F", "Box_NATO_Support_F"];
-	IL_Supported_Cargo20 = ["Land_Cargo20_blue_F", "Land_Cargo20_brick_red_F", "Land_Cargo20_cyan_F", "Land_Cargo20_grey_F", "Land_Cargo20_light_blue_F", "Land_Cargo20_light_green_F", "Land_Cargo20_military_green_F", "Land_Cargo20_orange_F", "Land_Cargo20_red_F", "Land_Cargo20_sand_F", "Land_Cargo20_white_F", "Land_Cargo20_yellow_F"];
+	IL_Supported_HEMTT = [
+	"B_Truck_01_covered_F", 
+	"B_Truck_01_transport_F", 
+	"B_Truck_01_box_F", 
+	"Marinir_Truck_01_box_FG", 
+	"Marinir_Truck_01_transport_FG", 
+	"Marinir_Truck_01_covered_FG", 
+	"B_mas_mar_Truck_01_covered_F", 
+	"B_mas_mar_Truck_01_transport_F", 
+	"B_Truck_01_mover_F", 
+	"B_Truck_01_ammo_F", 
+	"B_Truck_01_fuel_F", 
+	"B_Truck_01_medical_F", 
+	"B_Truck_01_Repair_F"
+	];
+	IL_Supported_KAMAZ = [
+	"I_Truck_02_transport_F", 
+	"O_Truck_02_transport_F", 
+	"I_Truck_02_covered_F", 
+	"O_Truck_02_covered_F", 
+	"caf_HLVW_open_AR", 
+	"caf_HLVW_open", 
+	"caf_HLVW_covered_ar", 
+	"caf_HLVW_covered"
+	];
+	IL_Supported_TEMPEST = [
+	"O_Truck_03_transport_F", 
+	"O_Truck_03_covered_F"
+	];
+	IL_Supported_Strider = [
+	"I_MRAP_03_F", 
+	"I_MRAP_03_gmg_F", 
+	"I_MRAP_03_hmg_F", 
+	"CAF_TAPV_ar", 
+	"caf_tapv_gl_ar", 
+	"caf_tapv_50_ar", 
+	"CAF_TAPV_tw", 
+	"caf_tapv_gl_tw", 
+	"caf_tapv_50_tw", 
+	"Night_B_MRAP_03_F", 
+	"Night_B_MRAP_03_gmg_F", 
+	"Night_B_MRAP_03_hmg_F"
+	];
+	IL_Supported_Hunter = [
+	"B_MRAP_01_F", 
+	"B_MRAP_01_gmg_F", 
+	"B_MRAP_01_hmg_F", 
+	"Marinir_B_MRAP_01_FG", 
+	"Marinir_MRAP_01_gmg_FG", 
+	"Marinir_MRAP_01_hmg_FG", 
+	"B_mas_mar_MRAP_01_med_F", 
+	"B_mas_mar_MRAP_01_F", 
+	"B_mas_mar_MRAP_01_gmg_F", 
+	"B_mas_mar_MRAP_01_hmg_F"
+	];
+	IL_Supported_Ifrit = [
+	"O_MRAP_02_F", 
+	"O_MRAP_02_gmg_F", 
+	"O_MRAP_02_hmg_F"
+	];
+	IL_Supported_UGV = [
+	"B_UGV_01_rcws_F", 
+	"B_UGV_01_F", 
+	"O_UGV_01_rcws_F", 
+	"O_UGV_01_F", 
+	"I_UGV_01_rcws_F", 
+	"I_UGV_01_F"
+	];
+	IL_Supported_VAN = [
+	"C_Van_01_box_F", 
+	"B_G_Van_01_transport_F", 
+	"C_Van_01_transport_F"
+	];
+	IL_Supported_OFFROAD = [
+	"C_Offroad_01_F", 
+	"B_G_Offroad_01_F", 
+	"B_G_Offroad_01_armed_F", 
+	"JTF2_Offroad_armed_01", 
+	"B_mas_mar_Offroad_01_F", 
+	"B_mas_mar_Offroad_01_armed_F"
+	];
+	IL_Supported_SUV = [
+	"C_SUV_01_F", 
+	"C_Kart_01_Vrana_F", 
+	"C_Kart_01_Red_F", 
+	"C_Kart_01_Blu_F", 
+	"C_Kart_01_Fuel_F", 
+	"C_Kart_01_F"
+	];
+	IL_Supported_Hatchback = [
+	"C_Hatchback_01_F", 
+	"C_Hatchback_01_sport_F"
+	];
+	IL_Supported_Hummvee = [
+	"rc_hmmwv", 
+	"HMMWV2", 
+	"HMMWV_M1035", 
+	"M1114_AGS_ACR", 
+	"HMMWV_M1151_M2", 
+	"HMMWV2_M2", 
+	"HMMWV2_MK19", 
+	"HMMWV2_TOW", 
+	"HMMWV", 
+	"HMMWV_M2", 
+	"HMMWV_MK19", 
+	"HMMWV_TOW",
+	"DAR_M1151",
+	"DAR_M1151_Deploy",
+	"DAR_M1151_MK19",
+	"DAR_M1167",
+	"DAR_M1152",
+	"DAR_M1165_GMV",
+	"DAR_M1151Woodland",
+	"DAR_M115_MK19Woodland",
+	"DAR_M1151WoodlandUA",
+	"DAR_M1167Woodland",
+	"DAR_M1152Woosland"
+	];
+	IL_Supported_Quadbike = [
+	"I_Quadbike_01_F", 
+	"C_Quadbike_01_F", 
+	"O_Quadbike_01_F", 
+	"B_G_Quadbike_01_F", 
+	"B_Quadbike_01_F", 
+	"CAF_Quadbike_OD", 
+	"CAF_Quadbike_AR", 
+	"Marinir_Quadbike_01_FG", 
+	"B_mas_mar_Quadbike_01_F"
+	];
+	IL_Supported_Supply_Crate = [
+	"B_supplyCrate_F", 
+	"IG_supplyCrate_F", 
+	"O_supplyCrate_F", 
+	"I_supplyCrate_F", 
+	"C_supplyCrate_F"
+	];
+	IL_Supported_Veh_Ammo = [
+	"Box_NATO_AmmoVeh_F", 
+	"Box_East_AmmoVeh_F", 
+	"Box_IND_AmmoVeh_F", 
+	"Land_CargoBox_V1_F", 
+	"ASC_B_box"
+	];
+	IL_Supported_Barrel = [
+	"Land_BarrelEmpty_F", 
+	"Land_BarrelEmpty_grey_F", 
+	"Land_BarrelSand_F", 
+	"Land_BarrelSand_grey_F", 
+	"Land_BarrelTrash_F", 
+	"Land_BarrelTrash_grey_F", 
+	"Land_BarrelWater_F", 
+	"Land_BarrelWater_grey_F", 
+	"Land_MetalBarrel_F"
+	];//, "Land_MetalBarrel_empty_F", "MetalBarrel_burning_F"];
+	IL_Supported_Tank = [
+	"Land_WaterBarrel_F", 
+	"Land_WaterTank_F"
+	];
+	IL_Supported_Rubberboat = [
+	"I_Boat_Transport_01_F", 
+	"O_Boat_Transport_01_F", 
+	"B_G_Boat_Transport_01_F", 
+	"B_Boat_Transport_01_F", 
+	"C_Rubberboat", 
+	"O_Lifeboat", 
+	"B_Lifeboat", 
+	"Marinir_duck_base_F", 
+	"B_mas_mar_Boat_Transport_01_F",
+	"A3L_JetSki",
+	"A3L_JetSki_Yellow"
+	];
+	IL_Supported_SDV = [
+	"I_SDV_01_F", 
+	"O_SDV_01_F", 
+	"B_SDV_01_F", 
+	"B_mas_mar_SDV_01_F"
+	];
+	IL_Supported_Box_H1 = [
+	"Box_NATO_Wps_F", 
+	"Box_East_Wps_F", 
+	"Box_IND_Wps_F", 
+	"Box_East_WpsLaunch_F", 
+	"Box_NATO_WpsLaunch_F", 
+	"Box_IND_WpsLaunch_F", 
+	"Box_IND_WpsSpecial_F", 
+	"Box_East_WpsSpecial_F", 
+	"Box_NATO_WpsSpecial_F", 
+	"Box_mas_all_rifle_Wps_F", 
+	"Box_mas_us_rifle_Wps_F", 
+	"Box_mas_ru_rifle_Wps_F", 
+	"Box_mas_mar_NATO_equip_F", 
+	"Box_mas_mar_NATO_Wps_F"
+	];
+	IL_Supported_Box_H2 = [
+	"Box_NATO_AmmoOrd_F", 
+	"Box_East_AmmoOrd_F", 
+	"Box_IND_AmmoOrd_F", 
+	"Box_NATO_Grenades_F", 
+	"Box_East_Grenades_F", 
+	"Box_IND_Grenades_F", 
+	"Box_NATO_Ammo_F", 
+	"Box_East_Ammo_F", 
+	"Box_IND_Ammo_F", 
+	"Box_IND_Support_F", 
+	"Box_East_Support_F", 
+	"Box_NATO_Support_F"
+	];
+	IL_Supported_Cargo20 = [
+	"Land_Cargo20_blue_F", 
+	"Land_Cargo20_brick_red_F", 
+	"Land_Cargo20_cyan_F", 
+	"Land_Cargo20_grey_F", 
+	"Land_Cargo20_light_blue_F", 
+	"Land_Cargo20_light_green_F", 
+	"Land_Cargo20_military_green_F", 
+	"Land_Cargo20_orange_F", 
+	"Land_Cargo20_red_F", 
+	"Land_Cargo20_sand_F", 
+	"Land_Cargo20_white_F", 
+	"Land_Cargo20_yellow_F"
+	];
 	//TODO
 	//IL_Supported_Backpack = ["B_AssaultPack_blk", "B_AssaultPack_cbr", "B_AssaultPack_dgtl", "B_AssaultPack_khk", "B_AssaultPack_mcamo", "B_AssaultPack_ocamo", "B_AssaultPack_rgr", "B_AssaultPack_sgg", "B_AssaultPackG", "B_Bergen_blk", "B_Bergen_mcamo", "B_Bergen_rgr", "B_Bergen_sgg", "B_BergenC_blu", "B_BergenC_grn", "B_BergenC_red", "B_BergenG", "B_Carryall_cbr", "B_Carryall_khk", "B_Carryall_mcamo", "B_Carryall_ocamo", "B_Carryall_oli", "B_Carryall_oucamo", "B_FieldPack_blk", "B_FieldPack_cbr", "B_FieldPack_khk", "B_FieldPack_ocamo", "B_FieldPack_oli", "B_FieldPack_oucamo", "B_HuntingBackpack", "B_Kitbag_cbr", "B_Kitbag_mcamo", "B_Kitbag_sgg", "B_OutdoorPack_blk", "B_OutdoorPack_blu", "B_OutdoorPack_tan", "B_TacticalPack_blk", "B_TacticalPack_mcamo", "B_TacticalPack_ocamo", "B_TacticalPack_oli", "B_TacticalPack_rgr", "C_Bergen_blu", "C_Bergen_grn", "C_Bergen_red", "G_AssaultPack", "G_Bergen"];
 	//IL_Supported_Backpack_Support = ["B_HMG_01_support_F", "B_HMG_01_support_high_F", "B_Mortar_01_support_F", "I_Mortar_01_support_F", "O_Mortar_01_support_F"];
