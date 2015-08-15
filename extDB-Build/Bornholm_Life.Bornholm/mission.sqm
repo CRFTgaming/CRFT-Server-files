@@ -5242,7 +5242,7 @@ class Mission
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
-					init=" this enableSimulation false; this allowDamage false; this addAction[""Plane Shop"",life_fnc_vehicleShopMenu,[""civ_plane"",civilian,[""civ_plane_1""],""civ"",""Anthony's Planes""]];    igloo";
+					init="this enableSimulation false; this allowDamage false; this addAction[""Plane Shop"",life_fnc_vehicleShopMenu,[""civ_plane"",civilian,[""civ_plane_1""],""civ"",""Anthony's Planes""]]; this addAction[""Air Garage"",  {   [[getPlayerUID player,playerSide,""Air"",player],""TON_fnc_getVehicles"",false,false] spawn life_fnc_MP;  life_garage_type = ""Air""; createDialog ""Life_impound_menu"";   disableSerialization;   ctrlSetText[2802,""Fetching Vehicles....""];   life_garage_sp = ""civ_plane_1"";  }]; this addAction[""Store vehicle in Garage"",  {   private[""_nearVehicle""];   _nearVehicle = nearestObjects[(getPos (_this select 0)),[""Car"",""Ship"",""Air""],35] select 0;   if(isNil ""_nearVehicle"") exitWith {hint ""There isn't a vehicle near this NPC."";};   [[_nearVehicle,false,(_this select 1)],""TON_fnc_vehicleStore"",false,false] spawn life_fnc_MP;   hint ""The server is trying to store the vehicle please wait...."";   life_garage_store = true;  },"""",0,false,false,"""",'!life_garage_store'];";
 				};
 			};
 		};
