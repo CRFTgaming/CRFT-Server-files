@@ -101,7 +101,7 @@ switch (_shop) do
 			["A3L_F350White",4500],
 			["A3L_F350Mex",4500],
 			["B_Heli_Light_01_F",10530],
-			["USAF_HH60G",10530]
+			["USAF_HH60G",10530],
 			["B_Heli_Light_01_F",10500]
 		];
 		
