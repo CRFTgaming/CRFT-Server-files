@@ -87,6 +87,32 @@ switch (_shop) do
 			["O_Truck_03_device_F",20000]
 		];	
 	};
+
+	case "civ_plane":
+	{
+		_return =
+		[
+			["GNT_C185",15000],
+			["IVORY_CRJ200_1",40000],
+			["IVORY_ERJ135_1",35000],
+			["USAF_C17",80000],
+			["usaf_c5",100000],
+			["sab_C130_J",65000],
+			["sab_C130_JT",65000],
+			["sab_c130_JC",65000],
+			["sab_C130_FA",65000],
+			["sab_C130_CG",65000],
+			["sab_C130_CSP",65000],
+			["sab_L100_AL",65000],
+			["bwi_a3_t6a",25000],
+			["bwi_a3_t6a_2",25000],
+			["bwi_a3_t6a_3",25000],
+			["bwi_a3_t6a_4",25000],
+			["bwi_a3_t6a_5",25000],
+			["bwi_a3_t6a_6",25000],
+			["bwi_a3_t6a_7",25000]
+		];	
+	};
 	
 	case "reb_car":
 	{
