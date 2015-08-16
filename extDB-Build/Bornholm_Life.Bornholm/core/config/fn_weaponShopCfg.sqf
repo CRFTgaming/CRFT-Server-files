@@ -1112,6 +1112,7 @@ switch(_shop) do
 						["muzzle_snds_L","9mm Suppressor",100],
 						["muzzle_snds_acp","45 ACP Suppressor",100],
 						["muzzle_snds_M","556 Suppressor",100],
+						["muzzle_mas_snds_SM","Scar Suppressor",100],
 						["muzzle_snds_B","762 Suppressor",100],
 						["muzzle_snds_H_MG","65 LMG Suppressor",100],
 						["muzzle_snds_338_black",nil,100],
