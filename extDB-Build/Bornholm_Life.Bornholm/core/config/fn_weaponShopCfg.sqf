@@ -800,6 +800,31 @@ switch(_shop) do
 		};	
 	};	
 	
+	case "rebel_equip":
+	{
+		switch(true) do
+		{
+			case (playerSide != civilian): {"You are not a civilian!"};
+			case (!license_civ_rebel): {"You don't have a Rebel training license!"};
+			default
+			{
+				["Mohammed's Equipment Shop",
+					[
+						["ItemMap",nil,0],
+						["ItemRadio","CellPhone",0],
+						["ItemGPS",nil,100],
+						["Rangefinder",nil,100],
+						["Toolkit",nil,200],
+						["pmc_earpiece","NVG Ear Piece",1500],
+						["NVGoggles_OPFOR","NVG Black",2000],
+						["NVGoggles","NVG Brown",2000],
+						["NVGoggles_INDEP","NVG Green",2000]
+					]
+				];
+			};
+		};
+	};
+	
 	case "rebel":
 	{
 		switch(true) do
@@ -853,7 +878,6 @@ switch(_shop) do
 						["100Rnd_mas_545x39_mag","100rd RPK Mag",100],
 						["LMG_mas_pkm_F","PKM",6000],
 						["100Rnd_mas_762x54_mag","100rd PKM Mag",100],
-						["NVGoggles_OPFOR","NVG Black",500],
 						["optic_mas_kobra",nil,100],
 						["optic_mas_PSO_kv",nil,100],
 						["optic_mas_PSO",nil,100],
@@ -871,8 +895,7 @@ switch(_shop) do
 						["optic_KHS_blk",nil,1100],
 						["bipod_01_F_blk",nil,50],
 						["bipod_02_F_blk",nil,50],
-						["bipod_03_F_blk",nil,50],
-						["ItemRadio","CellPhone",0]
+						["bipod_03_F_blk",nil,50]
 					]
 				];
 			};

@@ -32,7 +32,6 @@ switch (_filter) do
 			["TRYK_U_B_AOR2_BLK_CombatUniform","BAF Combat Uniform4",1000],
 			["U_O_CombatUniform_oucamo","Urban Fatigues",300],
 			["U_O_SpecopsUniform_ocamo","Recon Fatigues",300],
-			["U_O_SpecopsUniform_blk","Recon Fatigues BLK",300],
 			["U_O_OfficerUniform_ocamo","Officer Fatigues",300],
 			["U_I_GhillieSuit","Ghillie Suit",1000],
 			["U_O_FullGhillie_ard","Ghillie Arid",1000],
