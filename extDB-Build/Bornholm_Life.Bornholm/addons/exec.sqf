@@ -1,11 +1,3 @@
-/*
-	File: exec.sqf
-	Author: Lt.Bigglesworth / Itsyuka (AltisLifeRPG Forums)
-	Description:
-	Finds Player UID and allows access to the Admin Tools and starts up the anti-afk system.
-*/
-// Admin Tool and Afk kick
-//   
 waituntil 
 {!alive player ; !isnull (finddisplay 46)};
 
