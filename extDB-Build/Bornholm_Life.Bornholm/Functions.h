@@ -164,6 +164,7 @@ class Life_Client_Core
 		class vehicleWeightCfg {};
 		class houseConfig {};
 		class profType {};
+		class itemIcon {};
 		
 		//Clothing Store Configs
 		class clothing_cop {};
