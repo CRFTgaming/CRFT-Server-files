@@ -71,7 +71,7 @@ switch (_var) do
 	case "life_inv_bottles": {("textures\icons\bottle.paa")};
 	case "life_inv_cornmeal": {("textures\icons\cornmeal.paa")};
 	case "life_inv_bottledwhiskey": {("textures\icons\bottledwhiskey.paa")};
-	case "life_inv_bottledbeer": {("textures\icons\.paa")};
+	case "life_inv_bottledbeer": {("textures\icons\beerbottled.paa")};
 	case "life_inv_bottledshine": {("textures\icons\moonshine.paa")};
 	case "life_inv_moonshine": {("textures\icons\moonshine.paa")};
 	case "life_inv_speedbomb": {("textures\icons\c-4.paa")};

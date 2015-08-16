@@ -199,6 +199,9 @@ class Life_Client_Core
 		class settingsInit {};
 		class cellphone2 {};
 		class p_prisionbreak {};
+		class smartphone {};
+		class newMsg {};
+		class showMsg {};
 	};
 	
 	class Functions
