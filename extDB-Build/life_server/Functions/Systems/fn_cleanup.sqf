@@ -19,7 +19,7 @@ while {true} do
 		if(_vehicleClass in ["Car","Air","Ship","Armored","Submarine"]) then
 		{
 			_dbInfo = _veh getVariable["dbInfo",[]];
-			_units = {(_x distance _veh < 100)} count playableUnits;
+			_units = {(_x distance _veh < 500)} count playableUnits;
 			if(count crew _x == 0) then
 			{
 				switch (true) do
