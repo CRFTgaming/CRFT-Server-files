@@ -134,17 +134,17 @@ class CfgFunctions
 			file = "\life_server\Functions\airdrop";
 			class generateAirdrop {};
 		};
+	};
 
-		class GHBSystem
+	class GHBSystem
+	{
+		tag = "GHB";
+		class Smartphone
 		{
-			tag = "GHB";
-			class Smartphone
-			{
-				file = "\life_server\Functions\Smartphone";
-				class handleMessages {};
-				class msgRequest {};
-			};	
-		};
+			file = "\life_server\Functions\Smartphone";
+			class handleMessages {};
+			class msgRequest {};
+		};	
 	};
 };
 

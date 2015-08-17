@@ -4895,28 +4895,28 @@
 			<Original>Playerlist</Original>
 		</Key>
 		<Key ID="STR_SMARTPHONE_MESSAGETITLE">
-			<Original>Messages  | VON | WANN</Original>
+			<Original>Nachrichten  | VON | WANN</Original>
 		</Key>
 		<Key ID="STR_SMARTPHONE_RANDOMTITLE">
-			<Original>Select message to read</Original>
+			<Original>Nachricht zum lesen auswählen</Original>
 		</Key>
 		<Key ID="STR_Global_Close">
 			<Original>Close</Original>
 		</Key>
 		<Key ID="STR_SMARTPHONE_SCHREIBEN">
-			<Original>Writing</Original>
+			<Original>Schreiben</Original>
 		</Key>
 		<Key ID="STR_SMARTPHONE_NOTRUF">
-			<Original>Emergency call</Original>
+			<Original>Notruf</Original>
 		</Key>
 		<Key ID="STR_SMARTPHONE_Absenden">
-			<Original>Send</Original>
+			<Original>Absenden</Original>
 		</Key>
 		<Key ID="STR_SMARTPHONE_NACHRICHTTITLE">
-			<Original>Message to:</Original>
+			<Original>Nachricht an:</Original>
 		</Key>
 		<Key ID="STR_SMARTPHONE_Notruftitle">
-			<Original>EMERGENCY CALLS</Original>
+			<Original>NOTRUFE | Abuse führt zum BAN!</Original>
 		</Key>
 	</Package>
 </Project>
