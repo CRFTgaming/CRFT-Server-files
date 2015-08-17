@@ -134,18 +134,18 @@ class CfgFunctions
 			file = "\life_server\Functions\airdrop";
 			class generateAirdrop {};
 		};
-
-		class GHBSystem
-		{
-			tag = "GHB";
-			class Smartphone
-			{
-				file = "\life_server\Functions\Smartphone";
-				class handleMessages {};
-				class msgRequest {};
-			};	
-		};
 	};
+};
+
+class GHBSystem
+{
+	tag = "GHB";
+	class Smartphone
+	{
+		file = "\life_server\Functions\Smartphone";
+		class handleMessages {};
+		class msgRequest {};
+	};	
 };
 
 class CfgVehicles
