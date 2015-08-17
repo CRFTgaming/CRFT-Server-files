@@ -108,7 +108,6 @@ class Mission
 		"A3_Structures_F_Heli_Ind_Cargo",
 		"coophelipad",
 		"jdg_carrier",
-		"usaf_sfs_pilots",
 		"A3_Structures_F_Kart_Civ_SportsGrounds",
 		"s_porschers",
 		"A3L_Atom",
@@ -125,7 +124,6 @@ class Mission
 		"A3_Characters_F_Gamma",
 		"A3_Characters_F_INDEP",
 		"A3_Characters_F_EPC",
-		"usaf_sfs_pilots",
 		"A3_Structures_F_Furniture",
 		"A3_Structures_F_EPC_Civ_Accessories",
 		"A3_Structures_F_Civ_Accessories",
@@ -5249,7 +5247,7 @@ class Mission
 					special="NONE";
 					id=297;
 					side="WEST";
-					vehicle="USAF_SFS_Officer_Green7";
+					vehicle="B_RangeMaster_F";
 					leader=1;
 					rank="LIEUTENANT";
 					skill=0.60000002;
