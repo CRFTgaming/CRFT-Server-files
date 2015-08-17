@@ -38,7 +38,6 @@ life_enslaved = false;
 life_frozen = false;
 life_nlrtimer_stop = false;
 life_nlrtimer_running = false;
-life_smartphoneTarget = ObjNull;
 //Insert EarPlugs
 life_fadeSound = false;
 life_god = false; //Add this

@@ -4884,39 +4884,4 @@
 			<English>Fruit Proficiency</English>
 		</Key>
 	</Package>
-	<Package name="Smartphone">
-		<Key ID="STR_PM_Smartphone">
-			<Original>Smartphone</Original>
-		</Key>
-		<Key ID="STR_SMARTPHONE_TITLE">
-			<Original>Smartphone Menu</Original>
-		</Key>
-		<Key ID="STR_SMARTPHONE_PLAYERLISTTITLE">
-			<Original>Playerlist</Original>
-		</Key>
-		<Key ID="STR_SMARTPHONE_MESSAGETITLE">
-			<Original>Messages  | VON | WANN</Original>
-		</Key>
-		<Key ID="STR_SMARTPHONE_RANDOMTITLE">
-			<Original>Select message to read</Original>
-		</Key>
-		<Key ID="STR_Global_Close">
-			<Original>Close</Original>
-		</Key>
-		<Key ID="STR_SMARTPHONE_SCHREIBEN">
-			<Original>Writing</Original>
-		</Key>
-		<Key ID="STR_SMARTPHONE_NOTRUF">
-			<Original>Emergency call</Original>
-		</Key>
-		<Key ID="STR_SMARTPHONE_Absenden">
-			<Original>Send</Original>
-		</Key>
-		<Key ID="STR_SMARTPHONE_NACHRICHTTITLE">
-			<Original>Message to:</Original>
-		</Key>
-		<Key ID="STR_SMARTPHONE_Notruftitle">
-			<Original>EMERGENCY CALLS</Original>
-		</Key>
-	</Package>
 </Project>
