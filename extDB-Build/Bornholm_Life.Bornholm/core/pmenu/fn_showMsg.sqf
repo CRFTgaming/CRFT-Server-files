@@ -27,5 +27,5 @@ _status = "[OFFLINE]";
     };
 }forEach playableUnits;
 
-_cMessageHeader ctrlSetText format["%1 %2 schrieb:",_data select 3,_status];
+_cMessageHeader ctrlSetText format["%1 %2 wrote:",_data select 3,_status];
 _cMessageShow ctrlSetText format["%1",_data select 2];

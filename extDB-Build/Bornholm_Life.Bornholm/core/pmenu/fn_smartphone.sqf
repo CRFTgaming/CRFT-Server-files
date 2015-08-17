@@ -57,7 +57,7 @@ switch(_type) do
 	case 4:
 	{
 		createDialog "Life_smartphone_schreiben";
-		ctrlSetText[88886, format["Nachricht an: %1",name life_smartphoneTarget]];
+		ctrlSetText[88886, format["Message to: %1",name life_smartphoneTarget]];
 		if((__GETC__(life_adminlevel) < 1)) then
 		{
 			ctrlShow[888897,false];
